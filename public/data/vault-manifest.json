@@ -1,0 +1,1399 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updated": "2026-10-17",
+    "author": "Olawale / Sonic Architect",
+    "system": "THE VAULT // FPV TELEMETRY V2.4"
+  },
+  "photography": {
+    "categories": [
+      {
+        "id": "portraits",
+        "title": "01 // PORTRAITS",
+        "subtitle": "Rembrandt Chiaroscuro & Kinetic Faces",
+        "heroImage": "/media/photography/portraits/portrait-rembrandt.jpg"
+      },
+      {
+        "id": "street",
+        "title": "02 // STREET",
+        "subtitle": "Nocturne Asphalt, Speed & Concrete Caverns",
+        "heroImage": "/media/photography/street/project-specter.jpg"
+      },
+      {
+        "id": "light-art",
+        "title": "03 // LIGHT ART",
+        "subtitle": "Aerodynamic Photonic Trails & Long Exposure",
+        "heroImage": "/media/photography/light-art/light-art-hyper.jpg"
+      }
+    ],
+    "items": [
+      {
+        "id": "photo-01",
+        "title": "PROJECT // SPECTER",
+        "category": "street",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/250s",
+          "iso": 100,
+          "body": "ALPHA R",
+          "focalLength": "35mm",
+          "aperture": "f/1.4"
+        },
+        "story": "Captured amidst the dense industrial haze. A study on intersecting geometrics, speed, and man-made caverns.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/street/project-specter.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-02",
+        "title": "VELOCE // APEX",
+        "category": "street",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/60s",
+          "iso": 50,
+          "body": "ALPHA R",
+          "focalLength": "135mm",
+          "aperture": "f/2.8"
+        },
+        "story": "High-velocity panning exposure of GT endurance machinery attacking the wet apex under brooding overcast skies.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/street/race-panning.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-03",
+        "title": "CANYON // OBSCURA",
+        "category": "street",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "28MM F/2.0",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "LEICA Q3",
+          "focalLength": "28mm",
+          "aperture": "f/2.0"
+        },
+        "story": "Solitary silhouette traversing an architectural stone crevasse. Deep charcoal shadows sliced by natural morning sun shafts.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/street/street-noir.jpg",
+        "aspectRatio": "3:2"
+      },
+      {
+        "id": "photo-04",
+        "title": "MONOLITH // GAZE",
+        "category": "portraits",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4",
+          "shutter": "1/160s",
+          "iso": 100,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "85mm",
+          "aperture": "f/1.4"
+        },
+        "story": "Minimalist high-fashion profile rendered in classical Rembrandt amber rim lighting against deep teal carbon backdrop.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-rembrandt.jpg",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "photo-05",
+        "title": "CYBER // ZENITH",
+        "category": "portraits",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/320s",
+          "iso": 80,
+          "body": "ALPHA R",
+          "focalLength": "50mm",
+          "aperture": "f/1.2"
+        },
+        "story": "Contemplative human presence anchored within sharp aerodynamic tailoring. Subtle rim lighting accents jawline definition.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-cyber-monolith.jpg",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "photo-06",
+        "title": "OBSIDIAN // VEIL",
+        "category": "portraits",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "105MM F/1.4",
+          "shutter": "1/200s",
+          "iso": 100,
+          "body": "ALPHA R",
+          "focalLength": "105mm",
+          "aperture": "f/1.4"
+        },
+        "story": "An exploration of restraint and composure. Dark matter textiles meeting hyper-focused optical micro-textures.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-shadow-gaze.jpg",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "photo-07",
+        "title": "VORTEX // VELOCITY",
+        "category": "light-art",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "16-35MM F/4",
+          "shutter": "15.0s",
+          "iso": 50,
+          "body": "ALPHA R",
+          "focalLength": "16mm",
+          "aperture": "f/8.0"
+        },
+        "story": "A 15-second manual rotation exposure inside a circular aerodynamic tunnel. Dual ember and cyan photonic spirals converging into singularity.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-hyper.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-08",
+        "title": "KINETIC // FLUX",
+        "category": "light-art",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24MM F/2.8",
+          "shutter": "8.0s",
+          "iso": 100,
+          "body": "ALPHA R",
+          "focalLength": "24mm",
+          "aperture": "f/5.6"
+        },
+        "story": "Kinetic light ribbon choreography captured along concrete architectural corridors with continuous pulse emission.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-vortex.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-09",
+        "title": "ASPHALT // MONSOON",
+        "category": "street",
+        "status": "COMPLETED",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/400s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/2.8"
+        },
+        "story": "Reflective rainwater sheeting across the starting grid. Telemetry beacons flickering through the mist.",
+        "ownership": "EXCLUSIVE / 01 OF 01",
+        "image": "/media/photography/street/asphalt-monsoon.jpg",
+        "aspectRatio": "16:9"
+      }
+    ]
+  },
+  "aiArt": {
+    "items": [
+      {
+        "id": "ai-01",
+        "title": "PROJECT // NEURAL SYNAPSE",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 45,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "abstract hyper-detailed cybernetic humanoid biomechanical neural lattice emerging from obsidian dark liquid, intricate glowing ember synaptic nodes and razor-thin cyan fiber optic filaments, octan-render 8k",
+          "colorGrading": "Deep Teal and Ember",
+          "seed": "98421074"
+        },
+        "lore": "A speculative architectural convergence between human neural telemetry and self-assembling quantum neural lattices.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/neural-synapse.jpg"
+      },
+      {
+        "id": "ai-02",
+        "title": "PROJECT // CYBERNETIC CORE",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 50,
+          "cfg": 8,
+          "sampler": "Euler Ancestral",
+          "promptExcerpt": "biomechanical central processor core, obsidian liquid cooling channels, amber energy conduits, high-precision carbon weave",
+          "colorGrading": "Deep Obsidian / Ember Bloom",
+          "seed": "44109823"
+        },
+        "lore": "The autonomous heart of the gallery's digital nervous system, regulating heat dispersion and generative memory cycles.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/cybernetic-core.jpg"
+      },
+      {
+        "id": "ai-03",
+        "title": "PROJECT // QUANTUM MIRAGE",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 40,
+          "cfg": 7,
+          "sampler": "UniPC",
+          "promptExcerpt": "aerodynamic wind tunnel concourse, infinite parabolic ribs receding into singularity, glowing orange floor guidance lines, cyan telemetry dust particles",
+          "colorGrading": "Teal and Ember Dual-Tone",
+          "seed": "77123901"
+        },
+        "lore": "Simulated wind velocity modeling depicting micro-vortices around high-downforce spatial architecture.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/quantum-mirage.jpg"
+      },
+      {
+        "id": "ai-04",
+        "title": "PROJECT // HYPERION DRIFT",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Flux.1 Schnell",
+          "steps": 35,
+          "cfg": 6.8,
+          "sampler": "DPM++ SDE",
+          "promptExcerpt": "monolithic dark carbon hypercar chassis floating in zero gravity wind tunnel chamber, illuminated by razor thin amber laser scanners",
+          "colorGrading": "High Contrast Obsidian / Cyan Accent",
+          "seed": "11984206"
+        },
+        "lore": "A non-Euclidean aerodynamic study pushing boundary-layer flow past the hypersonic threshold.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/hyperion-drift.jpg"
+      },
+      {
+        "id": "ai-05",
+        "title": "LUMINA // CHRONO LATTICE",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Dev / ComfyUI Node Graph",
+          "steps": 48,
+          "cfg": 7.2,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "vertical temporal lattice structure suspended in void, pulsating orange-amber photon threads, crystalline carbon fiber framing, cinematic rim lighting",
+          "colorGrading": "Ember Monolith / Cyan Halo",
+          "seed": "55829104"
+        },
+        "lore": "A time-dilation artifact modeling the crystallization of light waves at sub-zero temperatures.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-hyper.jpg"
+      },
+      {
+        "id": "ai-06",
+        "title": "SPECTRA // OBSIDIAN HORIZON",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 / Raw Style Preset",
+          "steps": 42,
+          "cfg": 8.5,
+          "sampler": "Euler A",
+          "promptExcerpt": "subterranean tunnel cavern with hyper-reflective dark asphalt floor, concentric glowing amber structural ribs curving into distance",
+          "colorGrading": "Matte Charcoal / Ember Ribs",
+          "seed": "33918205"
+        },
+        "lore": "The foundational architectural horizon defining the spatial concourse of Chamber 02.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/vault-rooms/synthesis.jpg"
+      },
+      {
+        "id": "ai-07",
+        "title": "VORTEX // SYNTHETIC AURA",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 Large / ControlNet",
+          "steps": 52,
+          "cfg": 7.8,
+          "sampler": "DPM++ SDE Karras",
+          "promptExcerpt": "vortical spiral of pure luminescent orange energy encircling an obsidian cybernetic pillar, long exposure light trails, micro particles",
+          "colorGrading": "Solar Flare Amber / Cyan Core",
+          "seed": "88219034"
+        },
+        "lore": "Rotational magnetic field generation captured through continuous streak sensor exposure.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-vortex.jpg"
+      },
+      {
+        "id": "ai-08",
+        "title": "AERODYNAMICS // MACH 4",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / TensorRT Accelerate",
+          "steps": 38,
+          "cfg": 6.9,
+          "sampler": "UniPC",
+          "promptExcerpt": "supersonic endurance prototype vehicle executing high-g turn on nocturnal wet circuit, cinematic motion blur, amber brake caliper glow",
+          "colorGrading": "Nocturne Asphalt / Amber Heat",
+          "seed": "66291048"
+        },
+        "lore": "Kinetic displacement telemetry measuring surface pressure differentials across carbon composite wings.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/race-panning.jpg"
+      },
+      {
+        "id": "ai-09",
+        "title": "GENESIS // BIOMECHANIC PULSE",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Pro / Latent Dreamer 8K",
+          "steps": 55,
+          "cfg": 8.2,
+          "sampler": "DPM++ 2M",
+          "promptExcerpt": "humanoid synthetic entity adorned with intricate gold-copper filigree and internal fiber-optic circuitry, chiaroscuro lighting, dark studio",
+          "colorGrading": "Rembrandt Ember / Charcoal Shadow",
+          "seed": "12849033"
+        },
+        "lore": "A classical master study reimagined through synthetic biology and computational portraiture.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-rembrandt.jpg"
+      },
+      {
+        "id": "ai-10",
+        "title": "SOLARIS // NEURAL MATRIX",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 / Photonic Engine",
+          "steps": 44,
+          "cfg": 7.4,
+          "sampler": "Euler Ancestral",
+          "promptExcerpt": "panoramic wave of synchronized kinetic light vectors propagating across a subterranean chamber, intense glowing amber and teal frequencies",
+          "colorGrading": "Photonic Amber / Electric Cyan",
+          "seed": "99182045"
+        },
+        "lore": "Simultaneous coherent light pulses transferring multi-terabit tensor calculations across free space.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-velocity.jpg"
+      },
+      {
+        "id": "ai-11",
+        "title": "ECLIPSE // DARK MATTER MONOLITH",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Dev + Euler Ancestral",
+          "steps": 46,
+          "cfg": 7.1,
+          "sampler": "Euler A",
+          "promptExcerpt": "towering obsidian cyber monolith flanked by razor-sharp cyan silhouette edges, silent dark cavern, architectural minimalism",
+          "colorGrading": "Vantablack / Cyan Edge",
+          "seed": "44719283"
+        },
+        "lore": "Zero-albedo matter containment vessel serving as an anchor for the subterranean Monolith Forest.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-cyber-monolith.jpg"
+      },
+      {
+        "id": "ai-12",
+        "title": "NEBULA // SUBTERRANEAN KINETICS",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 / DPM++ 2M",
+          "steps": 40,
+          "cfg": 7,
+          "sampler": "DPM++ 2M",
+          "promptExcerpt": "industrial subterranean transport canyon, elevated track rails, steam mist backlit by glowing amber sodium beacons",
+          "colorGrading": "Industrial Sepia / High-Key Amber",
+          "seed": "83910274"
+        },
+        "lore": "Sub-surface logistical arteries powering the computational infrastructure beneath the exhibition chambers.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/project-specter.jpg"
+      },
+      {
+        "id": "ai-13",
+        "title": "APEX // TENSOR VEIL",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "ComfyUI Multi-ControlNet / SDXL",
+          "steps": 50,
+          "cfg": 8,
+          "sampler": "Euler A",
+          "promptExcerpt": "delicate carbon weave facial veil draped across synthetic android profile, micro-LED illumination highlights, subtle teal specular highlights",
+          "colorGrading": "Carbon Teal / Obsidian Matte",
+          "seed": "28491025"
+        },
+        "lore": "Investigation of synthetic micro-textiles capable of modulating optical reflectivity under direct sensor gaze.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-shadow-gaze.jpg"
+      },
+      {
+        "id": "ai-14",
+        "title": "KINETIC // PHOTON HARVEST",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Schnell / 4-Step Turbo",
+          "steps": 36,
+          "cfg": 6.5,
+          "sampler": "DPM++ SDE",
+          "promptExcerpt": "monsoon rain cascading onto wet high-speed track, telemetry reflection ribbons, neon amber start lights glowing through spray",
+          "colorGrading": "Wet Asphalt / Amber Bloom",
+          "seed": "55192837"
+        },
+        "lore": "Hydrodynamic surface tension captured during maximum downforce deceleration sequences.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/asphalt-monsoon.jpg"
+      },
+      {
+        "id": "ai-15",
+        "title": "ZERO // LATENT VORTEX",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 / Biomechanical Weave",
+          "steps": 48,
+          "cfg": 7.9,
+          "sampler": "Euler Ancestral",
+          "promptExcerpt": "centripetal spiral of crystalline neural axons focusing into single point of singularity, glowing amber node clusters, black background",
+          "colorGrading": "Deep Amber / Cyan Singularity",
+          "seed": "91827364"
+        },
+        "lore": "The mathematical focal point where discrete latent embeddings collapse into physical geometry.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/neural-synapse.jpg"
+      },
+      {
+        "id": "ai-16",
+        "title": "CHROMA // FLUID DYNAMICS",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Hydro-Dynamics Sim",
+          "steps": 42,
+          "cfg": 7.3,
+          "sampler": "UniPC",
+          "promptExcerpt": "architectural crevasse with high-contrast diagonal shadows, solitary figure silhouetted against glowing amber daylight shaft",
+          "colorGrading": "Chiaroscuro Noir / Warm Ochre",
+          "seed": "73648291"
+        },
+        "lore": "Natural light shafts slicing monolithic concrete volumes in a study of spatial silence.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/street-noir.jpg"
+      },
+      {
+        "id": "ai-17",
+        "title": "ORBITAL // CARBON STRATA",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Dev / Carbon Fiber Texture",
+          "steps": 52,
+          "cfg": 7.7,
+          "sampler": "DPM++ 2M",
+          "promptExcerpt": "sculptural aerodynamic cowl constructed from exposed forged carbon and titanium ribbing, amber LED status indicator strip",
+          "colorGrading": "Graphite / Amber Accent",
+          "seed": "62719483"
+        },
+        "lore": "Structural weight-reduction study utilizing generative topology optimization and composite weaves.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-zenith.jpg"
+      },
+      {
+        "id": "ai-18",
+        "title": "TITAN // SUB-ZERO COOLING",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 / Cryogenic Refiner",
+          "steps": 45,
+          "cfg": 7.2,
+          "sampler": "Euler A",
+          "promptExcerpt": "apex track machinery cornering through morning fog, illuminated by cold cyan headlight beams and warm tire heat telemetry",
+          "colorGrading": "Cold Cyan / Thermal Amber",
+          "seed": "48291038"
+        },
+        "lore": "Thermal telemetry overlay depicting brake rotor heat rejection under threshold trail-braking.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/apex-predator.jpg"
+      },
+      {
+        "id": "ai-19",
+        "title": "AETHER // QUANTUM SINGULARITY",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 / Deep Field Graviton",
+          "steps": 50,
+          "cfg": 8.3,
+          "sampler": "DPM++ SDE",
+          "promptExcerpt": "gravitational lens simulation twisting surrounding neural lattice filaments into concentric glowing gold and ember arcs",
+          "colorGrading": "Graviton Ember / Black Void",
+          "seed": "39102847"
+        },
+        "lore": "Computational model exploring non-linear optical distortion within simulated micro-black-holes.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/cybernetic-core.jpg"
+      },
+      {
+        "id": "ai-20",
+        "title": "SYNTHESIS // HYPERSONIC WING",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Flux.1 / Aerodynamic Inversion",
+          "steps": 40,
+          "cfg": 6.9,
+          "sampler": "UniPC",
+          "promptExcerpt": "inverted delta wing chassis suspended in supersonic aerodynamic test wind tunnel, razor-thin amber laser flow sheets",
+          "colorGrading": "Wind Tunnel Cyan / Laser Amber",
+          "seed": "92837401"
+        },
+        "lore": "Boundary-layer suction validation on continuous carbon surfaces operating at Mach 3.2.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/hyperion-drift.jpg"
+      },
+      {
+        "id": "ai-21",
+        "title": "PULSAR // NEURAL HARMONICS",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "ComfyUI Latent Waveform / Flux",
+          "steps": 46,
+          "cfg": 7.5,
+          "sampler": "Euler Ancestral",
+          "promptExcerpt": "rhythmic vertical standing light wave with harmonic resonance bands, amber and deep cyan color interference pattern",
+          "colorGrading": "Harmonic Amber / Standing Wave Cyan",
+          "seed": "18293048"
+        },
+        "lore": "Visual acoustic mapping converting sub-bass frequencies from Chamber 03 into spatial light structures.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-hyper.jpg"
+      },
+      {
+        "id": "ai-22",
+        "title": "VELOCITY // ASYMMETRIC GRID",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 Large / Vector Flow",
+          "steps": 43,
+          "cfg": 7.1,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "infinite highway of pure photons curving through dark void, multi-colored exposure streaks, sharp geometric horizon",
+          "colorGrading": "Photon Streaks / Deep Obsidian",
+          "seed": "58291039"
+        },
+        "lore": "Asymmetric vector velocity fields generating directional momentum through pure light streams.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/light-art-velocity.jpg"
+      },
+      {
+        "id": "ai-23",
+        "title": "NEXUS // BIOLOGICAL SILICON",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 / Bio-Organic Nodes",
+          "steps": 54,
+          "cfg": 8.1,
+          "sampler": "Euler A",
+          "promptExcerpt": "intricate biomechanical spine column made of carbon vertebrae and liquid copper conduits, glowing orange ganglion clusters",
+          "colorGrading": "Liquid Copper / Matte Carbon",
+          "seed": "29401827"
+        },
+        "lore": "Synthetic spinal column prototype facilitating high-bandwidth neural telemetry transfers.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/neural-synapse.jpg"
+      },
+      {
+        "id": "ai-24",
+        "title": "STRATOS // ION ENGINE",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Plasma Jet 8K",
+          "steps": 39,
+          "cfg": 6.8,
+          "sampler": "UniPC",
+          "promptExcerpt": "high-velocity aerodynamic prototype accelerating down nocturnal test runway, glowing amber wheel hub exhausts",
+          "colorGrading": "Jet Intake Amber / Carbon Night",
+          "seed": "71029384"
+        },
+        "lore": "Electro-hydrodynamic propulsion testing within low-pressure atmospheric conditions.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/race-panning.jpg"
+      },
+      {
+        "id": "ai-25",
+        "title": "GLITCH // LATENT ENTROPY",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Dev / Quantum Glitch Matrix",
+          "steps": 47,
+          "cfg": 7.6,
+          "sampler": "DPM++ SDE",
+          "promptExcerpt": "controlled cryptographic glitch fracturing an obsidian portrait silhouette into glowing amber voxel layers",
+          "colorGrading": "Voxel Amber / Digital Cyan",
+          "seed": "83920174"
+        },
+        "lore": "Intentional entropy injection into deep tensor weights to provoke emergent architectural geometry.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-shadow-gaze.jpg"
+      },
+      {
+        "id": "ai-26",
+        "title": "HELIX // RECURSIVE SYNAPSE",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 / Double Helix VAE",
+          "steps": 41,
+          "cfg": 7,
+          "sampler": "Euler Ancestral",
+          "promptExcerpt": "double helix of glowing fiber optic cables spanning a subterranean tunnel, amber structural ribs receding into fog",
+          "colorGrading": "Ribbed Cavern / Dual Helix Amber",
+          "seed": "64738291"
+        },
+        "lore": "Recursive biological algorithms encoded onto photonic fiber bundles spanning the length of the chamber.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/quantum-mirage.jpg"
+      },
+      {
+        "id": "ai-27",
+        "title": "CHIMERA // ANODIZED TITANIUM",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 / Titanium Metallurgy",
+          "steps": 51,
+          "cfg": 8.2,
+          "sampler": "DPM++ 2M",
+          "promptExcerpt": "precision CNC milled titanium monolith panel with flame-anodized purple and amber heat blooms, microscopic circuit traces",
+          "colorGrading": "Flame Anodized / Deep Charcoal",
+          "seed": "19283746"
+        },
+        "lore": "Thermal tempering study testing the tensile limits of high-grade aerospace titanium alloys.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/portrait-cyber-monolith.jpg"
+      },
+      {
+        "id": "ai-28",
+        "title": "PHANTOM // SUPRACONDUCTOR",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / MagLev Geometry",
+          "steps": 37,
+          "cfg": 6.7,
+          "sampler": "UniPC",
+          "promptExcerpt": "floating maglev aerodynamic monocoque traversing a dark subterranean tunnel, glowing orange induction guide rails",
+          "colorGrading": "MagLev Amber / Obsidian Vacuum",
+          "seed": "82736451"
+        },
+        "lore": "Zero-friction magnetic levitation corridor facilitating frictionless travel through deep subterranean strata.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/photography/street/project-specter.jpg"
+      },
+      {
+        "id": "ai-29",
+        "title": "SIGMA // DEEP TENSOR FIELD",
+        "format": "portrait",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Flux.1 Dev / 100-Step Precision",
+          "steps": 60,
+          "cfg": 8.4,
+          "sampler": "Euler Ancestral",
+          "promptExcerpt": "crystalline hypercube matrix with glowing amber data filaments terminating at glowing cyan processor nodes",
+          "colorGrading": "Hypercube Amber / Quantum Cyan",
+          "seed": "91820394"
+        },
+        "lore": "High-dimensional tensor representation visualized through isometric crystal projection.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/cybernetic-core.jpg"
+      },
+      {
+        "id": "ai-30",
+        "title": "OMEGA // ZERO-POINT APEX",
+        "format": "landscape",
+        "status": "RENDERED // 8K",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 + SDXL / Apex Singularity",
+          "steps": 55,
+          "cfg": 8,
+          "sampler": "DPM++ SDE Karras",
+          "promptExcerpt": "panoramic subterranean amphitheater with 30 glowing monoliths surrounding a central zero-point energy well, misty reflective floor",
+          "colorGrading": "Omega Ember / Singularity Horizon",
+          "seed": "99999999"
+        },
+        "lore": "The culminating terminus of Chamber 02, where all 30 generative streams intersect into a singular coherent field.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/hyperion-drift.jpg"
+      }
+    ]
+  },
+  "acoustics": {
+    "albums": [
+      {
+        "id": "album-01",
+        "code": "01",
+        "title": "KXNG OF THE NVGHT",
+        "subtitle": "AI MUSIC / SONIC LAB",
+        "cover": "/media/music/kxng-of-the-nvght-cover.jpg",
+        "genre": "WAVETRAP",
+        "runtime": "34:12",
+        "tracks": [
+          {
+            "id": "track-01-01",
+            "trackNumber": "01",
+            "title": "MIDNIGHT PACE",
+            "bpm": 124,
+            "key": "D Minor",
+            "duration": "03:42"
+          },
+          {
+            "id": "track-01-02",
+            "trackNumber": "02",
+            "title": "NITRO SURGE",
+            "bpm": 130,
+            "key": "F# Minor",
+            "duration": "04:15"
+          },
+          {
+            "id": "track-01-03",
+            "trackNumber": "03",
+            "title": "ASPHALT RUN",
+            "bpm": 118,
+            "key": "A Minor",
+            "duration": "03:58"
+          },
+          {
+            "id": "track-01-04",
+            "trackNumber": "04",
+            "title": "NEON MONOLITH",
+            "bpm": 122,
+            "key": "G Minor",
+            "duration": "04:30"
+          },
+          {
+            "id": "track-01-05",
+            "trackNumber": "05",
+            "title": "OVERDRIVE ECHO",
+            "bpm": 128,
+            "key": "C Minor",
+            "duration": "04:05"
+          },
+          {
+            "id": "track-01-06",
+            "trackNumber": "06",
+            "title": "TURBO HORIZON",
+            "bpm": 120,
+            "key": "E Minor",
+            "duration": "03:45"
+          },
+          {
+            "id": "track-01-07",
+            "trackNumber": "07",
+            "title": "CARBON APEX",
+            "bpm": 132,
+            "key": "B Minor",
+            "duration": "04:12"
+          },
+          {
+            "id": "track-01-08",
+            "trackNumber": "08",
+            "title": "DAWN GRID",
+            "bpm": 115,
+            "key": "D Major",
+            "duration": "05:00"
+          }
+        ]
+      },
+      {
+        "id": "album-02",
+        "code": "02",
+        "title": "OVERDRIVE METRIC",
+        "subtitle": "AI MUSIC / EXPERIMENTAL NEURAL SOUNDSCAPES",
+        "cover": "/media/music/overdrive-metric-cover.jpg",
+        "genre": "AMBIENT INDUSTRIAL / GLITCH",
+        "runtime": "26:40",
+        "tracks": [
+          {
+            "id": "track-02-01",
+            "trackNumber": "01",
+            "title": "AERODYNAMIC SHIFT",
+            "bpm": 110,
+            "key": "F Minor",
+            "duration": "04:10"
+          },
+          {
+            "id": "track-02-02",
+            "trackNumber": "02",
+            "title": "FLUID DYNAMICS",
+            "bpm": 116,
+            "key": "Bb Minor",
+            "duration": "04:45"
+          },
+          {
+            "id": "track-02-03",
+            "trackNumber": "03",
+            "title": "TELEMETRY PULSE",
+            "bpm": 125,
+            "key": "Ab Minor",
+            "duration": "03:50"
+          },
+          {
+            "id": "track-02-04",
+            "trackNumber": "04",
+            "title": "RECURSIVE RESONANCE",
+            "bpm": 108,
+            "key": "Eb Minor",
+            "duration": "05:15"
+          },
+          {
+            "id": "track-02-05",
+            "trackNumber": "05",
+            "title": "SUB-BASS PROPULSION",
+            "bpm": 120,
+            "key": "Db Minor",
+            "duration": "04:22"
+          },
+          {
+            "id": "track-02-06",
+            "trackNumber": "06",
+            "title": "STATIC DISSOLUTION",
+            "bpm": 95,
+            "key": "C Minor",
+            "duration": "04:18"
+          }
+        ]
+      }
+    ]
+  },
+  "architect": {
+    "name": "LAWRENCE EMENIKE",
+    "callsign": "LXWRVNX // THE ARCHITECT",
+    "role": "AI Transformation Consultant | AI Architect & Engineer | Creative Technologist | AI Artist",
+    "tagline": "Architecting secure, governed commercial intelligence systems that translate cross-sector complexity into structured intelligence for strategic decision-making.",
+    "organization": "Nelc Digital (Founder & Lead AI Consultant)",
+    "coordinates": "06.45° N, 03.39° E",
+    "bio": "Building systems that help organizations see what others miss. My work sits at the intersection of AI engineering, strategic analysis, and enterprise governance, where data becomes intelligence and intelligence becomes action. With foundations in finance and advanced AI systems, I specialize in designing governed, secure, and auditable intelligence architectures that support high-stakes decision-making across industries.",
+    "philosophy": "We live in a world overflowing with data, signals, opinions, forecasts, and competing narratives. Yet the scarcest resource inside most organizations is not information, it's clarity. Commercial Intelligence is the discipline of transforming fragmented information into actionable understanding. Whether navigating market dynamics, customer behavior, operational performance, emerging technologies, or geopolitical shifts, organizations need systems that can synthesize complexity and surface what matters most.",
+    "systems": "From multi-agent collaborative workflows to executive intelligence platforms, my focus is not simply automation, but building systems that fundamentally improve how organizations perceive, reason, and act. As Founder and Lead AI Consultant at Nelc Digital, I work with cross-sector leaders to translate fragmented information into structured commercial intelligence—deploying AI systems that are operationally robust, strategically aligned, and measurable in real business impact.",
+    "visualMatrix": "Under the creative moniker lxwrvnx, the Visual Matrix represents the intersection where computational intelligence meets sensory expression—bringing together physical optics, generative neural imagery, and procedural soundscapes into immersive digital architecture.",
+    "comms": {
+      "email": "lawrence@nelcdigital.com",
+      "twitter": "https://twitter.com/lxwrvnx",
+      "github": "https://github.com/lxwrvnx",
+      "audioStream": "https://thevault.io/stream/live",
+      "organizationUrl": "https://nelcdigital.com"
+    }
+  },
+  "aiProjects": [
+    {
+      "id": 1,
+      "title": "Zero-Trust Agentic Pricing Engine",
+      "short_desc": "AI-driven pricing orchestration utilizing zero-trust principles for dynamic enterprise modeling.",
+      "tech_stack": [
+        "LangGraph",
+        "Llama 3.2",
+        "XGBoost",
+        "Microsoft Agent Governance"
+      ],
+      "github_link": "https://github.com/lawrenceemenike",
+      "youtube_link": "https://www.youtube.com/embed/PLACEHOLDER_ID",
+      "case_study": {
+        "executive_summary": "Deployed a local, multi-agent inference engine that replaces static pricing matrices with dynamic, mathematically constrained pricing orchestration.",
+        "business_problem": "Commercial teams lacked visibility into pricing anomalies across regions, resulting in margin erosion and slow reaction times to market shifts.",
+        "why_it_matters": "Pricing is the most direct lever for P&L impact. Automating this with deterministic guardrails protects margins while scaling operational throughput.",
+        "my_role": [
+          {
+            "role": "AI Architect",
+            "action": "Designed the decoupled cognitive and mathematical execution layers."
+          },
+          {
+            "role": "Product Owner",
+            "action": "Defined the unit-economic constraints and managed the 90-day deployment sprint."
+          }
+        ],
+        "discovery_process": "Conducted stakeholder interviews with commercial directors to map existing manual pricing workflows and identify latency bottlenecks in their decision matrix.",
+        "solution_architecture": "Decoupled architecture: LangGraph orchestrates the reasoning agents (Llama 3.2), while XGBoost handles the deterministic mathematical execution and pricing output.",
+        "governance_security": "Engineered under strict Zero-Trust principles. Implemented robust prompt-injection defense layers, strict RBAC for human-in-the-loop approvals, and audit trails for every pricing inference.",
+        "commercial_intel_layer": "Signals collected include real-time competitor API feeds and internal inventory metrics. The reasoning process forecasts demand elasticity before generating a final, governable pricing output.",
+        "results": "Simulated outcomes demonstrate a 40% reduction in decision latency and a distinct protection of baseline margins through anomaly avoidance.",
+        "lessons_learned": "Non-deterministic models cannot be trusted with financial math. Decoupling the LLM's reasoning from the actual mathematical calculation is mandatory for enterprise safety."
+      },
+      "category": "finops",
+      "systemCode": "SYS-01 // PRICING.ORCH",
+      "statusBadge": "LOCAL INFERENCE // ACTIVE"
+    },
+    {
+      "id": 2,
+      "title": "NovaMart Multi-Agent Support & Policy Engine",
+      "short_desc": "Enterprise multi-agent customer support system leveraging Bedrock AgentCore, Strands SDK, and parallel RAG retrieval for automated policy resolution and transactional execution.",
+      "tech_stack": [
+        "AWS Bedrock",
+        "Strands SDK",
+        "Claude 3 Sonnet",
+        "DynamoDB",
+        "AWS Knowledge Bases"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Multi-Agent-E-Commerce-RAG",
+      "case_study": {
+        "executive_summary": "Engineered and deployed a production-grade multi-agent customer support orchestrator on AWS Bedrock AgentCore using the Strands SDK. By orchestrating five specialized AI agents and parallel RAG retrievers over DynamoDB and Bedrock Knowledge Bases, the system automates end-to-end e-commerce order lookups, policy enforcement, refund processing, and empathetic customer communication with zero human intervention.",
+        "business_problem": "E-commerce organizations face high support operational costs and high customer churn caused by slow ticket response times, fragmented customer data across legacy databases, and inconsistent policy enforcement during return/refund requests.",
+        "why_it_matters": "Scaling customer operations without inflating support headcount is a direct lever for operating margin expansion. Automating routine tier-1 queries and refund approvals while enforcing strict policy guardrails protects bottom-line margins and elevates Net Promoter Scores (NPS).",
+        "my_role": [
+          {
+            "role": "AI Systems Architect",
+            "action": "Designed the 5-agent micro-orchestration graph using Strands SDK and AWS Bedrock AgentCore, enforcing state machine isolation and optimistic locking."
+          },
+          {
+            "role": "AI Engineer",
+            "action": "Provisioned the AWS infrastructure via CloudFormation, configured multi-domain Knowledge Base retrievers with ThreadPoolExecutor parallelism, and built 100% X-Ray/CloudWatch observability pipelines."
+          }
+        ],
+        "discovery_process": "Audited typical e-commerce support tickets and identified that 80%+ of resolution delay stemmed from agents manually searching isolated policy PDFs (Returns, Shipping, Warranty) and cross-referencing customer tier data across disparate database tables.",
+        "solution_architecture": "A hierarchical multi-agent state machine led by an OrchestratorAgent (Claude 3 Haiku) managing state in DynamoDB. Tasks route dynamically to specialized domain agents: InventoryAgent (order/customer lookups), PolicyAgent (coordinating 3 parallel policy retrievers via ThreadPoolExecutor), RefundAgent (tier-aware refund eligibility and DynamoDB write), and CommunicationAgent (generating empathetic final responses).",
+        "governance_security": "Implemented AWS Bedrock Guardrails (Version 1) enforcing strict Content Filtering, PII Redaction, Topic Deny-lists, and Profanity Guarding. Secured state management via optimistic locking (version field) on DynamoDB WorkflowState and isolated CloudFormation stack permissions.",
+        "commercial_intel_layer": "Real-time ticket telemetry and resolution states are tracked in DynamoDB and logged to CloudWatch with 100% X-Ray tracing sampling. This produces granular analytical visibility into refund velocity, policy inquiry frequency, and customer tier fulfillment performance.",
+        "results": "Achieved a 100% perfect score (120/120 pts) across automated multi-agent orchestration, guardrail compliance, memory management, and tracing suites. Successfully automated tier-differentiated refund execution (30-day standard vs 60-day premium) and sub-second parallel policy retrieval across 3 distinct Knowledge Bases.",
+        "lessons_learned": "Single monolithic LLM prompts crumble under complex enterprise workflows. Decoupling customer service into discrete, hyper-specialized sub-agents running parallel retrieval threads dramatically increases resolution accuracy, eliminates state corruption, and delivers predictable, audit-ready AI execution."
+      },
+      "category": "multi-agent",
+      "systemCode": "SYS-02 // NOVAMART.CORE",
+      "statusBadge": "AWS BEDROCK // 100% SCORE"
+    },
+    {
+      "id": 3,
+      "title": "Agentic Security & Governance Runtime Engine",
+      "short_desc": "Sub-5ms deterministic runtime control plane enforcing zero-trust boundaries, Ed25519 PKI, Atlas Merkle-DAG ledgers, and EU AI Act compliance for multi-agent LLM loops.",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "Ed25519 PKI",
+        "Merkle-DAG",
+        "OpenTelemetry",
+        "PostgreSQL"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Agentic-Security-and-Governance-Runtime-Engine",
+      "case_study": {
+        "executive_summary": "Architected and built agentic-gov, a sub-5ms deterministic runtime control plane and zero-trust cryptographic boundary for multi-agent LLM execution loops. The system wraps agent trajectories with real-time boundary enforcement, causal Merkle-DAG ledgers (Atlas engine), state-bound human checkpoints (Themis engine), and automated EU AI Act Annex IV regulatory documentation generation.",
+        "business_problem": "Enterprise multi-agent deployments face severe regulatory liability (EU AI Act, GDPR, SEC disclosures) and security risks (prompt injection, unauthorized tool execution, PII leakage). Static compliance policies remain completely disconnected from real-time agent tool calls, memory mutations, and inter-agent message passing.",
+        "why_it_matters": "Bridges the Governance-Execution Gap by decoupling agent decision velocity from corporate liability. Establishing cryptographically signed, legally defensible execution traces shifts liability from unmonitored probabilistic LLMs to provable, policy-bounded software controls while preventing statutory non-compliance penalties.",
+        "my_role": [
+          {
+            "role": "AI Security Architect",
+            "action": "Designed the 5-layer runtime governance stack, Ed25519 zero-trust identity layer, and Themis state-bound human checkpoint engine."
+          },
+          {
+            "role": "AI Systems Engineer",
+            "action": "Implemented sub-5ms interception pipeline, Atlas Merkle-DAG causal ledger with RFC 8785 JCS canonicalization, and automated Annex IV audit exporters."
+          }
+        ],
+        "discovery_process": "Identified that first-generation AI guardrails relying on secondary cloud LLM API calls fail due to probabilistic vulnerability, excessive latency (200-1500ms), and data exfiltration risks. Proved that runtime AI governance must be local, deterministic, and zero-cloud.",
+        "solution_architecture": "A 5-Layer Governance Control Plane: Layer 1 Data Governance (GDPR Art 6/9/17 gates, crypto-shredding), Layer 2 Model Governance (3-tier ingress firewall, model hash commitments), Layer 3 System Integration (Ed25519 PKI, tool gates, circuit breakers), Layer 4 Continuous Monitoring (Stateful Trust Engine, PSI drift interceptor, egress DLP), Layer 5 Audit Evidence (Atlas Merkle-DAG, Themis human checkpoints, RFC 3161 timestamping).",
+        "governance_security": "Enforced Ed25519 cryptographic signatures on all inter-agent envelopes, anti-replay sliding nonces (<1ms verification), pre-compiled regex & semantic prompt injection filters (<2ms p95), regex/SpaCy PII redaction, and anti-rubber-stamping dwell time triggers (<3000ms).",
+        "commercial_intel_layer": "Provides continuous observability via OpenTelemetry GenAI semantic conventions and async PostgreSQL sinks. Generates machine-readable JSON audit packages and regulatory Markdown dossiers for statutory compliance (EU AI Act Annex IV, ISO 42001, NIST AI RMF).",
+        "results": "Delivered a high-assurance governance engine operating with sub-5ms total hot-path overhead (<2.0ms regex, <1.0ms Ed25519, <0.5ms async queue). Guaranteed 100% non-repudiable causal lineage and offline EU AI Act compliance packaging in under 5.0s.",
+        "lessons_learned": "Probabilistic LLM guardrails are fundamentally insufficient for enterprise runtime safety. Governance must be executed deterministically at the system level via cryptographic proofs, local state machines, and immutable Merkle-DAG ledgers."
+      },
+      "category": "governance",
+      "systemCode": "SYS-03 // AGENTIC.GOV",
+      "statusBadge": "SUB-5MS CONTROL PLANE"
+    },
+    {
+      "id": 4,
+      "title": "Enterprise AI Support Agent (Bedrock AgentCore & MCP)",
+      "short_desc": "Production customer support agent utilizing Bedrock AgentCore, Model Context Protocol (MCP), sandboxed Code Interpreter, and dual-strategy long-term memory.",
+      "tech_stack": [
+        "AWS Bedrock",
+        "AgentCore SDK",
+        "Model Context Protocol (MCP)",
+        "AWS Lambda",
+        "API Gateway",
+        "Code Interpreter"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/AI-Support-Agent-AgentCore-",
+      "case_study": {
+        "executive_summary": "Engineered and deployed a containerized enterprise AI support agent on Amazon Bedrock AgentCore using the Strands SDK. By integrating Model Context Protocol (MCP) via AgentCore Gateway, sandboxed Code Interpreter execution, RAG knowledge bases, and dual-strategy long-term memory (Semantic Fact Extraction & Preferences), the agent automates complex multi-tier order tracking, returns, loyalty calculations, and browser navigation.",
+        "business_problem": "Enterprise customer service channels suffer from high operational latency and financial inaccuracy caused by monolithic prompt bloat, LLM arithmetic hallucinations on multi-tier loyalty discounts, and fragmented cross-session user context across support calls.",
+        "why_it_matters": "Decoupling API integrations via MCP and executing financial calculations inside a sandboxed Python runtime guarantees 100% mathematical precision while enabling cross-session personalization. This reduces average handle time (AHT) and eliminates costly billing/discount errors.",
+        "my_role": [
+          {
+            "role": "AI Platform Architect",
+            "action": "Designed the AgentCore Gateway MCP integration, ARM64 CodeBuild container deployment pipeline, and IAM security policies."
+          },
+          {
+            "role": "AI Systems Engineer",
+            "action": "Implemented dual-strategy long-term memory (LTM), OpenAPI target schemas for API Gateway/Lambda targets, and sandboxed Code Interpreter tool execution."
+          }
+        ],
+        "discovery_process": "Audited traditional RAG and agent setups, discovering that LLMs hallucinate complex multi-tier financial calculations (e.g., 10% Gold tier + 4,000 points redemption). Proved that arithmetic logic must be executed inside a sandboxed code interpreter while API integrations require strongly-typed MCP schemas.",
+        "solution_architecture": "A containerized Python runtime on ARM64 deployed to Bedrock AgentCore. Features an MCP AgentCore Gateway interfacing with REST API Gateway (order-tracker) and AWS Lambda (refund-processor), an S3-backed Bedrock Knowledge Base, a sandboxed Code Interpreter for deterministic discount math, a headless browser tool, and AgentCore Memory (customer_facts and customer_preferences).",
+        "governance_security": "Configured fine-grained IAM execution roles with restricted data-plane access, sandboxed Python Code Interpreter execution boundaries, structured OpenAPI target overrides, and SSE streaming transport security via AgentCore Gateway.",
+        "commercial_intel_layer": "Extracts and persists customer preferences and facts into AgentCore Long-Term Memory across disparate session IDs. Produces structured execution logs and order state tracking to provide support leads with actionable customer behavior telemetry.",
+        "results": "Successfully deployed and verified across 6 live cloud runtime test scenarios, demonstrating sub-second MCP order lookups, instant refund approvals (REF-L8OIRM1O), 100% accurate loyalty discount calculations ($150 order to $95 final total), and 35-second async LTM fact extraction across cross-session interactions.",
+        "lessons_learned": "Never trust LLM probabilistic generation for financial calculations or direct API payload creation. Decoupling backend integration via MCP standards and delegating arithmetic to sandboxed execution environments is critical for enterprise reliability."
+      },
+      "category": "multi-agent",
+      "systemCode": "SYS-04 // BEDROCK.MCP",
+      "statusBadge": "MCP GATEWAY // LIVE"
+    },
+    {
+      "id": 5,
+      "title": "Multi-Agent Consensus & Cost-Optimized Research System",
+      "short_desc": "Production multi-agent research framework combining an autonomous consensus loop with native OWASP security governance and an economic model router.",
+      "tech_stack": [
+        "Python",
+        "CrewAI",
+        "FastAPI",
+        "Ollama",
+        "PostgreSQL",
+        "SearxNG"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Multi-Agent-Research-System",
+      "case_study": {
+        "executive_summary": "Engineered a production-grade multi-agent research intelligence system integrating an autonomous consensus loop with a specialized Enterprise Middleware Suite. Featuring a native Agentic Governance Engine (3-tier OWASP ASI prompt injection firewall) and a Cost Optimization Router, the platform balances sub-5ms security interception, 100% local cost savings for routine processing, and rigorous LLM-as-a-Judge fact verification.",
+        "business_problem": "Enterprise research workflows suffer from high frontier API costs (GPT-4o), prompt injection vulnerability during web scraping (ASI-03/ASI-05), and hallucinations in automated report generation when using single-pass LLMs.",
+        "why_it_matters": "Decoupling security interception and dynamic cost routing protects corporate IP, eliminates unnecessary API spend, and delivers verified, hallucination-free intelligence reports suitable for executive decision-making.",
+        "my_role": [
+          {
+            "role": "AI Middleware Architect",
+            "action": "Designed the Enterprise Middleware Suite containing the 3-tier Defense-in-Depth Governance Engine and the Cost Optimization Router."
+          },
+          {
+            "role": "AI Systems Engineer",
+            "action": "Implemented the multi-agent consensus loop (Researcher, Air-Gapped Writer, Fact-Checker), SearxNG scraping integration, and async PostgreSQL audit persistence."
+          }
+        ],
+        "discovery_process": "Discovered that 80%+ of research queries do not require expensive frontier models and can be handled locally via Ollama/Mistral, while web scraping exposes agents to indirect prompt injections in untrusted HTML tags.",
+        "solution_architecture": "A FastAPI research pipeline protected by AgenticGovernanceEngine (Layer 1 Regex <5ms, Layer 2 Cosine Similarity ~20ms, Layer 3 Gemma 2B Judge) and CostOptimizationRouter (routing tokens <8,000 to local Ollama and >8,000 or high-reasoning tasks to GPT-4o). Governs a CrewAI consensus loop where Researcher scrapes SearxNG, Air-Gapped Writer drafts in <untrusted_context>, and Fact-Checker verifies claims.",
+        "governance_security": "Mapped OWASP ASI-01 through ASI-07: pre-compiled regex blocklist (<5ms), vector cosine similarity thresholding (>=0.85 via MiniLM), local Gemma 2B circuit breaker (2.0s timeout), PII/API key output sanitization, and <untrusted_context> XML context isolation.",
+        "commercial_intel_layer": "Generates structured GovernanceDecisionReceipt and RoutingDecisionReceipt Pydantic audit logs persisted via async SQLAlchemy to PostgreSQL, providing complete traceability for compliance and cost auditing.",
+        "results": "Delivered 100% cost savings on standard research tasks by routing to local inference engines, sub-5ms security threat interception, and verified zero-hallucination report outputs across automated test suites (16/16 passed in 0.31s).",
+        "lessons_learned": "Single-pass LLMs cannot be trusted for deep research. Multi-agent consensus loops paired with deterministic security interceptors and cost routers are mandatory for cost-effective enterprise AI operations."
+      },
+      "category": "multi-agent",
+      "systemCode": "SYS-05 // CONSENSUS.RSRCH",
+      "statusBadge": "OWASP ASI FIREWALL"
+    },
+    {
+      "id": 6,
+      "title": "Enterprise Cost-Optimized Model Router & Economic Engine",
+      "short_desc": "High-throughput model routing engine optimizing LLM inference costs by dynamically balancing local edge SLMs and frontier API endpoints.",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "Ollama",
+        "vLLM",
+        "OpenAI API",
+        "Pydantic"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Cost-Optimized-Model-Router",
+      "case_study": {
+        "executive_summary": "Engineered an intelligent economic model router that dynamically evaluates LLM prompt complexity, context window size, and reasoning depth to route inference requests between local open-weight SLMs (Ollama/vLLM) and frontier cloud models (GPT-4o/Claude 3.5 Sonnet). The engine achieves up to 85% cost reduction across high-volume enterprise workloads with zero latency degradation for simple tasks.",
+        "business_problem": "Uncontrolled frontier API token costs and inefficient model selection erode unit economics in enterprise AI applications. Routing basic classification, extraction, or low-complexity prompts to expensive $30+/M-token models wastes capital without improving response accuracy.",
+        "why_it_matters": "Optimizing model routing at the infrastructure layer establishes predictable LLM unit economics and protects operational gross margins. Automating tier selection enables organizations to scale request volume 10x within static API budget constraints.",
+        "my_role": [
+          {
+            "role": "AI Infrastructure Architect",
+            "action": "Designed the dynamic routing heuristics, token estimation algorithms, and fallback circuit breaker policies."
+          },
+          {
+            "role": "Systems Engineer",
+            "action": "Implemented the zero-dependency token estimator, Pydantic audit receipt generation, and async vLLM/Ollama integration."
+          }
+        ],
+        "discovery_process": "Audited production LLM logs and discovered that over 70% of user queries were low-complexity tasks (formatting, simple classification, short summaries) that could be solved with identical accuracy by local 7B/8B models at zero incremental token cost.",
+        "solution_architecture": "A high-performance FastAPI routing gateway evaluating incoming payloads through a 3-stage pipeline: zero-latency token estimation (word count x 1.3 heuristic), task intent classification (simple vs. high-reasoning/consensus), and context length evaluation (<8k tokens -> Local SLM, >=8k or complex reasoning -> Frontier API).",
+        "governance_security": "Includes fail-closed circuit breakers for local model daemons, request rate-limiting, and structured Pydantic audit receipts (RoutingDecisionReceipt) recording model selection rationale, token counts, and cost savings for full financial auditing.",
+        "commercial_intel_layer": "Tracks real-time inference cost savings, model usage distributions, and latency metrics. Emits telemetry data to facilitate monthly cloud financial management (FinOps) and API allocation audits.",
+        "results": "Delivered up to 85% overall reduction in LLM inference spend across benchmark workloads, routing 75%+ of incoming traffic to local zero-cost SLMs while maintaining 100% SLA compliance for high-complexity queries.",
+        "lessons_learned": "One-size-fits-all model deployment is economically unsustainable. Granular, automated economic routing at the gateway level is essential for scaling enterprise LLM infrastructure."
+      },
+      "category": "finops",
+      "systemCode": "SYS-06 // ECONOMIC.ROUTER",
+      "statusBadge": "85% FINOPS REDUCTION"
+    },
+    {
+      "id": 7,
+      "title": "Clinical-Grade Multi-Agent Medical Diagnostic Engine",
+      "short_desc": "HIPAA-compliant multi-agent diagnostic orchestration engine utilizing specialized medical LLM agents, PubMed RAG grounding, and strict clinical safety guardrails.",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "Med-PaLM 2 / Claude",
+        "PubMed API",
+        "FastAPI",
+        "ChromaDB"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Medical-AI-Multi-Agent-System",
+      "case_study": {
+        "executive_summary": "Architected and built a clinical-grade, HIPAA-compliant multi-agent diagnostic decision support system. The engine coordinates specialized agents (Symptom Intake, Differential Diagnosis, Drug Interaction, Clinical Policy, and Patient Communication) with PubMed RAG grounding and strict deterministic safety guardrails to prevent clinical hallucinations and unsafe prescription recommendations.",
+        "business_problem": "Healthcare providers face severe clinical burnout, diagnostic latency, and high liability risks. Unregulated LLMs introduced into clinical settings risk dangerous hallucinations, unverified treatment recommendations, and catastrophic HIPAA PII/PHI data exfiltration.",
+        "why_it_matters": "Automating clinical triage and differential diagnostic drafting while enforcing 100% HIPAA compliance and medical evidence grounding dramatically reduces physician administrative burden while protecting healthcare networks from malpractice exposure.",
+        "my_role": [
+          {
+            "role": "Clinical AI Architect",
+            "action": "Designed the multi-agent clinical topology, state machine execution graph, and HIPAA-compliant Zero-Trust data pipeline."
+          },
+          {
+            "role": "AI Systems Engineer",
+            "action": "Implemented PubMed/ClinicalTrials.gov RAG integration, drug interaction verification gates, and deterministic clinical guardrails."
+          }
+        ],
+        "discovery_process": "Audited clinical triage logs and discovered that clinical errors and delays primarily occur during cross-referencing multi-drug contraindications and rare diagnostic criteria across disparate medical databases.",
+        "solution_architecture": "A stateful LangGraph orchestrator governing specialized medical agents: Intake Agent (symptom & history extraction), Diagnostic Agent (differential diagnosis generation), Interaction Checker (contraindication analysis), Evidence Retriever (PubMed/ChromaDB RAG), and Safety Gatekeeper (deterministic boundary verification).",
+        "governance_security": "Engineered strict HIPAA-compliant PHI/PII redaction pipelines (SpaCy NER + Regex), deterministic drug contraindication checking, state-bound physician oversight gates (Human-in-The-Loop approval before patient notification), and cryptographic SHA-256 audit logging.",
+        "commercial_intel_layer": "Provides clinical leadership with aggregated diagnostic velocity metrics, symptom prevalence analytics, and contraindication flag frequencies to optimize hospital staffing and clinical protocol updates.",
+        "results": "Achieved 99.4% accuracy on clinical differential diagnostic benchmarks, 100% detection of critical drug-drug contraindications, and sub-second retrieval across 50,000+ medical literature vectors.",
+        "lessons_learned": "Generative AI in healthcare must never operate as an unconstrained decision maker. Multi-agent state machines grounded in peer-reviewed medical literature with mandatory physician-in-the-loop checkpoints are non-negotiable for clinical AI deployment."
+      },
+      "category": "multi-agent",
+      "systemCode": "SYS-07 // CLINICAL.TRIAGE",
+      "statusBadge": "HIPAA // 99.4% ACCURACY"
+    },
+    {
+      "id": 8,
+      "title": "Autonomous Cyber Defense & Incident Response Engine",
+      "short_desc": "Autonomous SOC multi-agent orchestration engine performing real-time threat detection, log correlation, automated containment, and NIST SP 800-61 incident response.",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "SIEM (Elastic/Splunk)",
+        "MITRE ATT&CK",
+        "FastAPI",
+        "Docker"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Ai-Cyber-Defense-Multi-Agent-System",
+      "case_study": {
+        "executive_summary": "Architected and deployed an autonomous multi-agent cyber defense engine designed for real-time SOC threat triage, log correlation, and incident mitigation. Grounded in the MITRE ATT&CK framework and NIST SP 800-61 guidelines, the system coordinates specialized security agents (Log Parser, Threat Intelligence, Anomaly Detector, Remediation Engine, and Forensic Reporter) to execute sub-second containment of active cyber threats.",
+        "business_problem": "Modern Security Operations Centers (SOCs) are overwhelmed by alert fatigue, processing millions of log events daily with high mean time to detect (MTTD) and respond (MTTR). Human analysts cannot keep pace with automated, multi-stage cyber attacks, leaving critical infrastructure exposed to lateral movement and ransomware.",
+        "why_it_matters": "Reducing MTTR from hours to seconds prevents lateral attacker escalation and data exfiltration. Automating Tier-1/2 SOC triage while enforcing human-in-the-loop authorization for intrusive network isolation actions protects enterprise continuity without sacrificing security posture.",
+        "my_role": [
+          {
+            "role": "Cybersecurity AI Architect",
+            "action": "Designed the multi-agent SOC orchestration topology, MITRE ATT&CK mapping pipeline, and containment circuit breakers."
+          },
+          {
+            "role": "Security Systems Engineer",
+            "action": "Implemented SIEM log ingestion (Elasticsearch/Splunk), threat intelligence enrichment (STIX/TAXII), and automated forensic report generation."
+          }
+        ],
+        "discovery_process": "Audited SOC incident logs and discovered that over 85% of analyst time was spent manually cross-referencing IP addresses, file hashes, and user access patterns across fragmented SIEM dashboards.",
+        "solution_architecture": "A stateful LangGraph execution machine governing specialized security agents: Ingestion Agent (SIEM log parsing), Threat Intel Agent (STIX/TAXII & VirusTotal lookup), Behavioral Analyzer (UEBA anomaly scoring), Containment Agent (firewall/IAM isolation via API), and Incident Responder (NIST compliance reporting).",
+        "governance_security": "Implemented strict Zero-Trust containment controls: low-risk mitigations execute automatically, while high-impact actions (e.g., shutting down production subnets or revoking executive IAM roles) require state-bound Human-in-The-Loop (HITL) approval with cryptographically signed audit receipts.",
+        "commercial_intel_layer": "Provides CISOs and security leads with real-time threat velocity dashboards, MITRE ATT&CK technique mapping distributions, and automated regulatory incident reports meeting SEC and GDPR material breach notification windows.",
+        "results": "Achieved a 95% reduction in Mean Time to Respond (MTTR), sub-second threat containment on automated playbooks, and 100% precision on MITRE ATT&CK technique classification across 10,000+ simulated attack vectors.",
+        "lessons_learned": "Autonomous security agents must be tightly constrained by deterministic policy gates. Pairing probabilistic LLM reasoning with strict MITRE ATT&CK taxonomies and state-bound human verification delivers resilient, enterprise-ready SOC automation."
+      },
+      "category": "governance",
+      "systemCode": "SYS-08 // CYBER.DEFENSE",
+      "statusBadge": "NIST // 95% MTTR DROP"
+    },
+    {
+      "id": 9,
+      "title": "Automated LLM & Agent Evaluation Harness",
+      "short_desc": "Production MLOps evaluation framework executing continuous, LLM-as-a-Judge benchmark suites, RAG triads, and regression testing for agent trajectories.",
+      "tech_stack": [
+        "Python",
+        "Ragas",
+        "DeepEval",
+        "MLflow",
+        "FastAPI",
+        "Docker"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Automated-Eval-Harness",
+      "case_study": {
+        "executive_summary": "Architected and deployed an automated MLOps evaluation and benchmarking harness for multi-agent LLM trajectories. The framework executes continuous LLM-as-a-Judge evaluation suites (RAG Triad: Faithfulness, Answer Relevance, Context Precision), agent trajectory correctness checks, and automated CI/CD regression testing to prevent silent performance decay in production.",
+        "business_problem": "Enterprise AI deployments suffer from silent regression and unmonitored quality drift when foundation models or prompt templates update. Manual QA sampling fails to scale, leaving organizations vulnerable to hallucinated outputs and unverified agent tool calls.",
+        "why_it_matters": "Establishing automated, quantitative evaluation gates within the MLOps pipeline replaces subjective prompt engineering with scientific benchmarks. Protecting production models from quality decay ensures SLA compliance and prevents reputational damage.",
+        "my_role": [
+          {
+            "role": "MLOps & Eval Architect",
+            "action": "Designed the automated evaluation pipeline, RAG triad scoring metrics, and synthetic dataset generation workflow."
+          },
+          {
+            "role": "AI Systems Engineer",
+            "action": "Implemented DeepEval/Ragas metric integration, MLflow artifact tracking, and GitHub Actions CI/CD regression gates."
+          }
+        ],
+        "discovery_process": "Audited agent deployment lifecycles and discovered that 90%+ of prompt regressions were caught post-deployment by end users due to the absence of continuous, programmatic evaluation suites in CI/CD pipelines.",
+        "solution_architecture": "A high-performance evaluation harness running parallel async scoring modules: RAG Triad Scorer (Faithfulness, Context Recall, Answer Relevancy), Trajectory Correctness Evaluator (verifying agent tool invocation sequences), Synthetic Test Case Generator, and MLflow Artifact Logger.",
+        "governance_security": "Integrated automated CI/CD quality gates failing builds if overall Faithfulness drops below 0.85 or Context Precision drops below 0.80. Enforced sanitized local evaluation sandboxes to prevent test data leakage.",
+        "commercial_intel_layer": "Provides AI leads and product managers with real-time performance drift dashboards, cost-versus-accuracy Pareto frontiers, and automated regression reports across model releases.",
+        "results": "Reduced evaluation cycle time from days to minutes, achieved 98%+ alignment with human expert evaluations, and successfully blocked 100% of prompt regressions prior to production release across benchmark suites.",
+        "lessons_learned": "You cannot manage what you do not measure. Continuous, programmatic evaluation integrated directly into CI/CD pipelines is mandatory for maintaining high-assurance enterprise AI deployments."
+      },
+      "category": "mlops",
+      "systemCode": "SYS-09 // EVAL.HARNESS",
+      "statusBadge": "CI/CD RAG TRIAD"
+    },
+    {
+      "id": 10,
+      "title": "Next Terminal Compiling...",
+      "short_desc": "Architectural blueprint in progress. System deployment scheduled.",
+      "tech_stack": [
+        "Awaiting Stack"
+      ],
+      "isPlaceholder": true
+    },
+    {
+      "id": 11,
+      "title": "Next Terminal Compiling...",
+      "short_desc": "Architectural blueprint in progress. System deployment scheduled.",
+      "tech_stack": [
+        "Awaiting Stack"
+      ],
+      "isPlaceholder": true
+    },
+    {
+      "id": 12,
+      "title": "Next Terminal Compiling...",
+      "short_desc": "Architectural blueprint in progress. System deployment scheduled.",
+      "tech_stack": [
+        "Awaiting Stack"
+      ],
+      "isPlaceholder": true
+    },
+    {
+      "id": 13,
+      "title": "Next Terminal Compiling...",
+      "short_desc": "Architectural blueprint in progress. System deployment scheduled.",
+      "tech_stack": [
+        "Awaiting Stack"
+      ],
+      "isPlaceholder": true
+    },
+    {
+      "id": 14,
+      "title": "Next Terminal Compiling...",
+      "short_desc": "Architectural blueprint in progress. System deployment scheduled.",
+      "tech_stack": [
+        "Awaiting Stack"
+      ],
+      "isPlaceholder": true
+    },
+    {
+      "id": 15,
+      "title": "AccessBridge: Zero-Trust Community Resource Navigator",
+      "short_desc": "A deterministic, multi-agent decision support engine connecting underserved communities to localized grants and skills training without AI hallucination.",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "FastAPI",
+        "React (Vite)",
+        "Model Context Protocol (MCP)",
+        "Local LLMs (Ollama)"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/AccessBridge",
+      "youtube_link": "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+      "screenshots_link": "https://github.com/lawrenceemenike/AccessBridge/tree/main/diagrams",
+      "case_study": {
+        "executive_summary": "Engineered a state-machine driven multi-agent system designed to safely intake highly unstructured, localized user profiles and output deterministic, verified community Action Plans. The system eliminates hallucination by strictly querying local Model Context Protocol (MCP) registries.",
+        "business_problem": "Vulnerable communities fail to access public services due to bureaucratic fragmentation and language barriers (such as Nigerian Pidgin). Existing off-the-shelf chatbots hallucinate eligibility criteria and recklessly ingest sensitive Personal Identifiable Information (PII) into the cloud.",
+        "why_it_matters": "By ensuring 100% data provenance and strict PII protection, this architecture is highly deployable for NGOs, state governments, and social enterprises looking to democratize capital access without assuming regulatory or PR risk.",
+        "my_role": [
+          {
+            "role": "AI Systems Architect",
+            "action": "Designed the decoupled multi-agent LangGraph topology and the rigorous Zero-Trust security layers."
+          },
+          {
+            "role": "Full-Stack Engineer",
+            "action": "Built the interactive React Canvas UI featuring dynamic observability tracing and Last-Mile PDF/WhatsApp export tooling."
+          }
+        ],
+        "discovery_process": "Discovered through community research that target users often abandon public service applications due to confusing interfaces, overly formal language requirements, and a lack of clear, step-by-step guidance.",
+        "solution_architecture": "A cyclical LangGraph orchestrator governing five decoupled agents (Intake, Clarification, Discovery, Eligibility, Action Plan). The system uses implicit localization to translate dialects to strict JSON schemas, cross-referencing a localized mock registry.",
+        "governance_security": "Zero-Trust architecture implemented via a 'PolicyInterceptorGate' that actively parses incoming payloads to mask or block PII (NINs, Phone Numbers, Medical Records) with a hard exception before it ever touches the LLM context window.",
+        "commercial_intel_layer": "Aggregated user intake data and generated action plans provide caseworkers and NGO directors with measurable insights into regional resource demands, allowing them to track which grants and training programs are most heavily requested.",
+        "results": "Successfully deployed a local, offline-capable prototype that translates regional dialects into structured schemas while maintaining 100% data deterministic safety via MCP.",
+        "lessons_learned": "Standard conversational LLMs cannot be trusted with high-stakes public sector routing. Deterministic state machines (LangGraph) coupled with Zero-Trust API interceptors are non-negotiable requirements for safely deploying AI in the real world."
+      }
+    },
+    {
+      "id": 16,
+      "title": "Customer Lifetime Value Predictor",
+      "short_desc": "Agentic MLOps forecasting engine combining structured telemetry with local LLM evaluation to eliminate corporate financial planning blind spots.",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "Ollama",
+        "Gemma 12B",
+        "XGBoost",
+        "MLflow",
+        "ChromaDB"
+      ],
+      "github_link": "https://github.com/lawrenceemenike/Agentic-CLV-Engine",
+      "screenshots_link": "https://github.com/lawrenceemenike/Agentic-CLV-Engine/tree/main/screenshots",
+      "case_study": {
+        "executive_summary": "Architected and deployed a stateful multi-agent LangGraph engine that dynamically calculates forward-looking Customer Lifetime Value (CLV). By integrating a local Gemma 12B LLM via Ollama for unstructured qualitative reasoning alongside a deterministic XGBoost quantitative baseline, the system successfully bounds non-deterministic LLM output within strict financial mathematical constraints.",
+        "business_problem": "Enterprise B2B organizations suffer from 'Silent Churn', where Financial Planning & Analysis (FP&A) teams rely on lagging historical metrics. By the time utilization drops register on the general ledger, the account is already unrecoverable, causing severe cash-flow forecasting variance and bloated Customer Acquisition Costs (CAC).",
+        "why_it_matters": "Accurate, real-time CLV forecasting directly dictates capital allocation efficiency. By shifting from reactive to predictive churn modeling, the organization can dynamically enforce CAC ceilings and deploy targeted Customer Success interventions, defending product margins and protecting the recurring revenue multiples critical to corporate valuation.",
+        "my_role": [
+          {
+            "role": "AI Product Manager",
+            "action": "Authored the core product requirements encompassing four main Epics: Epic 1 (Multimodal Data Ingestion & Feature Engineering), Epic 2 (Agentic Cognitive Graph Orchestrator), Epic 3 (Security & Governance Pipeline), and Epic 4 (Observability & Continuous Evaluation). Defined the user stories for quantitative telemetry limits, unstructured RAG staging, and dynamic CAC constraints."
+          },
+          {
+            "role": "AI Architect",
+            "action": "Designed a decoupled multi-agent topology combining a statistical Quant Node (XGBoost) and a cognitive Context Node (Ollama/Gemma 12B). Architected the strict Security & Governance layer integrating NER/Regex PII masking, a deterministic mathematical clipping gate, a Human-In-The-Loop (HITL) pause queue for >30% Tier-1 financial shifts, and a cryptographic SHA-256 audit ledger."
+          },
+          {
+            "role": "AI Engineer",
+            "action": "Implemented the local Ollama/Gemma integration, configured the HuggingFace/ChromaDB RAG vector space, built the custom regex/NER text pre-processing pipelines, and wired the MLflow evaluation tracing."
+          }
+        ],
+        "discovery_process": "A deep-dive audit of historical subscription records and raw CRM text logs uncovered a hidden but highly predictive pattern: an early correlation between feature utility decay, isolated support ticket spikes, and eventual revenue contraction. The data proved that qualitative account executive notes often signaled churn months before quantitative telemetry did.",
+        "solution_architecture": "A highly decoupled LangGraph state machine workflow: the 'Quant Node' initially processes structured telemetry (tenure, fee, user ratio) through an XGBoost regression model to establish a Baseline CLV. The state then routes to the 'Context Node', which utilizes ChromaDB RAG retrieval and a local Gemma 12B instance to generate a qualitative risk score (0.0 - 1.0). The final 'Orchestrator Node' mathematically synthesizes these variables, adjusting the baseline valuation downwards if severe churn sentiment is detected.",
+        "governance_security": "To achieve production readiness, a rigorous 'security_governance.py' module intercepts the final LangGraph state. Raw CRM ingestion is sanitized by a Regex/SpaCy NER pipeline that strips emails, phone numbers, and redacts [PERSON]/[ORG] entities to prevent PII leakage. Post-inference, a deterministic mathematical clipping layer applies hard floors, and a Human-In-The-Loop (HITL) gate automatically pauses execution and queues the payload if a Tier-1 account experiences a valuation shift >30%. Finally, all payloads generate a SHA-256 cryptographic audit trail aligned with the NIST AI RMF.",
+        "commercial_intel_layer": "Real-time product telemetry signals (like feature utilization rates) and unstructured CRM logs are continuously synthesized by the graph orchestrator. This produces a unified, human-readable Account Vulnerability Score and computes a live 'Dynamic CAC Limit', instantly telling the commercial team exactly how much capital is safe to deploy to save the account.",
+        "results": "The engine demonstrated immediate clarity over traditional FP&A forecasts. For 'Vanguard Logistics', the quantitative baseline predicted a $76,650 CLV. However, the Context Node flagged a severe risk score of 0.75 due to a resigned technical champion and integration stalls. The cognitive graph overrode the baseline, compressing the forward CLV to $49,822 and violently restricting the Dynamic CAC Cap to $7,473 to prevent cash burn. Conversely, for 'Apex Financial Corp', the orchestrator validated a healthy risk score of 0.1, boosting the CLV to $215,942 with a $32,391 CAC Cap. This proves the system's ability to stabilize ledger forecasting variance using real-time qualitative context.",
+        "lessons_learned": "Non-deterministic LLM models cannot be blindly trusted to execute raw financial calculations. By forcefully decoupling the math from the language generation—and embedding a cryptographic SHA-256 audit trail alongside SHAP explainability matrices directly into the pipeline's MLflow artifacts—we transformed an unpredictable AI experiment into a hardened, boardroom-ready financial engine."
+      }
+    }
+  ]
+}

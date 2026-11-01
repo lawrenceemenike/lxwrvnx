@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #070A0E;
+    --shadow-slate-teal: #0D1B24;
+    --ember-primary: #FF6B1A;
+    --ember-bright: #FFA14A;
+    --ember-dim: rgba(255, 107, 26, 0.2);
+    --telemetry-cyan: #38BDF8;
+    --telemetry-cyan-dim: rgba(56, 189, 248, 0.2);
+    --glass-panel: rgba(13, 27, 36, 0.65);
+    --glass-border: rgba(255, 107, 26, 0.35);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg-obsidian);
+    color: #F1F5F9;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Fonts */
+.font-mono-hud {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Smoked Glass Holographic Panels */
+.glass-hologram {
+  background: linear-gradient(135deg, rgba(13, 27, 36, 0.75) 0%, rgba(7, 10, 14, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 107, 26, 0.35);
+  box-shadow: 0 0 25px rgba(255, 107, 26, 0.12), inset 0 0 20px rgba(56, 189, 248, 0.05);
+}
+
+.glass-hologram-cyan {
+  background: linear-gradient(135deg, rgba(13, 27, 36, 0.75) 0%, rgba(7, 10, 14, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12), inset 0 0 20px rgba(255, 107, 26, 0.05);
+}
+
+.glass-pill {
+  background: rgba(13, 27, 36, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Ember LED Light Bloom */
+.glow-ember {
+  box-shadow: 0 0 15px rgba(255, 107, 26, 0.6), 0 0 30px rgba(255, 107, 26, 0.3);
+}
+
+.glow-ember-text {
+  text-shadow: 0 0 10px rgba(255, 107, 26, 0.8), 0 0 20px rgba(255, 161, 74, 0.5);
+}
+
+.glow-cyan-text {
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8), 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6), 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+/* 3D Perspective Scene Container */
+.perspective-viewport {
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #070A0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6B1A;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFA14A;
+}
+
+/* Subtle Scanlines & Vignette */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+.vignette-radial {
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(7, 10, 14, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Concentric floor ring pulse */
+@keyframes ringPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.animate-ring-pulse {
+  animation: ringPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Equalizer bar animation */
+@keyframes eqBounce {
+  0%, 100% {
+    height: 20%;
+  }
+  50% {
+    height: 95%;
+  }
+}
