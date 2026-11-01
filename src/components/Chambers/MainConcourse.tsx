@@ -31,7 +31,7 @@ const DOORS: DoorData[] = [
     discipline: 'PHYSICAL OPTICS, MOTORSPORT & REMBRANDT LIGHTING',
     specs: '3 CATEGORIES // 50 CURATED CANVASES',
     wall: 'left',
-    image: '/media/photography/street/project-specter.jpg',
+    image: '/media/photography/street/DSC03657.jpg',
     cameraZ: 250,
     cameraX: 200,
     cameraYaw: 35
@@ -44,7 +44,7 @@ const DOORS: DoorData[] = [
     discipline: 'NEURAL NETWORKS & LATENT SYNTHESIS',
     specs: '9:16 VERTICAL MONOLITHS // 16:9 8K RENDERS',
     wall: 'left',
-    image: '/media/ai-art/neural-synapse.jpg',
+    image: '/media/ai-art/Lucid_Origin_A_vast_open_interior_resembling_a_futuristic_obse_0.jpg',
     cameraZ: 450,
     cameraX: 180,
     cameraYaw: 28

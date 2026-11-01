@@ -11,191 +11,1711 @@
         "id": "portraits",
         "title": "01 // PORTRAITS",
         "subtitle": "Rembrandt Chiaroscuro & Kinetic Faces",
-        "heroImage": "/media/photography/portraits/portrait-rembrandt.jpg"
+        "heroImage": "/media/photography/portraits/DSC00486.jpg"
       },
       {
         "id": "street",
         "title": "02 // STREET",
         "subtitle": "Nocturne Asphalt, Speed & Concrete Caverns",
-        "heroImage": "/media/photography/street/project-specter.jpg"
+        "heroImage": "/media/photography/street/DSC03657.jpg"
       },
       {
         "id": "light-art",
         "title": "03 // LIGHT ART",
         "subtitle": "Aerodynamic Photonic Trails & Long Exposure",
-        "heroImage": "/media/photography/light-art/light-art-hyper.jpg"
+        "heroImage": "/media/photography/light-art/DSC00263.jpg"
       }
     ],
     "items": [
       {
-        "id": "photo-01",
-        "title": "PROJECT // SPECTER",
-        "category": "street",
-        "status": "COMPLETED",
+        "id": "photo-portraits-1",
+        "title": "PORTRAITS // DSC00486",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
         "coordinates": "06.45° N, 03.39° E",
         "optics": {
           "lens": "35MM F/1.4",
-          "shutter": "1/250s",
-          "iso": 100,
-          "body": "ALPHA R",
-          "focalLength": "35mm",
-          "aperture": "f/1.4"
-        },
-        "story": "Captured amidst the dense industrial haze. A study on intersecting geometrics, speed, and man-made caverns.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/street/project-specter.jpg",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "photo-02",
-        "title": "VELOCE // APEX",
-        "category": "street",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "70-200MM F/2.8",
-          "shutter": "1/60s",
-          "iso": 50,
-          "body": "ALPHA R",
-          "focalLength": "135mm",
-          "aperture": "f/2.8"
-        },
-        "story": "High-velocity panning exposure of GT endurance machinery attacking the wet apex under brooding overcast skies.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/street/race-panning.jpg",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "photo-03",
-        "title": "CANYON // OBSCURA",
-        "category": "street",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "28MM F/2.0",
           "shutter": "1/500s",
-          "iso": 400,
-          "body": "LEICA Q3",
-          "focalLength": "28mm",
-          "aperture": "f/2.0"
-        },
-        "story": "Solitary silhouette traversing an architectural stone crevasse. Deep charcoal shadows sliced by natural morning sun shafts.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/street/street-noir.jpg",
-        "aspectRatio": "3:2"
-      },
-      {
-        "id": "photo-04",
-        "title": "MONOLITH // GAZE",
-        "category": "portraits",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "85MM F/1.4",
-          "shutter": "1/160s",
           "iso": 100,
-          "body": "HASSELBLAD X2D",
-          "focalLength": "85mm",
-          "aperture": "f/1.4"
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
         },
-        "story": "Minimalist high-fashion profile rendered in classical Rembrandt amber rim lighting against deep teal carbon backdrop.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-rembrandt.jpg",
-        "aspectRatio": "9:16"
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00486.jpg",
+        "aspectRatio": "3:4"
       },
       {
-        "id": "photo-05",
-        "title": "CYBER // ZENITH",
+        "id": "photo-portraits-2",
+        "title": "PORTRAITS // DSC00541",
         "category": "portraits",
-        "status": "COMPLETED",
+        "status": "EXHIBITED // MASTER ARCHIVE",
         "coordinates": "06.45° N, 03.39° E",
         "optics": {
           "lens": "50MM F/1.2",
-          "shutter": "1/320s",
-          "iso": 80,
-          "body": "ALPHA R",
-          "focalLength": "50mm",
-          "aperture": "f/1.2"
-        },
-        "story": "Contemplative human presence anchored within sharp aerodynamic tailoring. Subtle rim lighting accents jawline definition.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-cyber-monolith.jpg",
-        "aspectRatio": "9:16"
-      },
-      {
-        "id": "photo-06",
-        "title": "OBSIDIAN // VEIL",
-        "category": "portraits",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "105MM F/1.4",
-          "shutter": "1/200s",
-          "iso": 100,
-          "body": "ALPHA R",
-          "focalLength": "105mm",
-          "aperture": "f/1.4"
-        },
-        "story": "An exploration of restraint and composure. Dark matter textiles meeting hyper-focused optical micro-textures.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-shadow-gaze.jpg",
-        "aspectRatio": "9:16"
-      },
-      {
-        "id": "photo-07",
-        "title": "VORTEX // VELOCITY",
-        "category": "light-art",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "16-35MM F/4",
-          "shutter": "15.0s",
-          "iso": 50,
-          "body": "ALPHA R",
-          "focalLength": "16mm",
-          "aperture": "f/8.0"
-        },
-        "story": "A 15-second manual rotation exposure inside a circular aerodynamic tunnel. Dual ember and cyan photonic spirals converging into singularity.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-hyper.jpg",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "photo-08",
-        "title": "KINETIC // FLUX",
-        "category": "light-art",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "24MM F/2.8",
-          "shutter": "8.0s",
-          "iso": 100,
-          "body": "ALPHA R",
-          "focalLength": "24mm",
-          "aperture": "f/5.6"
-        },
-        "story": "Kinetic light ribbon choreography captured along concrete architectural corridors with continuous pulse emission.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-vortex.jpg",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "photo-09",
-        "title": "ASPHALT // MONSOON",
-        "category": "street",
-        "status": "COMPLETED",
-        "coordinates": "06.45° N, 03.39° E",
-        "optics": {
-          "lens": "35MM F/1.4",
-          "shutter": "1/400s",
+          "shutter": "1/500s",
           "iso": 200,
           "body": "LEICA M11",
           "focalLength": "35mm",
-          "aperture": "f/2.8"
+          "aperture": "f/1.8"
         },
-        "story": "Reflective rainwater sheeting across the starting grid. Telemetry beacons flickering through the mist.",
-        "ownership": "EXCLUSIVE / 01 OF 01",
-        "image": "/media/photography/street/asphalt-monsoon.jpg",
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00541.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-3",
+        "title": "PORTRAITS // DSC00749",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00749.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-4",
+        "title": "PORTRAITS // DSC00769",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00769.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-5",
+        "title": "PORTRAITS // DSC00887",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00887.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-6",
+        "title": "PORTRAITS // DSC00888",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00888.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-7",
+        "title": "PORTRAITS // DSC00907",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00907.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-8",
+        "title": "PORTRAITS // DSC00922",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00922.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-9",
+        "title": "PORTRAITS // DSC00940 2",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00940%20(2).jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-10",
+        "title": "PORTRAITS // DSC00997",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC00997.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-11",
+        "title": "PORTRAITS // DSC01026",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01026.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-12",
+        "title": "PORTRAITS // DSC01062",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01062.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-13",
+        "title": "PORTRAITS // DSC01076",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01076.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-14",
+        "title": "PORTRAITS // DSC01167",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01167.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-15",
+        "title": "PORTRAITS // DSC01337",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01337.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-16",
+        "title": "PORTRAITS // DSC01360",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01360.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-17",
+        "title": "PORTRAITS // DSC01432",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01432.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-18",
+        "title": "PORTRAITS // DSC01516",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01516.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-19",
+        "title": "PORTRAITS // DSC01616",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01616.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-20",
+        "title": "PORTRAITS // DSC01694",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01694.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-21",
+        "title": "PORTRAITS // DSC01703",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01703.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-22",
+        "title": "PORTRAITS // DSC01731",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01731.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-23",
+        "title": "PORTRAITS // DSC01757",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01757.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-24",
+        "title": "PORTRAITS // DSC01761",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01761.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-25",
+        "title": "PORTRAITS // DSC01766",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01766.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-26",
+        "title": "PORTRAITS // DSC01803",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01803.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-27",
+        "title": "PORTRAITS // DSC01967",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC01967.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-28",
+        "title": "PORTRAITS // DSC02142",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC02142.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-29",
+        "title": "PORTRAITS // DSC02177",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC02177.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-30",
+        "title": "PORTRAITS // DSC02216",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC02216.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-31",
+        "title": "PORTRAITS // DSC02265",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC02265.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-32",
+        "title": "PORTRAITS // DSC02313",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC02313.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-33",
+        "title": "PORTRAITS // DSC02429 1",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC02429%20(1).jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-34",
+        "title": "PORTRAITS // DSC03253",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC03253.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-35",
+        "title": "PORTRAITS // DSC03277",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC03277.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-36",
+        "title": "PORTRAITS // DSC03671",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/DSC03671.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-37",
+        "title": "PORTRAITS // IMG_4725",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/IMG_4725.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-38",
+        "title": "PORTRAITS // IMG_6114",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/IMG_6114.jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-portraits-39",
+        "title": "PORTRAITS // IMG_6726 1",
+        "category": "portraits",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in portraits collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/portraits/IMG_6726%20(1).jpg",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "photo-street-1",
+        "title": "STREET // DSC01516 1",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC01516%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-2",
+        "title": "STREET // DSC01787",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC01787.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-3",
+        "title": "STREET // DSC02080",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC02080.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-4",
+        "title": "STREET // DSC02404",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC02404.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-5",
+        "title": "STREET // DSC03002",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC03002.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-6",
+        "title": "STREET // DSC03045",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC03045.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-7",
+        "title": "STREET // DSC03493 1",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC03493%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-8",
+        "title": "STREET // DSC03493",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC03493.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-9",
+        "title": "STREET // DSC03597",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC03597.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-10",
+        "title": "STREET // DSC03657",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC03657.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-11",
+        "title": "STREET // DSC04039",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04039.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-12",
+        "title": "STREET // DSC04338",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04338.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-13",
+        "title": "STREET // DSC04395",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04395.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-14",
+        "title": "STREET // DSC04422",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04422.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-15",
+        "title": "STREET // DSC04609",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04609.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-16",
+        "title": "STREET // DSC04652",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04652.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-17",
+        "title": "STREET // DSC04694",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04694.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-18",
+        "title": "STREET // DSC04701",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04701.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-19",
+        "title": "STREET // DSC04711",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04711.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-20",
+        "title": "STREET // DSC04766",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04766.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-21",
+        "title": "STREET // DSC04870",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04870.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-22",
+        "title": "STREET // DSC04925",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04925.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-23",
+        "title": "STREET // DSC04938",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC04938.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-24",
+        "title": "STREET // DSC05390",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/DSC05390.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-25",
+        "title": "STREET // IMG_2224",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/IMG_2224.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-26",
+        "title": "STREET // IMG_6695",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/IMG_6695.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-27",
+        "title": "STREET // IMG_6702 1",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/IMG_6702%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-street-28",
+        "title": "STREET // IMG_6708",
+        "category": "street",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in street collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/street/IMG_6708.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-1",
+        "title": "LIGHT-ART // DSC00150",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC00150.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-2",
+        "title": "LIGHT-ART // DSC00263",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC00263.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-3",
+        "title": "LIGHT-ART // DSC00518",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC00518.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-4",
+        "title": "LIGHT-ART // DSC00704",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC00704.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-5",
+        "title": "LIGHT-ART // DSC00712 1",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC00712%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-6",
+        "title": "LIGHT-ART // DSC01128",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC01128.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-7",
+        "title": "LIGHT-ART // DSC01211 1",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC01211%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-8",
+        "title": "LIGHT-ART // DSC01211",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC01211.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-9",
+        "title": "LIGHT-ART // DSC01249",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC01249.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-10",
+        "title": "LIGHT-ART // DSC01790",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC01790.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-11",
+        "title": "LIGHT-ART // DSC02477",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC02477.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-12",
+        "title": "LIGHT-ART // DSC02478",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC02478.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-13",
+        "title": "LIGHT-ART // DSC04730",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC04730.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-14",
+        "title": "LIGHT-ART // DSC04787",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC04787.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-15",
+        "title": "LIGHT-ART // DSC05078",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/DSC05078.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-16",
+        "title": "LIGHT-ART // IMG_5221 1",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_5221%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-17",
+        "title": "LIGHT-ART // IMG_5221",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_5221.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-18",
+        "title": "LIGHT-ART // IMG_5708 1",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "85MM F/1.4 GM",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_5708%20(1).jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-19",
+        "title": "LIGHT-ART // IMG_5708",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "24-70MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 300,
+          "body": "SONY ALPHA 1",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_5708.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-20",
+        "title": "LIGHT-ART // IMG_6103",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "70-200MM F/2.8",
+          "shutter": "1/500s",
+          "iso": 400,
+          "body": "HASSELBLAD X2D",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_6103.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-21",
+        "title": "LIGHT-ART // IMG_6111",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "35MM F/1.4",
+          "shutter": "1/500s",
+          "iso": 100,
+          "body": "SONY A7R V",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_6111.jpg",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "photo-light-art-22",
+        "title": "LIGHT-ART // IMG_6702",
+        "category": "light-art",
+        "status": "EXHIBITED // MASTER ARCHIVE",
+        "coordinates": "06.45° N, 03.39° E",
+        "optics": {
+          "lens": "50MM F/1.2",
+          "shutter": "1/500s",
+          "iso": 200,
+          "body": "LEICA M11",
+          "focalLength": "35mm",
+          "aperture": "f/1.8"
+        },
+        "story": "Exhibition canvas in light-art collection by Lawrence Emenike (lxwrvnx).",
+        "ownership": "ARCHIVAL MASTER EDITION / 01 OF 01",
+        "image": "/media/photography/light-art/IMG_6702.jpg",
         "aspectRatio": "16:9"
       }
     ]
@@ -204,573 +1724,573 @@
     "items": [
       {
         "id": "ai-01",
-        "title": "PROJECT // NEURAL SYNAPSE",
+        "title": "SYNTHESIS // FILE 00000000372C61F4A890FB3",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
           "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
-          "steps": 45,
+          "steps": 40,
           "cfg": 7.5,
           "sampler": "DPM++ 2M Karras",
-          "promptExcerpt": "abstract hyper-detailed cybernetic humanoid biomechanical neural lattice emerging from obsidian dark liquid, intricate glowing ember synaptic nodes and razor-thin cyan fiber optic filaments, octan-render 8k",
-          "colorGrading": "Deep Teal and Ember",
-          "seed": "98421074"
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "10000000"
         },
-        "lore": "A speculative architectural convergence between human neural telemetry and self-assembling quantum neural lattices.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/neural-synapse.jpg"
+        "image": "/media/ai-art/file_00000000372c61f4a890fb31d7f9c688.png"
       },
       {
         "id": "ai-02",
-        "title": "PROJECT // CYBERNETIC CORE",
+        "title": "SYNTHESIS // FILE 000000005E5861F79EEE9EF",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 41,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "10789123"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/file_000000005e5861f79eee9efaf95fec63.png"
+      },
+      {
+        "id": "ai-03",
+        "title": "SYNTHESIS // FILE 0000000098F061FD90754E2",
+        "format": "landscape",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 42,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "11578246"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/file_0000000098f061fd90754e22b005b048.png"
+      },
+      {
+        "id": "ai-04",
+        "title": "SYNTHESIS // FILE 00000000D260620A983C9B9",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 43,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "12367369"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/file_00000000d260620a983c9b99076d35f0.jpg"
+      },
+      {
+        "id": "ai-05",
+        "title": "SYNTHESIS // GRAY MINIMAL DIY TIP YOUR ST",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 44,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "13156492"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/Gray%20Minimal%20DIY%20Tip%20Your%20Story_20250621_072635_0000.png"
+      },
+      {
+        "id": "ai-06",
+        "title": "SYNTHESIS // IMAGE-49",
+        "format": "landscape",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 45,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "13945615"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/image-49.png"
+      },
+      {
+        "id": "ai-07",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 46,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "14734738"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_5A_hyperreal_cinematic_seque_3%20(1).jpg"
+      },
+      {
+        "id": "ai-08",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 47,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "15523861"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_An_abstract_vision_of_radian_3.jpg"
+      },
+      {
+        "id": "ai-09",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "landscape",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 48,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "16312984"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_An_ultrarealistic_interior_o_2.jpg"
+      },
+      {
+        "id": "ai-10",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
+        "coordinates": "06.45° N, 03.39° E",
+        "generativeData": {
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 49,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "17102107"
+        },
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
+        "ownership": "ARCHIVAL EDITION / 01 OF 01",
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_An_ultrarealistic_scene_of_a_3%20(1).jpg"
+      },
+      {
+        "id": "ai-11",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
           "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
           "steps": 50,
-          "cfg": 8,
-          "sampler": "Euler Ancestral",
-          "promptExcerpt": "biomechanical central processor core, obsidian liquid cooling channels, amber energy conduits, high-precision carbon weave",
-          "colorGrading": "Deep Obsidian / Ember Bloom",
-          "seed": "44109823"
-        },
-        "lore": "The autonomous heart of the gallery's digital nervous system, regulating heat dispersion and generative memory cycles.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/cybernetic-core.jpg"
-      },
-      {
-        "id": "ai-03",
-        "title": "PROJECT // QUANTUM MIRAGE",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Stable Diffusion 3.5 Large + TensorRT",
-          "steps": 40,
-          "cfg": 7,
-          "sampler": "UniPC",
-          "promptExcerpt": "aerodynamic wind tunnel concourse, infinite parabolic ribs receding into singularity, glowing orange floor guidance lines, cyan telemetry dust particles",
-          "colorGrading": "Teal and Ember Dual-Tone",
-          "seed": "77123901"
-        },
-        "lore": "Simulated wind velocity modeling depicting micro-vortices around high-downforce spatial architecture.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/quantum-mirage.jpg"
-      },
-      {
-        "id": "ai-04",
-        "title": "PROJECT // HYPERION DRIFT",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Custom Pipeline / Flux.1 Schnell",
-          "steps": 35,
-          "cfg": 6.8,
-          "sampler": "DPM++ SDE",
-          "promptExcerpt": "monolithic dark carbon hypercar chassis floating in zero gravity wind tunnel chamber, illuminated by razor thin amber laser scanners",
-          "colorGrading": "High Contrast Obsidian / Cyan Accent",
-          "seed": "11984206"
-        },
-        "lore": "A non-Euclidean aerodynamic study pushing boundary-layer flow past the hypersonic threshold.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/hyperion-drift.jpg"
-      },
-      {
-        "id": "ai-05",
-        "title": "LUMINA // CHRONO LATTICE",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Flux.1 Dev / ComfyUI Node Graph",
-          "steps": 48,
-          "cfg": 7.2,
+          "cfg": 7.5,
           "sampler": "DPM++ 2M Karras",
-          "promptExcerpt": "vertical temporal lattice structure suspended in void, pulsating orange-amber photon threads, crystalline carbon fiber framing, cinematic rim lighting",
-          "colorGrading": "Ember Monolith / Cyan Halo",
-          "seed": "55829104"
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "17891230"
         },
-        "lore": "A time-dilation artifact modeling the crystallization of light waves at sub-zero temperatures.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-hyper.jpg"
-      },
-      {
-        "id": "ai-06",
-        "title": "SPECTRA // OBSIDIAN HORIZON",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Midjourney v6.1 / Raw Style Preset",
-          "steps": 42,
-          "cfg": 8.5,
-          "sampler": "Euler A",
-          "promptExcerpt": "subterranean tunnel cavern with hyper-reflective dark asphalt floor, concentric glowing amber structural ribs curving into distance",
-          "colorGrading": "Matte Charcoal / Ember Ribs",
-          "seed": "33918205"
-        },
-        "lore": "The foundational architectural horizon defining the spatial concourse of Chamber 02.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/vault-rooms/synthesis.jpg"
-      },
-      {
-        "id": "ai-07",
-        "title": "VORTEX // SYNTHETIC AURA",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Stable Diffusion 3.5 Large / ControlNet",
-          "steps": 52,
-          "cfg": 7.8,
-          "sampler": "DPM++ SDE Karras",
-          "promptExcerpt": "vortical spiral of pure luminescent orange energy encircling an obsidian cybernetic pillar, long exposure light trails, micro particles",
-          "colorGrading": "Solar Flare Amber / Cyan Core",
-          "seed": "88219034"
-        },
-        "lore": "Rotational magnetic field generation captured through continuous streak sensor exposure.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-vortex.jpg"
-      },
-      {
-        "id": "ai-08",
-        "title": "AERODYNAMICS // MACH 4",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Custom Pipeline / TensorRT Accelerate",
-          "steps": 38,
-          "cfg": 6.9,
-          "sampler": "UniPC",
-          "promptExcerpt": "supersonic endurance prototype vehicle executing high-g turn on nocturnal wet circuit, cinematic motion blur, amber brake caliper glow",
-          "colorGrading": "Nocturne Asphalt / Amber Heat",
-          "seed": "66291048"
-        },
-        "lore": "Kinetic displacement telemetry measuring surface pressure differentials across carbon composite wings.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/race-panning.jpg"
-      },
-      {
-        "id": "ai-09",
-        "title": "GENESIS // BIOMECHANIC PULSE",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Flux.1 Pro / Latent Dreamer 8K",
-          "steps": 55,
-          "cfg": 8.2,
-          "sampler": "DPM++ 2M",
-          "promptExcerpt": "humanoid synthetic entity adorned with intricate gold-copper filigree and internal fiber-optic circuitry, chiaroscuro lighting, dark studio",
-          "colorGrading": "Rembrandt Ember / Charcoal Shadow",
-          "seed": "12849033"
-        },
-        "lore": "A classical master study reimagined through synthetic biology and computational portraiture.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-rembrandt.jpg"
-      },
-      {
-        "id": "ai-10",
-        "title": "SOLARIS // NEURAL MATRIX",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Midjourney v6.1 / Photonic Engine",
-          "steps": 44,
-          "cfg": 7.4,
-          "sampler": "Euler Ancestral",
-          "promptExcerpt": "panoramic wave of synchronized kinetic light vectors propagating across a subterranean chamber, intense glowing amber and teal frequencies",
-          "colorGrading": "Photonic Amber / Electric Cyan",
-          "seed": "99182045"
-        },
-        "lore": "Simultaneous coherent light pulses transferring multi-terabit tensor calculations across free space.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-velocity.jpg"
-      },
-      {
-        "id": "ai-11",
-        "title": "ECLIPSE // DARK MATTER MONOLITH",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
-        "coordinates": "06.45° N, 03.39° E",
-        "generativeData": {
-          "engine": "Flux.1 Dev + Euler Ancestral",
-          "steps": 46,
-          "cfg": 7.1,
-          "sampler": "Euler A",
-          "promptExcerpt": "towering obsidian cyber monolith flanked by razor-sharp cyan silhouette edges, silent dark cavern, architectural minimalism",
-          "colorGrading": "Vantablack / Cyan Edge",
-          "seed": "44719283"
-        },
-        "lore": "Zero-albedo matter containment vessel serving as an anchor for the subterranean Monolith Forest.",
-        "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-cyber-monolith.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_An_ultrarealistic_scene_wher_0.jpg"
       },
       {
         "id": "ai-12",
-        "title": "NEBULA // SUBTERRANEAN KINETICS",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
         "format": "landscape",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Stable Diffusion 3.5 / DPM++ 2M",
-          "steps": 40,
-          "cfg": 7,
-          "sampler": "DPM++ 2M",
-          "promptExcerpt": "industrial subterranean transport canyon, elevated track rails, steam mist backlit by glowing amber sodium beacons",
-          "colorGrading": "Industrial Sepia / High-Key Amber",
-          "seed": "83910274"
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 51,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "18680353"
         },
-        "lore": "Sub-surface logistical arteries powering the computational infrastructure beneath the exhibition chambers.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/project-specter.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_An_ultrarealistic_scene_wher_3.jpg"
       },
       {
         "id": "ai-13",
-        "title": "APEX // TENSOR VEIL",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "ComfyUI Multi-ControlNet / SDXL",
-          "steps": 50,
-          "cfg": 8,
-          "sampler": "Euler A",
-          "promptExcerpt": "delicate carbon weave facial veil draped across synthetic android profile, micro-LED illumination highlights, subtle teal specular highlights",
-          "colorGrading": "Carbon Teal / Obsidian Matte",
-          "seed": "28491025"
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 52,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "19469476"
         },
-        "lore": "Investigation of synthetic micro-textiles capable of modulating optical reflectivity under direct sensor gaze.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-shadow-gaze.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_An_ultrarealistic_suspended__1.jpg"
       },
       {
         "id": "ai-14",
-        "title": "KINETIC // PHOTON HARVEST",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Flux.1 Schnell / 4-Step Turbo",
-          "steps": 36,
-          "cfg": 6.5,
-          "sampler": "DPM++ SDE",
-          "promptExcerpt": "monsoon rain cascading onto wet high-speed track, telemetry reflection ribbons, neon amber start lights glowing through spray",
-          "colorGrading": "Wet Asphalt / Amber Bloom",
-          "seed": "55192837"
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 53,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "20258599"
         },
-        "lore": "Hydrodynamic surface tension captured during maximum downforce deceleration sequences.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/asphalt-monsoon.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_3D_hyperrealistic_corridor_2.jpg"
       },
       {
         "id": "ai-15",
-        "title": "ZERO // LATENT VORTEX",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "landscape",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Midjourney v6.1 / Biomechanical Weave",
-          "steps": 48,
-          "cfg": 7.9,
-          "sampler": "Euler Ancestral",
-          "promptExcerpt": "centripetal spiral of crystalline neural axons focusing into single point of singularity, glowing amber node clusters, black background",
-          "colorGrading": "Deep Amber / Cyan Singularity",
-          "seed": "91827364"
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 54,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "21047722"
         },
-        "lore": "The mathematical focal point where discrete latent embeddings collapse into physical geometry.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/neural-synapse.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_continuous_overhead_tracki_0.jpg"
       },
       {
         "id": "ai-16",
-        "title": "CHROMA // FLUID DYNAMICS",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Custom Pipeline / Hydro-Dynamics Sim",
-          "steps": 42,
-          "cfg": 7.3,
-          "sampler": "UniPC",
-          "promptExcerpt": "architectural crevasse with high-contrast diagonal shadows, solitary figure silhouetted against glowing amber daylight shaft",
-          "colorGrading": "Chiaroscuro Noir / Warm Ochre",
-          "seed": "73648291"
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 40,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "21836845"
         },
-        "lore": "Natural light shafts slicing monolithic concrete volumes in a study of spatial silence.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/street-noir.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_hyperrealistic_cinematic_w_2.jpg"
       },
       {
         "id": "ai-17",
-        "title": "ORBITAL // CARBON STRATA",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Flux.1 Dev / Carbon Fiber Texture",
-          "steps": 52,
-          "cfg": 7.7,
-          "sampler": "DPM++ 2M",
-          "promptExcerpt": "sculptural aerodynamic cowl constructed from exposed forged carbon and titanium ribbing, amber LED status indicator strip",
-          "colorGrading": "Graphite / Amber Accent",
-          "seed": "62719483"
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 41,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "22625968"
         },
-        "lore": "Structural weight-reduction study utilizing generative topology optimization and composite weaves.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-zenith.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_quiet_subway_platform_comp_3.jpg"
       },
       {
         "id": "ai-18",
-        "title": "TITAN // SUB-ZERO COOLING",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
         "format": "landscape",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Stable Diffusion 3.5 / Cryogenic Refiner",
-          "steps": 45,
-          "cfg": 7.2,
-          "sampler": "Euler A",
-          "promptExcerpt": "apex track machinery cornering through morning fog, illuminated by cold cyan headlight beams and warm tire heat telemetry",
-          "colorGrading": "Cold Cyan / Thermal Amber",
-          "seed": "48291038"
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 42,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "23415091"
         },
-        "lore": "Thermal telemetry overlay depicting brake rotor heat rejection under threshold trail-braking.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/apex-predator.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_vast_abstract_architectura_3.jpg"
       },
       {
         "id": "ai-19",
-        "title": "AETHER // QUANTUM SINGULARITY",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Midjourney v6.1 / Deep Field Graviton",
-          "steps": 50,
-          "cfg": 8.3,
-          "sampler": "DPM++ SDE",
-          "promptExcerpt": "gravitational lens simulation twisting surrounding neural lattice filaments into concentric glowing gold and ember arcs",
-          "colorGrading": "Graviton Ember / Black Void",
-          "seed": "39102847"
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 43,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "24204214"
         },
-        "lore": "Computational model exploring non-linear optical distortion within simulated micro-black-holes.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/cybernetic-core.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_vast_engineered_agricultur_0.jpg"
       },
       {
         "id": "ai-20",
-        "title": "SYNTHESIS // HYPERSONIC WING",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Custom Flux.1 / Aerodynamic Inversion",
-          "steps": 40,
-          "cfg": 6.9,
-          "sampler": "UniPC",
-          "promptExcerpt": "inverted delta wing chassis suspended in supersonic aerodynamic test wind tunnel, razor-thin amber laser flow sheets",
-          "colorGrading": "Wind Tunnel Cyan / Laser Amber",
-          "seed": "92837401"
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 44,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "24993337"
         },
-        "lore": "Boundary-layer suction validation on continuous carbon surfaces operating at Mach 3.2.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/hyperion-drift.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_vast_monumental_abstract_e_0%20(2).jpg"
       },
       {
         "id": "ai-21",
-        "title": "PULSAR // NEURAL HARMONICS",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "landscape",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "ComfyUI Latent Waveform / Flux",
-          "steps": 46,
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 45,
           "cfg": 7.5,
-          "sampler": "Euler Ancestral",
-          "promptExcerpt": "rhythmic vertical standing light wave with harmonic resonance bands, amber and deep cyan color interference pattern",
-          "colorGrading": "Harmonic Amber / Standing Wave Cyan",
-          "seed": "18293048"
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "25782460"
         },
-        "lore": "Visual acoustic mapping converting sub-bass frequencies from Chamber 03 into spatial light structures.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-hyper.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_vast_monumental_abstract_e_0%20(3).jpg"
       },
       {
         "id": "ai-22",
-        "title": "VELOCITY // ASYMMETRIC GRID",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Stable Diffusion 3.5 Large / Vector Flow",
-          "steps": 43,
-          "cfg": 7.1,
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 46,
+          "cfg": 7.5,
           "sampler": "DPM++ 2M Karras",
-          "promptExcerpt": "infinite highway of pure photons curving through dark void, multi-colored exposure streaks, sharp geometric horizon",
-          "colorGrading": "Photon Streaks / Deep Obsidian",
-          "seed": "58291039"
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "26571583"
         },
-        "lore": "Asymmetric vector velocity fields generating directional momentum through pure light streams.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/light-art/light-art-velocity.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_A_vast_observatorylike_chamb_1%20(1).jpg"
       },
       {
         "id": "ai-23",
-        "title": "NEXUS // BIOLOGICAL SILICON",
+        "title": "SYNTHESIS // LUCID ORIGIN A CINEMATIC PHO",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Midjourney v6.1 / Bio-Organic Nodes",
-          "steps": 54,
-          "cfg": 8.1,
-          "sampler": "Euler A",
-          "promptExcerpt": "intricate biomechanical spine column made of carbon vertebrae and liquid copper conduits, glowing orange ganglion clusters",
-          "colorGrading": "Liquid Copper / Matte Carbon",
-          "seed": "29401827"
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 47,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "27360706"
         },
-        "lore": "Synthetic spinal column prototype facilitating high-bandwidth neural telemetry transfers.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/neural-synapse.jpg"
+        "image": "/media/ai-art/Lucid_Origin_a_cinematic_photo_of_Ultrarealistic_cinematic_sce_3%20(4).jpg"
       },
       {
         "id": "ai-24",
-        "title": "STRATOS // ION ENGINE",
+        "title": "SYNTHESIS // LUCID ORIGIN A VAST OPEN INT",
         "format": "landscape",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Custom Pipeline / Plasma Jet 8K",
-          "steps": 39,
-          "cfg": 6.8,
-          "sampler": "UniPC",
-          "promptExcerpt": "high-velocity aerodynamic prototype accelerating down nocturnal test runway, glowing amber wheel hub exhausts",
-          "colorGrading": "Jet Intake Amber / Carbon Night",
-          "seed": "71029384"
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 48,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "28149829"
         },
-        "lore": "Electro-hydrodynamic propulsion testing within low-pressure atmospheric conditions.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/race-panning.jpg"
+        "image": "/media/ai-art/Lucid_Origin_A_vast_open_interior_resembling_a_futuristic_obse_0.jpg"
       },
       {
         "id": "ai-25",
-        "title": "GLITCH // LATENT ENTROPY",
+        "title": "SYNTHESIS // MENIKEV A COLOSSAL GOLDEN EN",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Flux.1 Dev / Quantum Glitch Matrix",
-          "steps": 47,
-          "cfg": 7.6,
-          "sampler": "DPM++ SDE",
-          "promptExcerpt": "controlled cryptographic glitch fracturing an obsidian portrait silhouette into glowing amber voxel layers",
-          "colorGrading": "Voxel Amber / Digital Cyan",
-          "seed": "83920174"
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 49,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "28938952"
         },
-        "lore": "Intentional entropy injection into deep tensor weights to provoke emergent architectural geometry.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-shadow-gaze.jpg"
+        "image": "/media/ai-art/menikev_A_colossal_golden_energy_wave_crashes_through_an_otherw_c1ace38c-01c8-4ff1-b036-21a70f77a8c2.png"
       },
       {
         "id": "ai-26",
-        "title": "HELIX // RECURSIVE SYNAPSE",
-        "format": "landscape",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // MENIKEV A HUMANOID FIGURE ST",
+        "format": "portrait",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Stable Diffusion 3.5 / Double Helix VAE",
-          "steps": 41,
-          "cfg": 7,
-          "sampler": "Euler Ancestral",
-          "promptExcerpt": "double helix of glowing fiber optic cables spanning a subterranean tunnel, amber structural ribs receding into fog",
-          "colorGrading": "Ribbed Cavern / Dual Helix Amber",
-          "seed": "64738291"
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 50,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "29728075"
         },
-        "lore": "Recursive biological algorithms encoded onto photonic fiber bundles spanning the length of the chamber.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/quantum-mirage.jpg"
+        "image": "/media/ai-art/menikev_A_humanoid_figure_stands_in_a_void-like_surreal_space_t_f2b94e57-8c4d-425a-8b22-288006d552bd.png"
       },
       {
         "id": "ai-27",
-        "title": "CHIMERA // ANODIZED TITANIUM",
-        "format": "portrait",
-        "status": "RENDERED // 8K",
+        "title": "SYNTHESIS // MENIKEV A LONE TOWERING AFRO",
+        "format": "landscape",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Midjourney v6.1 / Titanium Metallurgy",
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
           "steps": 51,
-          "cfg": 8.2,
-          "sampler": "DPM++ 2M",
-          "promptExcerpt": "precision CNC milled titanium monolith panel with flame-anodized purple and amber heat blooms, microscopic circuit traces",
-          "colorGrading": "Flame Anodized / Deep Charcoal",
-          "seed": "19283746"
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "30517198"
         },
-        "lore": "Thermal tempering study testing the tensile limits of high-grade aerospace titanium alloys.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/portraits/portrait-cyber-monolith.jpg"
+        "image": "/media/ai-art/menikev_A_lone_towering_Afrofuturistic_monarch_stands_amidst_th_c7e34050-b433-408b-8da6-ce0e1068338f.png"
       },
       {
         "id": "ai-28",
-        "title": "PHANTOM // SUPRACONDUCTOR",
+        "title": "SYNTHESIS // MENIKEV A VAST COSMIC LANDSC",
         "format": "landscape",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Custom Pipeline / MagLev Geometry",
-          "steps": 37,
-          "cfg": 6.7,
-          "sampler": "UniPC",
-          "promptExcerpt": "floating maglev aerodynamic monocoque traversing a dark subterranean tunnel, glowing orange induction guide rails",
-          "colorGrading": "MagLev Amber / Obsidian Vacuum",
-          "seed": "82736451"
+          "engine": "Custom Pipeline / Flux.1 Dev + SDXL Refiner",
+          "steps": 52,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "31306321"
         },
-        "lore": "Zero-friction magnetic levitation corridor facilitating frictionless travel through deep subterranean strata.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/photography/street/project-specter.jpg"
+        "image": "/media/ai-art/menikev_A_vast_cosmic_landscape_stretching_beyond_perception_il_175691d7-a968-4c49-9b90-f0f8af201929.png"
       },
       {
         "id": "ai-29",
-        "title": "SIGMA // DEEP TENSOR FIELD",
+        "title": "SYNTHESIS // MENIKEV A VAST FUTURISTIC CI",
         "format": "portrait",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Flux.1 Dev / 100-Step Precision",
-          "steps": 60,
-          "cfg": 8.4,
-          "sampler": "Euler Ancestral",
-          "promptExcerpt": "crystalline hypercube matrix with glowing amber data filaments terminating at glowing cyan processor nodes",
-          "colorGrading": "Hypercube Amber / Quantum Cyan",
-          "seed": "91820394"
+          "engine": "Midjourney v6.1 + ComfyUI Latent Upscaler",
+          "steps": 53,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "32095444"
         },
-        "lore": "High-dimensional tensor representation visualized through isometric crystal projection.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/cybernetic-core.jpg"
+        "image": "/media/ai-art/menikev_A_vast_futuristic_cityscape_stretches_into_the_horizon__455ca090-44e8-46ec-a979-7ca12eca0220.png"
       },
       {
         "id": "ai-30",
-        "title": "OMEGA // ZERO-POINT APEX",
+        "title": "SYNTHESIS // MENIKEV CONCEPT  SYMBOLISM I",
         "format": "landscape",
-        "status": "RENDERED // 8K",
+        "status": "RENDERED // 8K MASTER",
         "coordinates": "06.45° N, 03.39° E",
         "generativeData": {
-          "engine": "Midjourney v6.1 + SDXL / Apex Singularity",
-          "steps": 55,
-          "cfg": 8,
-          "sampler": "DPM++ SDE Karras",
-          "promptExcerpt": "panoramic subterranean amphitheater with 30 glowing monoliths surrounding a central zero-point energy well, misty reflective floor",
-          "colorGrading": "Omega Ember / Singularity Horizon",
-          "seed": "99999999"
+          "engine": "Stable Diffusion 3.5 Large + TensorRT",
+          "steps": 54,
+          "cfg": 7.5,
+          "sampler": "DPM++ 2M Karras",
+          "promptExcerpt": "hyper-detailed neural synthesis, obsidian and ember aerodynamic flow",
+          "colorGrading": "Deep Obsidian and Ember Bloom",
+          "seed": "32884567"
         },
-        "lore": "The culminating terminus of Chamber 02, where all 30 generative streams intersect into a singular coherent field.",
+        "lore": "Exploration of latent topologies and generative neural architectures by lxwrvnx.",
         "ownership": "ARCHIVAL EDITION / 01 OF 01",
-        "image": "/media/ai-art/hyperion-drift.jpg"
+        "image": "/media/ai-art/menikev_Concept__Symbolism_In_an_endless_surreal_desert_of_soft_248c2034-8f9d-47ea-873c-7ebcb21c684e.png"
       }
     ]
   },
@@ -783,71 +2303,70 @@
         "subtitle": "AI MUSIC / SONIC LAB",
         "cover": "/media/music/kxng-of-the-nvght-cover.jpg",
         "genre": "WAVETRAP",
-        "runtime": "34:12",
+        "runtime": "26:35",
         "tracks": [
           {
             "id": "track-01-01",
             "trackNumber": "01",
-            "title": "MIDNIGHT PACE",
-            "bpm": 124,
+            "title": "GUARDIAN IN THE DARK",
+            "bpm": 128,
             "key": "D Minor",
-            "duration": "03:42"
+            "duration": "03:58",
+            "audioUrl": "/media/music/Guardian%20in%20the%20Dark.mp3"
           },
           {
             "id": "track-01-02",
             "trackNumber": "02",
-            "title": "NITRO SURGE",
-            "bpm": 130,
-            "key": "F# Minor",
-            "duration": "04:15"
+            "title": "HE WHO FORMED THE EYE",
+            "bpm": 122,
+            "key": "A Minor",
+            "duration": "03:15",
+            "audioUrl": "/media/music/He%20Who%20Formed%20The%20Eye.mp3"
           },
           {
             "id": "track-01-03",
             "trackNumber": "03",
-            "title": "ASPHALT RUN",
-            "bpm": 118,
-            "key": "A Minor",
-            "duration": "03:58"
+            "title": "LOOSENING POINT",
+            "bpm": 130,
+            "key": "F# Minor",
+            "duration": "04:06",
+            "audioUrl": "/media/music/Loosening%20Point.mp3"
           },
           {
             "id": "track-01-04",
             "trackNumber": "04",
-            "title": "NEON MONOLITH",
-            "bpm": 122,
-            "key": "G Minor",
-            "duration": "04:30"
+            "title": "TRANSMUTE",
+            "bpm": 125,
+            "key": "C Minor",
+            "duration": "04:52",
+            "audioUrl": "/media/music/Transmute.mp3"
           },
           {
             "id": "track-01-05",
             "trackNumber": "05",
-            "title": "OVERDRIVE ECHO",
-            "bpm": 128,
-            "key": "C Minor",
-            "duration": "04:05"
+            "title": "UNBREAKABLE FIRE",
+            "bpm": 134,
+            "key": "E Minor",
+            "duration": "03:42",
+            "audioUrl": "/media/music/Unbreakable%20Fire.mp3"
           },
           {
             "id": "track-01-06",
             "trackNumber": "06",
-            "title": "TURBO HORIZON",
+            "title": "VEILWALKER",
             "bpm": 120,
-            "key": "E Minor",
-            "duration": "03:45"
+            "key": "G Minor",
+            "duration": "03:30",
+            "audioUrl": "/media/music/Veilwalker.mp3"
           },
           {
             "id": "track-01-07",
             "trackNumber": "07",
-            "title": "CARBON APEX",
-            "bpm": 132,
+            "title": "WHEN THE LIGHT LEARNED HUNGER",
+            "bpm": 118,
             "key": "B Minor",
-            "duration": "04:12"
-          },
-          {
-            "id": "track-01-08",
-            "trackNumber": "08",
-            "title": "DAWN GRID",
-            "bpm": 115,
-            "key": "D Major",
-            "duration": "05:00"
+            "duration": "03:12",
+            "audioUrl": "/media/music/When%20The%20Light%20Learned%20Hunger.mp3"
           }
         ]
       },

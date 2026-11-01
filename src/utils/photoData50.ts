@@ -3,22 +3,25 @@ import { PhotoItem } from '../types';
 // Curated pool of high-resolution master photography canvases
 const BASE_IMAGES = {
   street: [
-    '/media/photography/street/project-specter.jpg',
-    '/media/photography/street/race-panning.jpg',
-    '/media/photography/street/street-noir.jpg',
-    '/media/photography/street/asphalt-monsoon.jpg',
-    '/media/photography/street/apex-predator.jpg'
+    '/media/photography/street/DSC02080.jpg',
+    '/media/photography/street/DSC03002.jpg',
+    '/media/photography/street/DSC03657.jpg',
+    '/media/photography/street/DSC04609.jpg',
+    '/media/photography/street/DSC04694.jpg'
   ],
   portraits: [
-    '/media/photography/portraits/portrait-rembrandt.jpg',
-    '/media/photography/portraits/portrait-cyber-monolith.jpg',
-    '/media/photography/portraits/portrait-shadow-gaze.jpg',
-    '/media/photography/portraits/portrait-zenith.jpg'
+    '/media/photography/portraits/DSC00486.jpg',
+    '/media/photography/portraits/DSC00541.jpg',
+    '/media/photography/portraits/DSC00749.jpg',
+    '/media/photography/portraits/DSC01026.jpg',
+    '/media/photography/portraits/DSC01337.jpg'
   ],
   'light-art': [
-    '/media/photography/light-art/light-art-hyper.jpg',
-    '/media/photography/light-art/light-art-velocity.jpg',
-    '/media/photography/light-art/light-art-vortex.jpg'
+    '/media/photography/light-art/DSC00150.jpg',
+    '/media/photography/light-art/DSC00263.jpg',
+    '/media/photography/light-art/DSC00704.jpg',
+    '/media/photography/light-art/DSC01790.jpg',
+    '/media/photography/light-art/DSC05078.jpg'
   ]
 };
 
