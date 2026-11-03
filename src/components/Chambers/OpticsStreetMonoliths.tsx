@@ -49,13 +49,13 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     wall: 'left',
     row: 'upper',
     title: 'METROPOLIS // ALLEY NOIR',
-    engine: 'LEICA M11 // 35MM SUMMICRON',
+    engine: 'SONY A7R V // 35MM F/1.4',
     stepsCfg: '50 STEPS // 1/500s @ ISO 100',
     promptPhilosophy: 'High contrast black and white canyon between brutalist brick facades, wet asphalt reflections.',
     seed: '#89412091',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/street-noir.jpg',
+    image: '/media/photography/street/DSC01516%20(1).jpg',
     spatial: { left: '3.5%', top: '21.5%', width: '7.6%', height: '22.5%', lockYaw: 36, lockPanX: 300 }
   },
   {
@@ -70,7 +70,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412092',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/portraits/portrait-shadow-gaze.jpg',
+    image: '/media/photography/street/DSC01787.jpg',
     spatial: { left: '11.8%', top: '26.8%', width: '5.3%', height: '18.5%', lockYaw: 28, lockPanX: 230 }
   },
   {
@@ -85,7 +85,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412093',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/race-panning.jpg',
+    image: '/media/photography/street/DSC02080.jpg',
     spatial: { left: '17.5%', top: '30.8%', width: '4.2%', height: '15.5%', lockYaw: 22, lockPanX: 180 }
   },
   {
@@ -100,7 +100,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412094',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/street/DSC02404.jpg',
     spatial: { left: '22.0%', top: '33.8%', width: '3.3%', height: '13.5%', lockYaw: 16, lockPanX: 130 }
   },
   // Lower Tier
@@ -116,7 +116,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412095',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/project-specter.jpg',
+    image: '/media/photography/street/DSC03002.jpg',
     spatial: { left: '3.5%', top: '46.5%', width: '7.6%', height: '22.5%', lockYaw: 36, lockPanX: 300 }
   },
   {
@@ -131,7 +131,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412096',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/street/DSC03045.jpg',
     spatial: { left: '11.8%', top: '47.8%', width: '5.3%', height: '18.5%', lockYaw: 28, lockPanX: 230 }
   },
   {
@@ -146,7 +146,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412097',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/race-panning.jpg',
+    image: '/media/photography/street/DSC03493%20(1).jpg',
     spatial: { left: '17.5%', top: '48.8%', width: '4.2%', height: '15.5%', lockYaw: 22, lockPanX: 180 }
   },
   {
@@ -161,7 +161,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412098',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/project-specter.jpg',
+    image: '/media/photography/street/DSC03493.jpg',
     spatial: { left: '22.0%', top: '49.5%', width: '3.3%', height: '13.5%', lockYaw: 16, lockPanX: 130 }
   },
 
@@ -181,7 +181,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412099',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/street-noir.jpg',
+    image: '/media/photography/street/DSC03597.jpg',
     spatial: { left: '28.0%', top: '32.0%', width: '6.0%', height: '16.5%', lockYaw: 8, lockPanX: 70 }
   },
   {
@@ -196,7 +196,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412100',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/street/DSC03657.jpg',
     spatial: { left: '36.5%', top: '32.0%', width: '6.0%', height: '16.5%', lockYaw: 4, lockPanX: 30 }
   },
   {
@@ -211,7 +211,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412101',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/apex-predator.jpg',
+    image: '/media/photography/street/DSC04039.jpg',
     spatial: { left: '28.0%', top: '50.5%', width: '6.0%', height: '16.5%', lockYaw: 8, lockPanX: 70 }
   },
   {
@@ -226,7 +226,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412102',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/portraits/portrait-zenith.jpg',
+    image: '/media/photography/street/DSC04338.jpg',
     spatial: { left: '36.5%', top: '50.5%', width: '6.0%', height: '16.5%', lockYaw: 4, lockPanX: 30 }
   },
 
@@ -243,7 +243,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412103',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/street-noir.jpg',
+    image: '/media/photography/street/DSC04395.jpg',
     spatial: { left: '57.5%', top: '32.0%', width: '6.0%', height: '16.5%', lockYaw: -4, lockPanX: -30 }
   },
   {
@@ -258,7 +258,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412104',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/portraits/portrait-cyber-monolith.jpg',
+    image: '/media/photography/street/DSC04422.jpg',
     spatial: { left: '66.0%', top: '32.0%', width: '6.0%', height: '16.5%', lockYaw: -8, lockPanX: -70 }
   },
   {
@@ -273,7 +273,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412105',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/street/DSC04609.jpg',
     spatial: { left: '57.5%', top: '50.5%', width: '6.0%', height: '16.5%', lockYaw: -4, lockPanX: -30 }
   },
   {
@@ -288,7 +288,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412106',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/project-specter.jpg',
+    image: '/media/photography/street/DSC04652.jpg',
     spatial: { left: '66.0%', top: '50.5%', width: '6.0%', height: '16.5%', lockYaw: -8, lockPanX: -70 }
   },
 
@@ -308,7 +308,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412107',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/street-noir.jpg',
+    image: '/media/photography/street/DSC04694.jpg',
     spatial: { left: '74.7%', top: '33.8%', width: '3.3%', height: '13.5%', lockYaw: -16, lockPanX: -130 }
   },
   {
@@ -323,7 +323,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412108',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/project-specter.jpg',
+    image: '/media/photography/street/DSC04701.jpg',
     spatial: { left: '78.3%', top: '30.8%', width: '4.2%', height: '15.5%', lockYaw: -22, lockPanX: -180 }
   },
   {
@@ -338,7 +338,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412109',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/street-noir.jpg',
+    image: '/media/photography/street/DSC04711.jpg',
     spatial: { left: '82.9%', top: '26.8%', width: '5.3%', height: '18.5%', lockYaw: -28, lockPanX: -230 }
   },
   {
@@ -353,7 +353,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412110',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/race-panning.jpg',
+    image: '/media/photography/street/DSC04766.jpg',
     spatial: { left: '88.9%', top: '21.5%', width: '7.6%', height: '22.5%', lockYaw: -36, lockPanX: -300 }
   },
   // Lower Tier
@@ -369,7 +369,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412111',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/street/DSC04870.jpg',
     spatial: { left: '74.7%', top: '49.5%', width: '3.3%', height: '13.5%', lockYaw: -16, lockPanX: -130 }
   },
   {
@@ -384,7 +384,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412112',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/street/DSC04925.jpg',
     spatial: { left: '78.3%', top: '48.8%', width: '4.2%', height: '15.5%', lockYaw: -22, lockPanX: -180 }
   },
   {
@@ -399,7 +399,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412113',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/apex-predator.jpg',
+    image: '/media/photography/street/DSC04938.jpg',
     spatial: { left: '82.9%', top: '47.8%', width: '5.3%', height: '18.5%', lockYaw: -28, lockPanX: -230 }
   },
   {
@@ -414,7 +414,7 @@ const DEFAULT_CONCOURSE_24_WORKS: ConcourseFrame[] = [
     seed: '#89412114',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/race-panning.jpg',
+    image: '/media/photography/street/DSC05390.jpg',
     spatial: { left: '88.9%', top: '46.5%', width: '7.6%', height: '22.5%', lockYaw: -36, lockPanX: -300 }
   }
 ];
@@ -451,8 +451,9 @@ export const OpticsStreetMonoliths: React.FC<OpticsStreetMonolithsProps> = ({
         p.frameId === defaultWork.id ||
         p.targetFrameIndex === index ||
         p.id === `photo-street-${defaultWork.id}` ||
-        p.id === defaultWork.id
-      );
+        p.id === defaultWork.id ||
+        p.id === `photo-street-${index + 1}`
+      ) || (streetPhotos.length > 0 ? streetPhotos[index % streetPhotos.length] : undefined);
 
       // A photo is custom if it has a custom ID or is marked as custom
       const isCustom = Boolean(
@@ -467,15 +468,15 @@ export const OpticsStreetMonoliths: React.FC<OpticsStreetMonolithsProps> = ({
 
       return {
         ...defaultWork,
-        id: photo.id,
+        id: photo.id || defaultWork.id,
         index: index + 1,
-        title: photo.title || defaultWork.title,
+        title: isCustom ? (photo.title || defaultWork.title) : defaultWork.title,
         engine: ('optics' in photo && photo.optics?.body) ? `${photo.optics.body} // ${photo.optics.lens || '35MM SUMMICRON'}` : defaultWork.engine,
         stepsCfg: ('optics' in photo && photo.optics?.shutter) ? `${photo.optics.shutter} @ ISO ${photo.optics?.iso || 100}` : defaultWork.stepsCfg,
-        promptPhilosophy: ('story' in photo && photo.story) ? photo.story : defaultWork.promptPhilosophy,
+        promptPhilosophy: ('story' in photo && photo.story && isCustom) ? photo.story : defaultWork.promptPhilosophy,
         dimensions: ('aspectRatio' in photo && photo.aspectRatio) ? `${photo.aspectRatio} MASTER` : defaultWork.dimensions,
         ownership: ('ownership' in photo && photo.ownership) ? photo.ownership : defaultWork.ownership,
-        image: photo.image,
+        image: photo.image || defaultWork.image,
         isCustom
       };
     });
@@ -722,6 +723,12 @@ export const OpticsStreetMonoliths: React.FC<OpticsStreetMonolithsProps> = ({
                     src={work.image}
                     alt={work.title}
                     draggable={false}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('DSC02080.jpg')) {
+                        target.src = '/media/photography/street/DSC02080.jpg';
+                      }
+                    }}
                     className="w-full h-full object-cover select-none transition-transform duration-300 group-hover:scale-103"
                   />
                   {/* Subtle Inner Bevel Depth */}

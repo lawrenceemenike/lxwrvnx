@@ -51,7 +51,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Kinetic sweep along the horizontal perimeter, grounded flat against matte slate concrete.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-hyper.jpg',
+    image: '/media/photography/light-art/DSC00150.jpg',
     spatial: { left: '5.2%', top: '36.0%', width: '5.2%', height: '19.4%', lockYaw: 33, lockPanX: 270 }
   },
   {
@@ -66,7 +66,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Shadow play slicing across vertical aperture blinds into reflective concrete.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-vortex.jpg',
+    image: '/media/photography/light-art/DSC00263.jpg',
     spatial: { left: '11.5%', top: '36.3%', width: '5.1%', height: '19.2%', lockYaw: 26, lockPanX: 210 }
   },
   {
@@ -81,7 +81,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Minimalist human scale framed symmetrically within the horizon curve.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-velocity.jpg',
+    image: '/media/photography/light-art/DSC00518.jpg',
     spatial: { left: '17.7%', top: '36.6%', width: '5.0%', height: '19.0%', lockYaw: 19, lockPanX: 150 }
   },
   {
@@ -96,7 +96,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Continuous orbital photon traces revolving around a singular horizontal axis.',
     dimensions: '16:9 CINEMATIC (4800 x 2700)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-velocity.jpg',
+    image: '/media/photography/light-art/DSC00704.jpg',
     spatial: { left: '23.8%', top: '36.9%', width: '4.9%', height: '18.8%', lockYaw: 13, lockPanX: 100 }
   },
   {
@@ -111,7 +111,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Brutalist concrete alleyway receded in pure linear perspective.',
     dimensions: '1:1 SQUARE (4000 x 4000)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/street-noir.jpg',
+    image: '/media/photography/light-art/DSC00712%20(1).jpg',
     spatial: { left: '29.8%', top: '37.1%', width: '4.9%', height: '18.6%', lockYaw: 8, lockPanX: 60 }
   },
   {
@@ -126,7 +126,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Geometric face profile contrasted against matte charcoal negative space.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-hyper.jpg',
+    image: '/media/photography/light-art/DSC01128.jpg',
     spatial: { left: '35.8%', top: '37.3%', width: '4.8%', height: '18.5%', lockYaw: 4, lockPanX: 30 }
   },
   {
@@ -141,7 +141,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Linear speed vectors converging cleanly toward the central emitter.',
     dimensions: '16:9 CINEMATIC (4800 x 2700)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-vortex.jpg',
+    image: '/media/photography/light-art/DSC01211%20(1).jpg',
     spatial: { left: '41.7%', top: '37.4%', width: '4.8%', height: '18.4%', lockYaw: 1.5, lockPanX: 10 }
   },
   {
@@ -156,7 +156,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Single figure standing at the infinite threshold of dark polished concrete.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/asphalt-monsoon.jpg',
+    image: '/media/photography/light-art/DSC01211.jpg',
     spatial: { left: '47.6%', top: '37.5%', width: '4.8%', height: '18.4%', lockYaw: 0, lockPanX: 0 }
   },
   {
@@ -171,7 +171,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Linear corridor lines tracking the camera across the horizon ribbon.',
     dimensions: '16:9 CINEMATIC (4800 x 2700)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/project-specter.jpg',
+    image: '/media/photography/light-art/DSC01249.jpg',
     spatial: { left: '53.5%', top: '37.4%', width: '4.8%', height: '18.4%', lockYaw: -1.5, lockPanX: -10 }
   },
   {
@@ -186,7 +186,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Vertical architectural columns illuminated by subtle ground-level radiance.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-velocity.jpg',
+    image: '/media/photography/light-art/DSC01790.jpg',
     spatial: { left: '59.4%', top: '37.3%', width: '4.8%', height: '18.5%', lockYaw: -4, lockPanX: -30 }
   },
   {
@@ -201,7 +201,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Natural warmth projected downward onto the dark reflective floor.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-vortex.jpg',
+    image: '/media/photography/light-art/DSC02477.jpg',
     spatial: { left: '65.3%', top: '37.1%', width: '4.9%', height: '18.6%', lockYaw: -8, lockPanX: -60 }
   },
   {
@@ -216,7 +216,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Controlled vertical light bars suspended in strict horizontal alignment.',
     dimensions: '16:9 CINEMATIC (4800 x 2700)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-hyper.jpg',
+    image: '/media/photography/light-art/DSC02478.jpg',
     spatial: { left: '71.3%', top: '36.9%', width: '4.9%', height: '18.8%', lockYaw: -13, lockPanX: -100 }
   },
   {
@@ -231,7 +231,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Panning trajectory cutting horizontally across the wide viewing angle.',
     dimensions: '16:9 CINEMATIC (4800 x 2700)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/street/race-panning.jpg',
+    image: '/media/photography/light-art/DSC04730.jpg',
     spatial: { left: '77.3%', top: '36.6%', width: '5.0%', height: '19.0%', lockYaw: -19, lockPanX: -150 }
   },
   {
@@ -246,7 +246,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Circular light loop mirroring the curvature of the vault wall.',
     dimensions: '1:1 SQUARE (4000 x 4000)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-velocity.jpg',
+    image: '/media/photography/light-art/DSC04787.jpg',
     spatial: { left: '83.4%', top: '36.3%', width: '5.1%', height: '19.2%', lockYaw: -26, lockPanX: -210 }
   },
   {
@@ -261,7 +261,7 @@ const DEFAULT_HORIZON_WORKS: HorizonArtwork[] = [
     philosophy: 'Dynamic spark shower illuminating industrial steel arches with golden light trails.',
     dimensions: '4:5 MASTER (3840 x 4800)',
     ownership: 'EXCLUSIVE / 01 OF 01',
-    image: '/media/photography/light-art/light-art-vortex.jpg',
+    image: '/media/photography/light-art/DSC05078.jpg',
     spatial: { left: '89.6%', top: '36.0%', width: '5.2%', height: '19.4%', lockYaw: -33, lockPanX: -270 }
   }
 ];
@@ -298,8 +298,9 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
         p.frameId === defaultWork.id ||
         p.targetFrameIndex === index ||
         p.id === `photo-light-art-${defaultWork.id}` ||
-        p.id === defaultWork.id
-      );
+        p.id === defaultWork.id ||
+        p.id === `photo-light-art-${index + 1}`
+      ) || (lightArtPhotos.length > 0 ? lightArtPhotos[index % lightArtPhotos.length] : undefined);
 
       // A photo is custom if it has a custom ID or is explicitly bound as custom
       const isCustom = Boolean(
@@ -316,18 +317,18 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
         ('aspectRatio' in photo && photo.aspectRatio === '1:1') ? '1:1' : defaultWork.format;
 
       return {
-        id: photo.id,
+        id: photo.id || defaultWork.id,
         index: index + 1,
         format,
-        title: photo.title || defaultWork.title,
+        title: isCustom ? (photo.title || defaultWork.title) : defaultWork.title,
         lightSource: ('optics' in photo && photo.optics?.body) ? `${photo.optics.body} // ${photo.optics.lens || 'LIGHT RIG'}` : defaultWork.lightSource,
         exposureDuration: ('optics' in photo && photo.optics?.shutter) ? `${photo.optics.shutter} EXPOSURE` : defaultWork.exposureDuration,
         apertureIso: ('optics' in photo && photo.optics?.aperture) ? `${photo.optics.aperture} @ ISO ${photo.optics?.iso || 100}` : defaultWork.apertureIso,
         chromaSpectrum: 'WARM AMBER 590nm // SODIUM FLUX',
-        philosophy: ('story' in photo && photo.story) ? photo.story : defaultWork.philosophy,
+        philosophy: ('story' in photo && photo.story && isCustom) ? photo.story : defaultWork.philosophy,
         dimensions: ('aspectRatio' in photo && photo.aspectRatio) ? `${photo.aspectRatio} MASTER` : defaultWork.dimensions,
         ownership: ('ownership' in photo && photo.ownership) ? photo.ownership : defaultWork.ownership,
-        image: photo.image,
+        image: photo.image || defaultWork.image,
         spatial: defaultWork.spatial,
         isCustom
       };
@@ -556,6 +557,12 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
                     src={work.image}
                     alt={work.title}
                     draggable={false}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('DSC00150.jpg')) {
+                        target.src = '/media/photography/light-art/DSC00150.jpg';
+                      }
+                    }}
                     className="w-full h-full object-cover select-none transition-transform duration-300 group-hover:scale-103"
                   />
                   {/* Subtle Inner Bevel Depth */}
