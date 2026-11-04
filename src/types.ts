@@ -77,6 +77,7 @@ export interface ArchitectProfile {
   role: string;
   tagline?: string;
   organization?: string;
+  avatarUrl?: string;
   coordinates: string;
   bio: string;
   philosophy: string;
@@ -84,9 +85,10 @@ export interface ArchitectProfile {
   visualMatrix?: string;
   comms: {
     email: string;
-    twitter: string;
-    github: string;
-    audioStream: string;
+    twitter?: string;
+    github?: string;
+    linkedin?: string;
+    audioStream?: string;
     organizationUrl?: string;
   };
 }
