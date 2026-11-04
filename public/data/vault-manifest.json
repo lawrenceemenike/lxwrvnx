@@ -2437,6 +2437,7 @@
     "role": "AI Transformation Consultant | AI Architect & Engineer | Creative Technologist | AI Artist",
     "tagline": "Architecting secure, governed commercial intelligence systems that translate cross-sector complexity into structured intelligence for strategic decision-making.",
     "organization": "Nelc Digital (Founder & Lead AI Consultant)",
+    "avatarUrl": "",
     "coordinates": "06.45° N, 03.39° E",
     "bio": "Building systems that help organizations see what others miss. My work sits at the intersection of AI engineering, strategic analysis, and enterprise governance, where data becomes intelligence and intelligence becomes action. With foundations in finance and advanced AI systems, I specialize in designing governed, secure, and auditable intelligence architectures that support high-stakes decision-making across industries.",
     "philosophy": "We live in a world overflowing with data, signals, opinions, forecasts, and competing narratives. Yet the scarcest resource inside most organizations is not information, it's clarity. Commercial Intelligence is the discipline of transforming fragmented information into actionable understanding. Whether navigating market dynamics, customer behavior, operational performance, emerging technologies, or geopolitical shifts, organizations need systems that can synthesize complexity and surface what matters most.",
@@ -2444,8 +2445,9 @@
     "visualMatrix": "Under the creative moniker lxwrvnx, the Visual Matrix represents the intersection where computational intelligence meets sensory expression—bringing together physical optics, generative neural imagery, and procedural soundscapes into immersive digital architecture.",
     "comms": {
       "email": "lawrence@nelcdigital.com",
+      "linkedin": "https://www.linkedin.com/in/lawrenceemenike",
+      "github": "https://github.com/lawrenceemenike",
       "twitter": "https://twitter.com/lxwrvnx",
-      "github": "https://github.com/lxwrvnx",
       "audioStream": "https://thevault.io/stream/live",
       "organizationUrl": "https://nelcdigital.com"
     }

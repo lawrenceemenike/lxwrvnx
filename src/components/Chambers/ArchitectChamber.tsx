@@ -1,11 +1,38 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ArchitectProfile } from '../../types';
 import { audioEngine } from '../../utils/audioEngine';
-import { 
-  Shield, Terminal, ExternalLink, Mail, Check, Copy, X, 
-  Cpu, Compass, Sparkles, Activity, Zap, Radio, Globe, 
-  CheckCircle2, ArrowRight, CornerRightDown, Layers, Target, Orbit
+import {
+  Shield,
+  Terminal,
+  ExternalLink,
+  Mail,
+  Check,
+  Copy,
+  X,
+  Cpu,
+  Compass,
+  Sparkles,
+  Activity,
+  Globe,
+  CheckCircle2,
+  Target,
+  Lock
 } from 'lucide-react';
+
+const LinkedInIcon: React.FC<{ className?: string }> = ({ className = 'w-3.5 h-3.5' }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const GitHubIcon: React.FC<{ className?: string }> = ({ className = 'w-3.5 h-3.5' }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
 
 interface ArchitectChamberProps {
   profile: ArchitectProfile;
@@ -15,29 +42,123 @@ interface ArchitectChamberProps {
 
 type TelemetryTab = 'perspective' | 'architecture' | 'creative' | 'kinetic';
 
+interface BriefingData {
+  id: TelemetryTab;
+  tabLabel: string;
+  headline: string;
+  briefing: string;
+  metrics: { label: string; value: string }[];
+  accentColor: string;
+  radarScores: [number, number, number, number, number, number];
+  activeConnections: [number, number][];
+}
+
+const TELEMETRY_BRIEFINGS: Record<TelemetryTab, BriefingData> = {
+  perspective: {
+    id: 'perspective',
+    tabLabel: '01 // STRATEGIC PERSPECTIVE',
+    headline: 'MAKING SENSE OF COMPLEXITY',
+    briefing:
+      '"The scarcest resource inside modern organizations is not information—it is clarity. Commercial Intelligence transforms fragmented signals across market dynamics, operations, and emerging tech into decisive, actionable execution."',
+    metrics: [
+      { label: 'SIGNAL SYNTHESIS', value: '99.4%' },
+      { label: 'FOCUS', value: 'COMMERCIAL INTELLIGENCE' },
+      { label: 'MODE', value: 'CROSS-SECTOR' }
+    ],
+    accentColor: '#FF6B1A',
+    radarScores: [90, 99, 94, 96, 82, 78],
+    activeConnections: [
+      [1, 3],
+      [1, 2],
+      [0, 1],
+      [2, 3]
+    ]
+  },
+  architecture: {
+    id: 'architecture',
+    tabLabel: '02 // ENTERPRISE ARCHITECTURE',
+    headline: 'GOVERNANCE & MULTI-AGENT PLATFORMS',
+    briefing:
+      '"Moving beyond basic automation to engineer systems that fundamentally upgrade how organizations perceive, reason, and act. Deploying zero-trust, governed multi-agent workflows with measurable commercial impact."',
+    metrics: [
+      { label: 'ARCHITECTURE', value: 'MULTI-AGENT RAG' },
+      { label: 'SECURITY', value: 'ZERO-TRUST / GOVERNED' },
+      { label: 'ENTITY', value: 'NELC DIGITAL' }
+    ],
+    accentColor: '#38BDF8',
+    radarScores: [99, 94, 99, 92, 80, 75],
+    activeConnections: [
+      [0, 2],
+      [0, 1],
+      [2, 3],
+      [0, 3]
+    ]
+  },
+  creative: {
+    id: 'creative',
+    tabLabel: '03 // VISUAL & SONIC MATRIX',
+    headline: 'LXWRVNX // CREATIVE SYNTHESIS',
+    briefing:
+      '"Where algorithmic precision meets human aesthetics. Directing long-exposure optical photography, custom generative AI cinema pipelines, and dark atmospheric wave/phonk sonic engineering."',
+    metrics: [
+      { label: 'OPTICS', value: 'MANUAL LONG-EXPOSURE' },
+      { label: 'SYNTHESIS', value: 'CUSTOM PIPELINES' },
+      { label: 'ACOUSTICS', value: 'WAVE / PHONK' }
+    ],
+    accentColor: '#FFA14A',
+    radarScores: [92, 82, 80, 78, 99, 99],
+    activeConnections: [
+      [4, 5],
+      [0, 4],
+      [0, 5],
+      [1, 4]
+    ]
+  },
+  kinetic: {
+    id: 'kinetic',
+    tabLabel: '04 // KINETIC DISCIPLINE',
+    headline: 'ENDURANCE & SYSTEMS MINDSET',
+    briefing:
+      '"High-output technical execution requires physical and mental rigor. Built on the intersection of quantitative problem-solving, long-distance marathon endurance, and kinetic discipline."',
+    metrics: [
+      { label: 'MINDSET', value: 'STOIC SYSTEMS' },
+      { label: 'PACING', value: 'LONG-RANGE ENDURANCE' },
+      { label: 'PRECISION', value: 'HIGH' }
+    ],
+    accentColor: '#34D399',
+    radarScores: [95, 96, 94, 98, 88, 86],
+    activeConnections: [
+      [0, 3],
+      [1, 3],
+      [2, 4],
+      [3, 5]
+    ]
+  }
+};
+
 export const ArchitectChamber: React.FC<ArchitectChamberProps> = ({
   profile,
   mouseOffset,
-  onBackToConcourse
+  onBackToConcourse: _onBackToConcourse
 }) => {
   const [activeTab, setActiveTab] = useState<TelemetryTab>('perspective');
   const [isCommsModalOpen, setIsCommsModalOpen] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [radarAngle, setRadarAngle] = useState(0);
 
-  // Subtle 3D spatial perspective tilt driven by mouse
-  const tiltX = -mouseOffset.y * 3.0;
-  const panY = mouseOffset.x * 5.0;
+  // Subtle 3D spatial perspective tilt driven by mouse movement
+  const tiltX = -mouseOffset.y * 3.2;
+  const panY = mouseOffset.x * 5.2;
   const roll = mouseOffset.x * 0.8;
 
-  // Continuous sweeping radar beam animation
+  // Continuous 60fps sweeping radar beam animation
   useEffect(() => {
     let animId: number;
     let lastTime = performance.now();
     const loop = (now: number) => {
       const delta = (now - lastTime) / 1000;
       lastTime = now;
-      setRadarAngle(prev => (prev + delta * 45) % 360);
+      setRadarAngle(prev => (prev + delta * 48) % 360);
       animId = requestAnimationFrame(loop);
     };
     animId = requestAnimationFrame(loop);
@@ -51,276 +172,380 @@ export const ArchitectChamber: React.FC<ArchitectChamberProps> = ({
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2500);
     } catch {
-      // fallback
+      // Clipboard fallback
     }
   };
 
   const handleTabChange = (tab: TelemetryTab) => {
     if (tab === activeTab) return;
-    try { audioEngine.playClickSFX(); } catch {}
+    try {
+      audioEngine.playClickSFX();
+    } catch {}
     setActiveTab(tab);
   };
 
-  // 6 Radar Axes: AI Engineering, Commercial Strategy, Enterprise Governance, Quantitative Finance, Spatial/Visual Synthesis, Sonic Architecture
-  const radarAxes = useMemo(() => [
-    { label: 'AI ENGINEERING', angle: -90 },
-    { label: 'COMMERCIAL STRATEGY', angle: -30 },
-    { label: 'ENTERPRISE GOVERNANCE', angle: 30 },
-    { label: 'QUANT FINANCE', angle: 90 },
-    { label: 'SPATIAL/VISUAL', angle: 150 },
-    { label: 'SONIC ARCHITECTURE', angle: 210 },
-  ], []);
+  // 6 Radar Axes matching specification
+  const radarAxes = useMemo(
+    () => [
+      { label: 'AI Engineering', shortLabel: 'AI ENGINEERING', angle: -90 },
+      { label: 'Commercial Strategy', shortLabel: 'COMMERCIAL STRATEGY', angle: -30 },
+      { label: 'Enterprise Governance', shortLabel: 'ENTERPRISE GOVERNANCE', angle: 30 },
+      { label: 'Quantitative Finance', shortLabel: 'QUANTITATIVE FINANCE', angle: 90 },
+      { label: 'Spatial/Visual Synthesis', shortLabel: 'SPATIAL/VISUAL SYNTHESIS', angle: 150 },
+      { label: 'Sonic Architecture', shortLabel: 'SONIC ARCHITECTURE', angle: 210 }
+    ],
+    []
+  );
 
-  // Dynamic radar profile polygon values depending on active telemetry tab
-  const radarValues = useMemo(() => {
-    switch (activeTab) {
-      case 'perspective':
-        // Strategic clarity & commercial intelligence
-        return [88, 98, 92, 94, 82, 78];
-      case 'architecture':
-        // Enterprise AI & Zero-trust multi-agent governance
-        return [99, 94, 98, 90, 80, 72];
-      case 'creative':
-        // Visual optics & sonic synthesis
-        return [88, 82, 78, 75, 99, 98];
-      case 'kinetic':
-        // Endurance & stoic systems execution
-        return [92, 95, 90, 93, 85, 84];
-    }
-  }, [activeTab]);
+  const currentBriefing = TELEMETRY_BRIEFINGS[activeTab];
+  const radarValues = currentBriefing.radarScores;
 
-  // Compute SVG polygon coordinates for the radar chart (radius = 90, center = 120,120)
-  const radarPolygonPoints = useMemo(() => {
-    const cx = 120;
-    const cy = 120;
-    const maxRadius = 85;
-    return radarValues.map((val, idx) => {
+  // Compute SVG coordinates for the 6-axis radar chart & multi-agent node graph (center = 200, 115, maxRadius = 76)
+  const radarGeometry = useMemo(() => {
+    const cx = 200;
+    const cy = 115;
+    const maxRadius = 76;
+
+    const nodes = radarValues.map((val, idx) => {
       const rad = (radarAxes[idx].angle * Math.PI) / 180;
       const r = (val / 100) * maxRadius;
       const x = cx + r * Math.cos(rad);
       const y = cy + r * Math.sin(rad);
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    }).join(' ');
+      const axisEndX = cx + maxRadius * Math.cos(rad);
+      const axisEndY = cy + maxRadius * Math.sin(rad);
+      const labelRadius = maxRadius + 22;
+      const lx = cx + labelRadius * Math.cos(rad);
+      const ly = cy + labelRadius * Math.sin(rad);
+      return {
+        x,
+        y,
+        val,
+        axisEndX,
+        axisEndY,
+        lx,
+        ly,
+        angle: radarAxes[idx].angle,
+        label: radarAxes[idx].shortLabel
+      };
+    });
+
+    const polygonPoints = nodes.map(n => `${n.x.toFixed(1)},${n.y.toFixed(1)}`).join(' ');
+
+    return { cx, cy, maxRadius, nodes, polygonPoints };
   }, [radarValues, radarAxes]);
 
+  const linkedinUrl = profile.comms.linkedin || 'https://www.linkedin.com/in/lawrenceemenike';
+  const githubUrl = profile.comms.github || 'https://github.com/lawrenceemenike';
+  const nelcUrl = profile.comms.organizationUrl || 'https://nelcdigital.com';
+
   return (
-    <div className="relative w-full h-full overflow-hidden select-none bg-[#070A0E] flex flex-col justify-between font-sans">
-      
+    <div className="relative w-full h-full overflow-hidden select-none bg-[#070A0E] flex items-center justify-center font-sans">
       {/* ======================================================== */}
-      {/* 3D ARCHITECTURAL WIND-TUNNEL APEX BACKDROP */}
+      {/* 3D ARCHITECTURAL WIND-TUNNEL APEX BACKDROP               */}
       {/* ======================================================== */}
-      <div 
+      <div
         className="absolute inset-0 transition-transform duration-300 ease-out pointer-events-none flex items-center justify-center overflow-hidden"
         style={{
-          transform: `perspective(1200px) rotateX(${tiltX}deg) rotateY(${panY}deg) rotateZ(${roll}deg) scale(1.05)`,
+          transform: `perspective(1200px) rotateX(${tiltX}deg) rotateY(${panY}deg) rotateZ(${roll}deg) scale(1.08)`,
           transformOrigin: '50% 50%'
         }}
       >
-        {/* Receding Wind Tunnel Ribs with Glowing Floor Lights */}
-        <img 
-          src="/media/vault-rooms/optics_street_clean.jpg"
-          alt="Architect Command Apex"
+        {/* Receding Wind-Tunnel Apex Base Image */}
+        <img
+          src="/media/vault-rooms/concourse.jpg"
+          alt="Architect Wind-Tunnel Apex"
           draggable={false}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none opacity-45 brightness-75 contrast-125"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none opacity-35 brightness-75 contrast-125 scale-125"
         />
 
-        {/* Ambient Darkened Carbon Texture & Radial Vignette Layer */}
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#070A0E]/60 to-[#070A0E]/95 pointer-events-none" />
+        {/* Procedural 3D Receding Wind-Tunnel Ribs & Glowing Ember Floor/Ceiling Strips */}
+        <svg
+          viewBox="0 0 1600 900"
+          preserveAspectRatio="xMidYMid slice"
+          className="absolute inset-0 w-full h-full opacity-65 pointer-events-none"
+        >
+          <defs>
+            <linearGradient id="emberStripGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#FF6B1A" stopOpacity="0.95" />
+              <stop offset="50%" stopColor="#FFA14A" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#FF6B1A" stopOpacity="0.95" />
+            </linearGradient>
+            <radialGradient id="apexPortalGlow" cx="50%" cy="50%" r="45%">
+              <stop offset="0%" stopColor="#FF6B1A" stopOpacity="0.22" />
+              <stop offset="45%" stopColor="#38BDF8" stopOpacity="0.08" />
+              <stop offset="100%" stopColor="#070A0E" stopOpacity="0" />
+            </radialGradient>
+          </defs>
 
-        {/* Floating Perspective Grid Overlay */}
-        <div 
+          {/* Central Wind-Tunnel Apex Ambient Glow */}
+          <circle cx="800" cy="450" r="420" fill="url(#apexPortalGlow)" />
+
+          {/* Receding Wind-Tunnel Structural Ribs */}
+          {[0.92, 0.76, 0.62, 0.49, 0.38, 0.29].map((scale, i) => {
+            const w = 1520 * scale;
+            const h = 840 * scale;
+            const x = 800 - w / 2;
+            const y = 450 - h / 2;
+            const rx = 140 * scale;
+            return (
+              <rect
+                key={i}
+                x={x}
+                y={y}
+                width={w}
+                height={h}
+                rx={rx}
+                fill="none"
+                stroke={i % 2 === 0 ? '#1E293B' : '#0F172A'}
+                strokeWidth={3.5 * scale}
+                opacity={0.75 - i * 0.08}
+              />
+            );
+          })}
+
+          {/* Terminal Circular Vault Apex Ring */}
+          <circle cx="800" cy="450" r="115" fill="none" stroke="#FF6B1A" strokeWidth="2" opacity="0.55" />
+          <circle
+            cx="800"
+            cy="450"
+            r="98"
+            fill="none"
+            stroke="#38BDF8"
+            strokeWidth="1"
+            strokeDasharray="6 4"
+            opacity="0.4"
+          />
+
+          {/* Glowing Ember Ceiling Strips (Receding to Apex) */}
+          <line x1="520" y1="0" x2="735" y2="345" stroke="url(#emberStripGrad)" strokeWidth="3.5" opacity="0.85" />
+          <line x1="1080" y1="0" x2="865" y2="345" stroke="url(#emberStripGrad)" strokeWidth="3.5" opacity="0.85" />
+
+          {/* Glowing Ember Floor Strips (Receding to Apex) */}
+          <line x1="340" y1="900" x2="720" y2="555" stroke="url(#emberStripGrad)" strokeWidth="4" opacity="0.85" />
+          <line x1="1260" y1="900" x2="880" y2="555" stroke="url(#emberStripGrad)" strokeWidth="4" opacity="0.85" />
+
+          {/* Subtle Cyan Telemetry Horizon Lines */}
+          <line x1="120" y1="450" x2="685" y2="450" stroke="#38BDF8" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.3" />
+          <line x1="915" y1="450" x2="1480" y2="450" stroke="#38BDF8" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.3" />
+        </svg>
+
+        {/* Darkened Smoked Vignette Layer so 3-Column Console Pops */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle at 50% 50%, rgba(7, 10, 14, 0.55) 0%, rgba(7, 10, 14, 0.88) 75%, rgba(7, 10, 14, 0.96) 100%)'
+          }}
+        />
+
+        {/* Subtle Spatial Telemetry Grid Overlay */}
+        <div
           className="absolute inset-0 opacity-15 pointer-events-none"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(255, 107, 26, 0.1) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(56, 189, 248, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
+            backgroundImage: `linear-gradient(to right, rgba(255, 107, 26, 0.12) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(56, 189, 248, 0.12) 1px, transparent 1px)`,
+            backgroundSize: '44px 44px'
           }}
         />
       </div>
 
       {/* ======================================================== */}
-      {/* TOP HUD BAR: CHAMBER TELEMETRY HEADER */}
+      {/* SINGLE-SCREEN 3-COLUMN COCKPIT GRID (calc(100vh - 140px)) */}
       {/* ======================================================== */}
-      <div className="relative z-30 w-full px-4 sm:px-6 lg:px-8 pt-2.5 pb-1 flex items-center justify-between shrink-0 pointer-events-auto">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={onBackToConcourse}
-            className="flex items-center gap-2 font-mono-hud text-[10px] tracking-wider text-[#FFA14A] bg-[#070A0E]/90 hover:bg-[#FF6B1A]/20 px-3 py-1.5 rounded-full border border-[#FF6B1A]/40 hover:border-[#FF6B1A] transition-all cursor-pointer shadow-[0_0_15px_rgba(255,107,26,0.25)]"
+      <div className="relative z-20 w-full max-w-[1440px] h-[calc(100vh-140px)] max-h-[calc(100vh-140px)] mx-auto px-3 sm:px-6 lg:px-8 mt-6 mb-2 flex items-stretch justify-center overflow-hidden pointer-events-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 lg:gap-4 w-full h-full min-h-0 items-stretch">
+          {/* ======================================================== */}
+          {/* A. LEFT COLUMN (col-span-3): THE IDENTITY MONOLITH       */}
+          {/* ======================================================== */}
+          <div
+            className="lg:col-span-3 h-full min-h-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-[#070A0E]/80 border border-[#FF6B1A]/35 shadow-[0_0_30px_rgba(255,107,26,0.14),inset_0_0_20px_rgba(56,189,248,0.05)] relative overflow-hidden"
+            style={{ backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}
           >
-            <span>&lt; CONCOURSE</span>
-          </button>
-          <div className="flex items-center gap-2 font-mono-hud text-[11px] font-bold tracking-widest text-slate-300">
-            <span className="text-[#FF6B1A]">CHAMBER // 04:</span>
-            <span className="text-white">THE ARCHITECT [COMMAND]</span>
-          </div>
-        </div>
+            {/* Thin Ember/Cyan Corner Brackets */}
+            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#FF6B1A] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#38BDF8] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#38BDF8] pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#FF6B1A] pointer-events-none" />
 
-        <div className="flex items-center gap-4">
-          <div className="hidden sm:flex items-center gap-2 font-mono-hud text-[10px] text-slate-400 bg-black/60 px-3 py-1 rounded-full border border-slate-800">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-400 font-bold">ARCHITECT COMMAND // ACTIVE</span>
-          </div>
-          <div className="font-mono-hud text-[10px] text-[#FFA14A]/80 tracking-widest hidden md:inline">
-            06.45° N, 03.39° E
-          </div>
-        </div>
-      </div>
-
-      {/* ======================================================== */}
-      {/* SINGLE-SCREEN 3-COLUMN COCKPIT GRID (ZERO VERTICAL SCROLL) */}
-      {/* ======================================================== */}
-      <div className="relative z-20 flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 min-h-0 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-4 h-full max-h-[calc(100vh-145px)] items-stretch">
-          
-          {/* ======================================================== */}
-          {/* COLUMN 1 (LEFT, 3 COLS): THE IDENTITY MONOLITH */}
-          {/* ======================================================== */}
-          <div className="lg:col-span-3 flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-[#070A0E]/85 backdrop-blur-xl border border-[#FF6B1A]/35 shadow-[0_0_30px_rgba(255,107,26,0.15)] relative overflow-hidden group">
-            {/* Corner Tech Reticle Accents */}
-            <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#FF6B1A] pointer-events-none" />
-            <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-[#38BDF8] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-2 border-l-2 border-[#38BDF8] pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#FF6B1A] pointer-events-none" />
-
-            {/* Header Badge Row */}
-            <div className="flex items-center justify-between pb-2 border-b border-slate-800/80 shrink-0">
-              <div className="flex items-center gap-1.5 font-mono-hud text-[9px] text-[#38BDF8] tracking-widest font-bold">
-                <Shield className="w-3 h-3 text-[#38BDF8]" />
-                <span>AI ARCHITECT // PROFILE</span>
+            {/* 1. Header Tag & Founder Badge */}
+            <div className="flex items-center justify-between gap-1 pb-2 border-b border-slate-800/90 shrink-0">
+              <div className="flex items-center gap-1.5 font-mono-hud text-[9px] text-[#38BDF8] tracking-widest font-bold truncate">
+                <Shield className="w-3 h-3 text-[#38BDF8] shrink-0" />
+                <span className="truncate">AI ARCHITECT // PROFILE</span>
               </div>
-              <span className="font-mono-hud text-[8px] text-[#FFA14A] bg-[#FF6B1A]/10 border border-[#FF6B1A]/40 px-2 py-0.5 rounded font-bold uppercase tracking-wider">
+              <span className="font-mono-hud text-[8px] text-[#FFA14A] bg-[#FF6B1A]/15 border border-[#FF6B1A]/45 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider shrink-0">
                 FOUNDER // NELC DIGITAL
               </span>
             </div>
 
-            {/* Holographic Wireframe Avatar Frame */}
-            <div className="relative my-2 w-full aspect-[16/10] sm:aspect-square max-h-44 sm:max-h-52 rounded-lg overflow-hidden border border-[#38BDF8]/40 bg-slate-950/90 shadow-[inset_0_0_20px_rgba(56,189,248,0.2)] flex items-center justify-center shrink-0">
-              
-              {/* Profile Image Background (if provided) */}
+            {/* 2. Visual Avatar / Hologram Frame (16:10 / Square Viewport) */}
+            <div className="relative my-2 w-full aspect-[16/10] flex-1 min-h-[115px] max-h-[185px] rounded-lg overflow-hidden border border-[#38BDF8]/45 bg-[#05080C]/95 shadow-[inset_0_0_24px_rgba(56,189,248,0.22)] flex items-center justify-center">
+              {/* Bound to architect.avatarUrl in vault-manifest.json */}
               {profile.avatarUrl ? (
-                <img 
-                  src={profile.avatarUrl} 
-                  alt={profile.name}
-                  className="w-full h-full object-cover filter contrast-125 brightness-90 saturate-50"
-                  onError={(e) => {
-                    // Fallback to cyber wireframe only
+                <img
+                  src={profile.avatarUrl}
+                  alt={profile.name || 'LAWRENCE EMENIKE'}
+                  className="absolute inset-0 w-full h-full object-cover filter contrast-125 brightness-90 saturate-75"
+                  onError={e => {
                     (e.target as HTMLElement).style.display = 'none';
                   }}
                 />
               ) : null}
 
-              {/* 3D Cybernetic Mesh / Wireframe Silhouette Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <svg viewBox="0 0 200 200" className="w-full h-full p-2 opacity-90 drop-shadow-[0_0_12px_rgba(56,189,248,0.6)]">
+              {/* Built-in Animated SVG Cybernetic / Geometric Fallback Silhouette */}
+              <div className="relative z-10 inset-0 w-full h-full flex items-center justify-center pointer-events-none">
+                <svg
+                  viewBox="0 0 240 160"
+                  className="w-full h-full p-1.5 opacity-95 drop-shadow-[0_0_12px_rgba(56,189,248,0.55)]"
+                >
                   <defs>
-                    <linearGradient id="cyberMeshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.9" />
-                      <stop offset="50%" stopColor="#818CF8" stopOpacity="0.8" />
+                    <linearGradient id="holoWireframeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.95" />
+                      <stop offset="55%" stopColor="#38BDF8" stopOpacity="0.75" />
                       <stop offset="100%" stopColor="#FF6B1A" stopOpacity="0.95" />
                     </linearGradient>
-                    <radialGradient id="meshCenterGlow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.35" />
+                    <radialGradient id="holoCoreGlow" cx="50%" cy="48%" r="48%">
+                      <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.32" />
+                      <stop offset="60%" stopColor="#FF6B1A" stopOpacity="0.12" />
                       <stop offset="100%" stopColor="transparent" stopOpacity="0" />
                     </radialGradient>
                   </defs>
 
-                  {/* Ambient Glow Aura */}
-                  <circle cx="100" cy="95" r="60" fill="url(#meshCenterGlow)" />
+                  {/* Holographic Aura */}
+                  <circle cx="120" cy="76" r="58" fill="url(#holoCoreGlow)" />
 
-                  {/* Wireframe Head & Shoulders Mesh Facets */}
-                  <g stroke="url(#cyberMeshGrad)" strokeWidth="0.85" fill="none" opacity="0.85">
-                    {/* Head contour */}
-                    <path d="M 75 50 Q 100 35 125 50 Q 140 70 135 105 Q 128 135 100 145 Q 72 135 65 105 Q 60 70 75 50 Z" />
-                    
-                    {/* Internal wireframe facial lattice */}
-                    <line x1="100" y1="35" x2="100" y2="145" strokeDasharray="2,2" strokeWidth="1" />
-                    <line x1="75" y1="70" x2="125" y2="70" />
-                    <line x1="70" y1="95" x2="130" y2="95" />
-                    <line x1="80" y1="120" x2="120" y2="120" />
-                    
-                    {/* Triangulation vectors */}
-                    <polygon points="100,35 75,50 100,70" fill="rgba(56,189,248,0.06)" />
-                    <polygon points="100,35 125,50 100,70" fill="rgba(255,107,26,0.06)" />
-                    <polygon points="75,50 65,105 100,95" />
-                    <polygon points="125,50 135,105 100,95" />
-                    <polygon points="100,95 70,95 80,120" />
-                    <polygon points="100,95 130,95 120,120" />
-                    <polygon points="80,120 100,145 120,120" fill="rgba(56,189,248,0.08)" />
+                  {/* Rotating Outer Target Ring */}
+                  <circle
+                    cx="120"
+                    cy="76"
+                    r="52"
+                    fill="none"
+                    stroke="#38BDF8"
+                    strokeWidth="0.7"
+                    strokeDasharray="6 4"
+                    opacity="0.45"
+                  />
+                  <circle
+                    cx="120"
+                    cy="76"
+                    r="44"
+                    fill="none"
+                    stroke="#FF6B1A"
+                    strokeWidth="0.6"
+                    strokeDasharray="3 5"
+                    opacity="0.4"
+                  />
 
-                    {/* Torso / collarbone cyber lines */}
-                    <path d="M 65 135 Q 40 160 20 190 L 180 190 Q 160 160 135 135" />
-                    <line x1="100" y1="145" x2="100" y2="190" strokeDasharray="3,3" />
-                    <line x1="65" y1="135" x2="100" y2="165" />
-                    <line x1="135" y1="135" x2="100" y2="165" />
-                    <line x1="45" y1="165" x2="100" y2="165" />
-                    <line x1="155" y1="165" x2="100" y2="165" />
+                  {/* Geometric Cybernetic Head & Shoulders Wireframe Silhouette */}
+                  <g stroke="url(#holoWireframeGrad)" strokeWidth="0.9" fill="none">
+                    {/* Cranial & Jaw Facets */}
+                    <polygon
+                      points="120,22 142,32 148,56 142,82 120,98 98,82 92,56 98,32"
+                      fill="rgba(56, 189, 248, 0.07)"
+                    />
+                    {/* Internal Geometric Mesh */}
+                    <line x1="120" y1="22" x2="120" y2="150" strokeDasharray="2 2" opacity="0.75" />
+                    <line x1="98" y1="32" x2="142" y2="32" opacity="0.6" />
+                    <line x1="92" y1="56" x2="148" y2="56" />
+                    <line x1="98" y1="82" x2="142" y2="82" opacity="0.75" />
+
+                    {/* Optical Visor Band */}
+                    <polygon
+                      points="96,52 120,58 144,52 140,63 120,67 100,63"
+                      fill="rgba(255, 107, 26, 0.25)"
+                      stroke="#FFA14A"
+                      strokeWidth="1"
+                    />
+
+                    {/* Facet Triangulation Lines */}
+                    <line x1="120" y1="22" x2="92" y2="56" opacity="0.55" />
+                    <line x1="120" y1="22" x2="148" y2="56" opacity="0.55" />
+                    <line x1="92" y1="56" x2="120" y2="82" opacity="0.65" />
+                    <line x1="148" y1="56" x2="120" y2="82" opacity="0.65" />
+                    <line x1="98" y1="82" x2="120" y2="67" opacity="0.55" />
+                    <line x1="142" y1="82" x2="120" y2="67" opacity="0.55" />
+
+                    {/* Neck & Cybernetic Shoulder Lattice */}
+                    <polygon
+                      points="106,90 134,90 142,112 120,124 98,112"
+                      fill="rgba(56, 189, 248, 0.05)"
+                    />
+                    <path
+                      d="M 98 104 L 54 124 L 38 154 L 202 154 L 186 124 L 142 104"
+                      fill="rgba(255, 107, 26, 0.05)"
+                    />
+                    <line x1="54" y1="124" x2="120" y2="142" opacity="0.6" />
+                    <line x1="186" y1="124" x2="120" y2="142" opacity="0.6" />
+                    <line x1="98" y1="112" x2="72" y2="154" opacity="0.5" />
+                    <line x1="142" y1="112" x2="168" y2="154" opacity="0.5" />
                   </g>
 
-                  {/* Pulsing Vertex Nodes */}
-                  <g fill="#38BDF8">
-                    <circle cx="100" cy="35" r="2.2" className="animate-pulse" />
-                    <circle cx="75" cy="50" r="1.8" />
-                    <circle cx="125" cy="50" r="1.8" />
-                    <circle cx="100" cy="70" r="2.2" fill="#FFA14A" />
-                    <circle cx="85" cy="90" r="1.5" />
-                    <circle cx="115" cy="90" r="1.5" />
-                    <circle cx="100" cy="110" r="2" fill="#FFA14A" />
-                    <circle cx="100" cy="145" r="2.2" />
+                  {/* Glowing Neural Vertex Nodes */}
+                  <g>
+                    <circle cx="120" cy="22" r="2.2" fill="#38BDF8" />
+                    <circle cx="92" cy="56" r="1.8" fill="#38BDF8" />
+                    <circle cx="148" cy="56" r="1.8" fill="#38BDF8" />
+                    <circle cx="120" cy="58" r="2.3" fill="#FFA14A" />
+                    <circle cx="120" cy="98" r="2" fill="#38BDF8" />
+                    <circle cx="120" cy="124" r="2.2" fill="#FF6B1A" />
+                    <circle cx="54" cy="124" r="1.8" fill="#38BDF8" />
+                    <circle cx="186" cy="124" r="1.8" fill="#38BDF8" />
                   </g>
                 </svg>
               </div>
 
-              {/* Sweeping Cyan Scanning Laser Bar */}
-              <div 
-                className="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent shadow-[0_0_12px_#38BDF8] pointer-events-none animate-scan"
+              {/* Stylized Cyan/Ember Wireframe Scan-Line Overlay */}
+              <div
+                className="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#38BDF8] to-[#FF6B1A] shadow-[0_0_12px_#38BDF8] pointer-events-none animate-scan z-20"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none opacity-30 z-10"
                 style={{
-                  animationDuration: '3.5s',
-                  animationIterationCount: 'infinite'
+                  backgroundImage:
+                    'repeating-linear-gradient(0deg, rgba(56, 189, 248, 0.16) 0px, transparent 2px, transparent 4px)'
                 }}
               />
 
-              {/* Holographic Scanline Texture */}
-              <div 
-                className="absolute inset-0 pointer-events-none opacity-25"
-                style={{
-                  backgroundImage: 'repeating-linear-gradient(0deg, rgba(56, 189, 248, 0.15) 0px, transparent 2px, transparent 4px)'
-                }}
-              />
-
-              {/* Bottom Viewport HUD Overlay Tags */}
-              <div className="absolute bottom-1.5 left-2 right-2 flex items-center justify-between pointer-events-none">
-                <span className="font-mono-hud text-[7px] text-[#38BDF8]/90 tracking-wider">
-                  SCAN // 894.2 Hz
+              {/* Viewport HUD Corner Telemetry */}
+              <div className="absolute top-1.5 left-2 right-2 flex items-center justify-between pointer-events-none z-20">
+                <span className="font-mono-hud text-[7px] text-[#38BDF8]/90 tracking-widest">
+                  HOLO.MESH // V4.2
+                </span>
+                <span className="font-mono-hud text-[7px] text-emerald-400 tracking-widest font-bold">
+                  BIOMETRIC // SYNC
+                </span>
+              </div>
+              <div className="absolute bottom-1.5 left-2 right-2 flex items-center justify-between pointer-events-none z-20">
+                <span className="font-mono-hud text-[7px] text-slate-400 tracking-wider">
+                  {profile.coordinates || '06.45° N, 03.39° E'}
                 </span>
                 <span className="font-mono-hud text-[7px] text-[#FFA14A] tracking-wider font-bold">
-                  HOLO-ID // ACTIVE
+                  ID // VERIFIED
                 </span>
               </div>
             </div>
 
-            {/* Name & Callsign Block */}
-            <div className="shrink-0">
-              <h2 className="font-syne text-xl sm:text-2xl font-extrabold text-white tracking-wider glow-ember-text leading-tight uppercase">
-                {profile.name}
-              </h2>
-
-              <div className="font-mono-hud text-[10px] text-[#FFA14A] tracking-wider mt-1 font-bold flex items-center gap-1.5 bg-[#FF6B1A]/10 px-2 py-0.5 rounded border border-[#FF6B1A]/30">
-                <span>CALLSIGN:</span>
-                <span className="text-white">LXWRVNX // THE ARCHITECT</span>
+            {/* 3. Name & Callsign */}
+            <div className="shrink-0 my-1">
+              <h1 className="font-syne text-lg sm:text-xl xl:text-2xl font-extrabold text-white tracking-wider glow-ember-text leading-tight uppercase">
+                LAWRENCE EMENIKE
+              </h1>
+              <div className="mt-1 px-2 py-1 rounded bg-[#FF6B1A]/15 border border-[#FF6B1A]/40 font-mono-hud text-[9px] sm:text-[10px] text-[#FFA14A] font-bold tracking-wider truncate">
+                CALLSIGN: <span className="text-white">LXWRVNX // THE ARCHITECT</span>
               </div>
             </div>
 
-            {/* 4 Role Pills */}
-            <div className="grid grid-cols-2 gap-1.5 my-2 shrink-0">
+            {/* 4. Role Pills */}
+            <div className="grid grid-cols-2 gap-1.5 my-1.5 shrink-0">
               {[
                 'AI Transformation Consultant',
                 'AI Architect & Engineer',
                 'Creative Technologist',
                 'AI Artist'
               ].map((role, idx) => (
-                <div 
+                <div
                   key={idx}
-                  className="font-mono-hud text-[8px] font-bold text-slate-300 bg-[#38BDF8]/10 hover:bg-[#38BDF8]/20 border border-[#38BDF8]/30 px-1.5 py-1 rounded text-center truncate tracking-tight transition-all"
+                  className="font-mono-hud text-[8px] font-bold text-slate-200 bg-[#38BDF8]/10 hover:bg-[#38BDF8]/20 border border-[#38BDF8]/35 shadow-[0_0_10px_rgba(56,189,248,0.12)] px-1.5 py-1 rounded text-center truncate tracking-tight transition-all"
                   title={role}
                 >
                   {role}
@@ -328,559 +553,632 @@ export const ArchitectChamber: React.FC<ArchitectChamberProps> = ({
               ))}
             </div>
 
-            {/* Core Thesis Quote Box */}
-            <div className="p-2.5 rounded-lg bg-[#FF6B1A]/10 border-l-2 border-[#FF6B1A] font-inter text-[10px] sm:text-[11px] text-slate-200 leading-snug italic shadow-[inset_0_0_12px_rgba(255,107,26,0.1)] shrink-0">
+            {/* 5. Core Thesis Quote Box (Ember-Left-Bordered Glass Callout) */}
+            <blockquote className="p-2.5 rounded-lg bg-[#0D1B24]/75 border-l-2 border-[#FF6B1A] border-t border-r border-b border-t-slate-800/70 border-r-slate-800/70 border-b-slate-800/70 font-inter text-[10px] sm:text-[11px] text-slate-200 leading-snug italic shadow-[inset_0_0_15px_rgba(255,107,26,0.12)] shrink-0">
               "Architecting secure, governed commercial intelligence systems that translate cross-sector complexity into structured intelligence for strategic decision-making."
-            </div>
+            </blockquote>
           </div>
 
           {/* ======================================================== */}
-          {/* COLUMN 2 (CENTER, 6 COLS): RADAR & TABBED BRIEFINGS */}
+          {/* B. CENTER COLUMN (col-span-6): TELEMETRY & BRIEFING      */}
           {/* ======================================================== */}
-          <div className="lg:col-span-6 flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-[#070A0E]/80 backdrop-blur-xl border border-slate-800 shadow-[0_0_35px_rgba(0,0,0,0.8)] relative overflow-hidden">
-            
-            {/* Top Half: 6-Axis Interactive Radar & Multi-Agent Node Visualizer */}
-            <div className="relative w-full h-[180px] sm:h-[220px] rounded-xl bg-[#07090C]/90 border border-slate-800/80 p-2 overflow-hidden flex items-center justify-center shrink-0">
-              
-              {/* Background Radar Range Rings & Crosshairs */}
-              <svg viewBox="0 0 240 240" className="w-full h-full max-h-[210px] overflow-visible">
+          <div
+            className="lg:col-span-6 h-full min-h-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-[#070A0E]/80 border border-slate-800/90 shadow-[0_0_35px_rgba(0,0,0,0.85)] relative overflow-hidden"
+            style={{ backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}
+          >
+            {/* Subtle Top Console Header */}
+            <div className="flex items-center justify-between pb-2 border-b border-slate-800/80 shrink-0">
+              <div className="flex items-center gap-2 font-mono-hud text-[10px] text-[#38BDF8] tracking-widest font-bold">
+                <Activity className="w-3.5 h-3.5 text-[#FF6B1A]" />
+                <span>CENTRAL TELEMETRY CONSOLE // NEURAL MATRIX</span>
+              </div>
+              <div className="flex items-center gap-2 font-mono-hud text-[9px] text-slate-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-emerald-400 font-bold">6-AXIS LOCK</span>
+              </div>
+            </div>
+
+            {/* 1. Interactive SVG 6-Axis Radar Chart & Multi-Agent Node Visualizer (Top Half) */}
+            <div className="relative w-full flex-1 min-h-[165px] my-2 rounded-xl bg-[#05080C]/90 border border-slate-800/90 p-2 overflow-hidden flex items-center justify-center">
+              <svg viewBox="0 0 400 230" className="w-full h-full max-h-[225px] select-none">
                 <defs>
-                  {/* Rotating Radar Sweep Cone Gradient */}
-                  <linearGradient id="radarSweep" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FF6B1A" stopOpacity="0.45" />
+                  <linearGradient id="radarSweepBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor={currentBriefing.accentColor} stopOpacity="0.4" />
                     <stop offset="100%" stopColor="#38BDF8" stopOpacity="0" />
                   </linearGradient>
-                  
-                  {/* Radar Polygon Area Gradient */}
-                  <linearGradient id="radarPolyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#FF6B1A" stopOpacity="0.45" />
-                    <stop offset="50%" stopColor="#FFA14A" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#38BDF8" stopOpacity="0.4" />
+                  <linearGradient id="radarPolyFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#FF6B1A" stopOpacity="0.38" />
+                    <stop offset="50%" stopColor="#FFA14A" stopOpacity="0.22" />
+                    <stop offset="100%" stopColor="#38BDF8" stopOpacity="0.38" />
                   </linearGradient>
                 </defs>
 
-                {/* Concentric Range Rings */}
-                {[20, 40, 60, 80].map((r) => (
+                {/* Subtle Background Grid Lines */}
+                <line x1="0" y1="115" x2="400" y2="115" stroke="#0F172A" strokeWidth="1" />
+                <line x1="200" y1="0" x2="200" y2="230" stroke="#0F172A" strokeWidth="1" />
+
+                {/* Concentric Radar Range Rings */}
+                {[19, 38, 57, 76].map(r => (
                   <circle
                     key={r}
-                    cx="120"
-                    cy="120"
+                    cx={radarGeometry.cx}
+                    cy={radarGeometry.cy}
                     r={r}
                     fill="none"
-                    stroke="#1E293B"
-                    strokeWidth="0.75"
-                    strokeDasharray={r === 80 ? 'none' : '3 3'}
+                    stroke={r === 76 ? '#334155' : '#1E293B'}
+                    strokeWidth={r === 76 ? '1' : '0.75'}
+                    strokeDasharray={r === 76 ? 'none' : '3 3'}
                   />
                 ))}
-                
-                {/* Outer Perimeter Ring */}
-                <circle cx="120" cy="120" r="85" fill="none" stroke="#FF6B1A" strokeWidth="1" opacity="0.6" />
 
-                {/* 6 Radar Axis Lines */}
-                {radarAxes.map((axis, i) => {
-                  const rad = (axis.angle * Math.PI) / 180;
-                  const x2 = 120 + 85 * Math.cos(rad);
-                  const y2 = 120 + 85 * Math.sin(rad);
-                  return (
-                    <line
-                      key={i}
-                      x1="120"
-                      y1="120"
-                      x2={x2}
-                      y2={y2}
-                      stroke="#334155"
-                      strokeWidth="0.8"
-                    />
-                  );
-                })}
-
-                {/* Rotating Amber/Cyan Radar Sweeper Cone */}
-                <g transform={`rotate(${radarAngle} 120 120)`}>
-                  <path
-                    d="M 120 120 L 205 120 A 85 85 0 0 1 180 180 Z"
-                    fill="url(#radarSweep)"
-                  />
-                  <line x1="120" y1="120" x2="205" y2="120" stroke="#FF6B1A" strokeWidth="1.5" />
-                </g>
-
-                {/* Dynamic Polygon Strength Area */}
-                <polygon
-                  points={radarPolygonPoints}
-                  fill="url(#radarPolyGrad)"
-                  stroke="#FF6B1A"
-                  strokeWidth="1.75"
-                  className="transition-all duration-700 ease-out"
+                {/* Outer Telemetry Degree Ring */}
+                <circle
+                  cx={radarGeometry.cx}
+                  cy={radarGeometry.cy}
+                  r="83"
+                  fill="none"
+                  stroke={currentBriefing.accentColor}
+                  strokeWidth="0.9"
+                  strokeDasharray="8 4"
+                  opacity="0.55"
                 />
 
-                {/* Animated Vertices & Neural Graph Nodes */}
-                {radarValues.map((val, idx) => {
-                  const rad = (radarAxes[idx].angle * Math.PI) / 180;
-                  const r = (val / 100) * 85;
-                  const x = 120 + r * Math.cos(rad);
-                  const y = 120 + r * Math.sin(rad);
+                {/* 6 Radar Axis Spokes */}
+                {radarGeometry.nodes.map((node, i) => (
+                  <line
+                    key={`axis-${i}`}
+                    x1={radarGeometry.cx}
+                    y1={radarGeometry.cy}
+                    x2={node.axisEndX}
+                    y2={node.axisEndY}
+                    stroke="#334155"
+                    strokeWidth="0.85"
+                  />
+                ))}
+
+                {/* Multi-Agent Node Graph Active Connections (Glowing Neural Pathways) */}
+                {currentBriefing.activeConnections.map(([fromIdx, toIdx], idx) => {
+                  const n1 = radarGeometry.nodes[fromIdx];
+                  const n2 = radarGeometry.nodes[toIdx];
+                  if (!n1 || !n2) return null;
                   return (
-                    <g key={idx} className="transition-all duration-700 ease-out">
-                      <circle cx={x} cy={y} r="3" fill="#38BDF8" stroke="#070A0E" strokeWidth="1" />
-                      <circle cx={x} cy={y} r="5" fill="none" stroke="#FFA14A" strokeWidth="0.75" className="animate-ping" />
+                    <g key={`conn-${idx}`}>
+                      <line
+                        x1={n1.x}
+                        y1={n1.y}
+                        x2={n2.x}
+                        y2={n2.y}
+                        stroke="#38BDF8"
+                        strokeWidth="1.4"
+                        strokeDasharray="3 2"
+                        opacity="0.8"
+                        className="transition-all duration-700 ease-out"
+                      />
+                      {/* Midpoint Neural Synapse Node */}
+                      <circle
+                        cx={(n1.x + n2.x) / 2}
+                        cy={(n1.y + n2.y) / 2}
+                        r="1.8"
+                        fill="#FFA14A"
+                        className="transition-all duration-700 ease-out"
+                      />
                     </g>
                   );
                 })}
 
-                {/* Axis Labels */}
-                {radarAxes.map((axis, idx) => {
-                  const rad = (axis.angle * Math.PI) / 180;
-                  const lx = 120 + 104 * Math.cos(rad);
-                  const ly = 120 + 104 * Math.sin(rad);
+                {/* Rotating Radar Sweep Sector */}
+                <g transform={`rotate(${radarAngle} ${radarGeometry.cx} ${radarGeometry.cy})`}>
+                  <path
+                    d={`M ${radarGeometry.cx} ${radarGeometry.cy} L ${radarGeometry.cx + 76} ${radarGeometry.cy} A 76 76 0 0 1 ${
+                      radarGeometry.cx + 54
+                    } ${radarGeometry.cy + 54} Z`}
+                    fill="url(#radarSweepBeam)"
+                  />
+                  <line
+                    x1={radarGeometry.cx}
+                    y1={radarGeometry.cy}
+                    x2={radarGeometry.cx + 76}
+                    y2={radarGeometry.cy}
+                    stroke={currentBriefing.accentColor}
+                    strokeWidth="1.4"
+                  />
+                </g>
+
+                {/* Animated 6-Axis Radar Strength Polygon */}
+                <polygon
+                  points={radarGeometry.polygonPoints}
+                  fill="url(#radarPolyFill)"
+                  stroke={currentBriefing.accentColor}
+                  strokeWidth="1.8"
+                  className="transition-all duration-700 ease-out"
+                />
+
+                {/* Central Multi-Agent Orchestrator Core Node */}
+                <circle
+                  cx={radarGeometry.cx}
+                  cy={radarGeometry.cy}
+                  r="4"
+                  fill="#070A0E"
+                  stroke="#FF6B1A"
+                  strokeWidth="1.5"
+                />
+                <circle cx={radarGeometry.cx} cy={radarGeometry.cy} r="1.5" fill="#FFA14A" />
+
+                {/* 6 Vertex Nodes + Score Callouts */}
+                {radarGeometry.nodes.map((node, idx) => (
+                  <g key={`node-${idx}`} className="transition-all duration-700 ease-out">
+                    <circle
+                      cx={node.x}
+                      cy={node.y}
+                      r="5.5"
+                      fill="none"
+                      stroke={currentBriefing.accentColor}
+                      strokeWidth="0.8"
+                      opacity="0.6"
+                    />
+                    <circle
+                      cx={node.x}
+                      cy={node.y}
+                      r="3"
+                      fill="#38BDF8"
+                      stroke="#070A0E"
+                      strokeWidth="1"
+                    />
+                  </g>
+                ))}
+
+                {/* 6 Axis Labels & Percentage Telemetry */}
+                {radarGeometry.nodes.map((node, idx) => {
+                  const isTop = idx === 0;
+                  const isBottom = idx === 3;
+                  const isRight = idx === 1 || idx === 2;
+                  const textAnchor = isTop || isBottom ? 'middle' : isRight ? 'start' : 'end';
+                  const dx = isTop || isBottom ? 0 : isRight ? 4 : -4;
+                  const dy = isTop ? -4 : isBottom ? 8 : 2;
+
                   return (
-                    <text
-                      key={idx}
-                      x={lx}
-                      y={ly + 3}
-                      fill="#94A3B8"
-                      fontSize="6.5"
-                      fontFamily="monospace"
-                      fontWeight="bold"
-                      textAnchor="middle"
-                      className="select-none tracking-tight"
-                    >
-                      {axis.label}
-                    </text>
+                    <g key={`label-${idx}`}>
+                      <text
+                        x={node.lx + dx}
+                        y={node.ly + dy}
+                        fill="#E2E8F0"
+                        fontSize="7.2"
+                        fontFamily="JetBrains Mono, monospace"
+                        fontWeight="bold"
+                        textAnchor={textAnchor}
+                      >
+                        {node.label}
+                      </text>
+                      <text
+                        x={node.lx + dx}
+                        y={node.ly + dy + 9}
+                        fill={currentBriefing.accentColor}
+                        fontSize="6.8"
+                        fontFamily="JetBrains Mono, monospace"
+                        fontWeight="bold"
+                        textAnchor={textAnchor}
+                      >
+                        [{node.val}%]
+                      </text>
+                    </g>
                   );
                 })}
               </svg>
 
-              {/* Side Floating Badge: SYS.ACT // 04 */}
-              <div className="absolute top-2 left-2 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/75 border border-slate-800 font-mono-hud text-[8px] text-slate-300">
-                <Activity className="w-2.5 h-2.5 text-[#FF6B1A]" />
-                <span>SYS.ACT // 04</span>
+              {/* Corner Telemetry Overlays inside Visualizer */}
+              <div className="absolute top-2 left-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/75 border border-slate-800 font-mono-hud text-[8px] text-slate-300 pointer-events-none">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B1A] animate-pulse" />
+                <span>NODE.GRAPH // MULTI-AGENT</span>
               </div>
-
-              {/* Real-Time Waveform Indicator (Bottom Right) */}
-              <div className="absolute bottom-2 right-2 z-10 flex items-center gap-1 px-2 py-1 rounded bg-black/75 border border-slate-800 font-mono-hud text-[8px] text-[#38BDF8]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse" />
-                <span>NEURAL FLOW: ACTIVE</span>
+              <div className="absolute bottom-2 right-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/75 border border-slate-800 font-mono-hud text-[8px] text-[#38BDF8] pointer-events-none">
+                <span>VECTOR SYNC // {activeTab.toUpperCase()}</span>
               </div>
             </div>
 
-            {/* Middle: 4 Sleek Horizontal HUD Selector Tabs */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 my-2.5 shrink-0">
-              {[
-                { id: 'perspective', label: '01 // STRATEGIC PERSPECTIVE' },
-                { id: 'architecture', label: '02 // ENTERPRISE ARCHITECTURE' },
-                { id: 'creative', label: '03 // VISUAL & SONIC MATRIX' },
-                { id: 'kinetic', label: '04 // KINETIC DISCIPLINE' },
-              ].map((tab) => {
-                const isActive = activeTab === tab.id;
+            {/* 2. 4 Sleek Horizontal HUD Selector Tabs (Middle of Center Panel) */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 my-1 shrink-0">
+              {(Object.keys(TELEMETRY_BRIEFINGS) as TelemetryTab[]).map(tabKey => {
+                const tab = TELEMETRY_BRIEFINGS[tabKey];
+                const isActive = activeTab === tabKey;
                 return (
                   <button
                     key={tab.id}
-                    onClick={() => handleTabChange(tab.id as TelemetryTab)}
-                    className={`px-2 py-1.5 rounded-lg font-mono-hud text-[9px] sm:text-[10px] font-bold tracking-wider transition-all cursor-pointer text-center truncate ${
+                    onClick={() => handleTabChange(tabKey)}
+                    className={`px-2 py-2 rounded-lg font-mono-hud text-[8.5px] xl:text-[9.5px] font-bold tracking-wider transition-all cursor-pointer text-center truncate ${
                       isActive
-                        ? 'bg-[#FF6B1A] text-slate-950 border border-[#FFA14A] shadow-[0_0_15px_rgba(255,107,26,0.5)] scale-[1.02]'
-                        : 'bg-slate-900/80 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700'
+                        ? 'bg-[#FF6B1A] text-slate-950 border border-[#FFA14A] shadow-[0_0_16px_rgba(255,107,26,0.55)] scale-[1.01]'
+                        : 'bg-slate-900/85 text-slate-400 hover:text-white border border-slate-800 hover:border-[#38BDF8]/50'
                     }`}
+                    title={tab.tabLabel}
                   >
-                    {tab.label}
+                    {tab.tabLabel}
                   </button>
                 );
               })}
             </div>
 
-            {/* Bottom Half: Single Punchy Active Telemetry Briefing Card */}
-            <div className="flex-1 min-h-[140px] p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between transition-all duration-300">
-              {activeTab === 'perspective' && (
-                <div className="flex flex-col justify-between h-full animate-fade-in">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Compass className="w-3.5 h-3.5 text-[#FF6B1A]" />
-                      <span className="font-mono-hud text-xs font-bold text-white tracking-widest uppercase">
-                        MAKING SENSE OF COMPLEXITY
-                      </span>
-                    </div>
-                    <p className="font-inter text-xs text-slate-300 leading-relaxed">
-                      "The scarcest resource inside modern organizations is not information—it is clarity. Commercial Intelligence transforms fragmented signals across market dynamics, operations, and emerging tech into decisive, actionable execution."
-                    </p>
-                  </div>
-                  <div className="pt-2 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 font-mono-hud text-[9px] text-[#FFA14A]">
-                    <span>SIGNAL SYNTHESIS: <strong className="text-white">99.4%</strong></span>
-                    <span>FOCUS: <strong className="text-white">COMMERCIAL INTELLIGENCE</strong></span>
-                    <span>MODE: <strong className="text-white">CROSS-SECTOR</strong></span>
-                  </div>
-                </div>
-              )}
+            {/* 3. Active Tabbed Briefing Card (Only ONE visible at a time, cross-fading) */}
+            <div
+              key={activeTab}
+              className="mt-1.5 p-3.5 rounded-xl bg-[#05080C]/90 border border-slate-800/90 flex flex-col justify-between shrink-0 min-h-[132px] animate-fade-in relative overflow-hidden"
+            >
+              {/* Subtle Left Accent Bar */}
+              <div
+                className="absolute left-0 top-0 bottom-0 w-1"
+                style={{ backgroundColor: currentBriefing.accentColor }}
+              />
 
-              {activeTab === 'architecture' && (
-                <div className="flex flex-col justify-between h-full animate-fade-in">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Cpu className="w-3.5 h-3.5 text-[#38BDF8]" />
-                      <span className="font-mono-hud text-xs font-bold text-white tracking-widest uppercase">
-                        GOVERNANCE & MULTI-AGENT PLATFORMS
-                      </span>
-                    </div>
-                    <p className="font-inter text-xs text-slate-300 leading-relaxed">
-                      "Moving beyond basic automation to engineer systems that fundamentally upgrade how organizations perceive, reason, and act. Deploying zero-trust, governed multi-agent workflows with measurable commercial impact."
-                    </p>
+              <div className="pl-2">
+                <div className="flex items-center justify-between gap-2 mb-1.5">
+                  <div className="flex items-center gap-2">
+                    {activeTab === 'perspective' && <Compass className="w-3.5 h-3.5 text-[#FF6B1A]" />}
+                    {activeTab === 'architecture' && <Cpu className="w-3.5 h-3.5 text-[#38BDF8]" />}
+                    {activeTab === 'creative' && <Sparkles className="w-3.5 h-3.5 text-[#FFA14A]" />}
+                    {activeTab === 'kinetic' && <Target className="w-3.5 h-3.5 text-emerald-400" />}
+                    <h3 className="font-mono-hud text-xs sm:text-[13px] font-bold text-white tracking-widest uppercase">
+                      {currentBriefing.headline}
+                    </h3>
                   </div>
-                  <div className="pt-2 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 font-mono-hud text-[9px] text-[#38BDF8]">
-                    <span>ARCHITECTURE: <strong className="text-white">MULTI-AGENT RAG</strong></span>
-                    <span>SECURITY: <strong className="text-white">ZERO-TRUST / GOVERNED</strong></span>
-                    <span>PRACTICE: <strong className="text-white">NELC DIGITAL</strong></span>
-                  </div>
+                  <span className="font-mono-hud text-[8px] text-slate-400 bg-slate-900/90 px-2 py-0.5 rounded border border-slate-800">
+                    {currentBriefing.tabLabel.split(' // ')[0]} // ACTIVE
+                  </span>
                 </div>
-              )}
 
-              {activeTab === 'creative' && (
-                <div className="flex flex-col justify-between h-full animate-fade-in">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Sparkles className="w-3.5 h-3.5 text-[#FFA14A]" />
-                      <span className="font-mono-hud text-xs font-bold text-white tracking-widest uppercase">
-                        LXWRVNX // CREATIVE SYNTHESIS
-                      </span>
-                    </div>
-                    <p className="font-inter text-xs text-slate-300 leading-relaxed">
-                      "Where algorithmic precision meets human aesthetics. Directing long-exposure optical photography, custom generative AI cinema pipelines, and dark atmospheric wave/phonk sonic engineering."
-                    </p>
-                  </div>
-                  <div className="pt-2 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 font-mono-hud text-[9px] text-[#FFA14A]">
-                    <span>OPTICS: <strong className="text-white">LONG-EXPOSURE</strong></span>
-                    <span>SYNTHESIS: <strong className="text-white">CUSTOM PIPELINES</strong></span>
-                    <span>ACOUSTICS: <strong className="text-white">WAVE / PHONK</strong></span>
-                  </div>
-                </div>
-              )}
+                <p className="font-inter text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                  {currentBriefing.briefing}
+                </p>
+              </div>
 
-              {activeTab === 'kinetic' && (
-                <div className="flex flex-col justify-between h-full animate-fade-in">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Target className="w-3.5 h-3.5 text-emerald-400" />
-                      <span className="font-mono-hud text-xs font-bold text-white tracking-widest uppercase">
-                        ENDURANCE & SYSTEMS MINDSET
-                      </span>
-                    </div>
-                    <p className="font-inter text-xs text-slate-300 leading-relaxed">
-                      "High-output technical execution requires physical and mental rigor. Built on the intersection of quantitative problem-solving, long-distance marathon endurance, and kinetic discipline."
-                    </p>
+              {/* Key Metrics Row */}
+              <div className="pl-2 pt-2.5 mt-2 border-t border-slate-800/90 flex flex-wrap items-center justify-between gap-2 font-mono-hud text-[8.5px] sm:text-[9.5px]">
+                {currentBriefing.metrics.map((m, idx) => (
+                  <div key={idx} className="flex items-center gap-1">
+                    <span className="text-slate-400">{m.label}:</span>
+                    <strong className="text-[#FFA14A] font-bold">{m.value}</strong>
                   </div>
-                  <div className="pt-2 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 font-mono-hud text-[9px] text-emerald-400">
-                    <span>MINDSET: <strong className="text-white">STOIC SYSTEMS</strong></span>
-                    <span>PACING: <strong className="text-white">MARATHON ENDURANCE</strong></span>
-                    <span>PRECISION: <strong className="text-white">DETERMINISTIC</strong></span>
-                  </div>
-                </div>
-              )}
+                ))}
+              </div>
             </div>
           </div>
 
           {/* ======================================================== */}
-          {/* COLUMN 3 (RIGHT, 3 COLS): TELEMETRY, CREDENTIALS & COMMS */}
+          {/* C. RIGHT COLUMN (col-span-3): TELEMETRY, STACK & COMMS   */}
           {/* ======================================================== */}
-          <div className="lg:col-span-3 flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-[#070A0E]/85 backdrop-blur-xl border border-slate-800 shadow-[0_0_30px_rgba(0,0,0,0.8)] relative overflow-hidden">
-            
-            {/* Module 1: SYSTEM CAPABILITIES & GAUGES */}
+          <div
+            className="lg:col-span-3 h-full min-h-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-[#070A0E]/80 border border-slate-800/90 shadow-[0_0_30px_rgba(0,0,0,0.85)] relative overflow-hidden"
+            style={{ backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}
+          >
+            {/* Corner Tech Brackets */}
+            <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#38BDF8] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-[#FF6B1A] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-2 border-l-2 border-[#FF6B1A] pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#38BDF8] pointer-events-none" />
+
+            {/* MODULE 1: SYSTEM CAPABILITIES // TELEMETRY */}
             <div className="shrink-0">
-              <div className="flex items-center justify-between pb-2 border-b border-slate-800/80 mb-2">
+              <div className="flex items-center justify-between pb-1.5 border-b border-slate-800/90 mb-2">
                 <span className="font-mono-hud text-[9px] text-[#38BDF8] tracking-widest font-bold">
-                  OPERATIONAL METRICS // HUD
+                  SYSTEM CAPABILITIES // TELEMETRY
                 </span>
-                <span className="font-mono-hud text-[8px] text-slate-500">
-                  REAL-TIME
+                <span className="font-mono-hud text-[7.5px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold">
+                  LIVE
                 </span>
               </div>
 
-              {/* Progress Telemetry Readouts */}
-              <div className="space-y-1.5 font-mono-hud text-[8px]">
-                <div>
-                  <div className="flex justify-between text-slate-400 mb-0.5">
-                    <span>MULTI-AGENT ORCHESTRATION</span>
-                    <span className="text-[#38BDF8] font-bold">OPTIMAL</span>
+              <div className="space-y-2 font-mono-hud">
+                {[
+                  {
+                    name: 'MULTI-AGENT ORCHESTRATION',
+                    ascii: '[||||||||||]',
+                    status: 'OPTIMAL',
+                    pct: '98%',
+                    barColor: 'from-[#38BDF8] to-[#FF6B1A]',
+                    textColor: 'text-[#38BDF8]'
+                  },
+                  {
+                    name: 'FINAI & COMMERCIAL STRATEGY',
+                    ascii: '[||||||||||]',
+                    status: 'ACTIVE',
+                    pct: '96%',
+                    barColor: 'from-[#FF6B1A] to-[#FFA14A]',
+                    textColor: 'text-[#FFA14A]'
+                  },
+                  {
+                    name: 'DATA GOVERNANCE & SECURITY',
+                    ascii: '[|||||||||.]',
+                    status: 'ENFORCED',
+                    pct: '94%',
+                    barColor: 'from-emerald-400 to-[#38BDF8]',
+                    textColor: 'text-emerald-400'
+                  },
+                  {
+                    name: 'CREATIVE SYNTHESIS (OPTICS/AI)',
+                    ascii: '[||||||||||]',
+                    status: 'ONLINE',
+                    pct: '99%',
+                    barColor: 'from-[#FFA14A] to-[#38BDF8]',
+                    textColor: 'text-[#38BDF8]'
+                  }
+                ].map((cap, idx) => (
+                  <div key={idx} className="bg-[#05080C]/80 p-1.5 rounded-lg border border-slate-800/80">
+                    <div className="flex items-center justify-between text-[7.5px] xl:text-[8px] mb-1 gap-1">
+                      <span className="text-slate-200 font-bold truncate">{cap.name}</span>
+                      <span className={`${cap.textColor} font-bold shrink-0`}>
+                        {cap.ascii} {cap.status}
+                      </span>
+                    </div>
+                    <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                      <div
+                        className={`h-full bg-gradient-to-r ${cap.barColor} rounded-full transition-all duration-1000`}
+                        style={{ width: cap.pct }}
+                      />
+                    </div>
                   </div>
-                  <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                    <div className="h-full bg-gradient-to-r from-[#38BDF8] to-[#FF6B1A] w-[97%] rounded-full shadow-[0_0_8px_rgba(56,189,248,0.5)]" />
-                  </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <div>
-                  <div className="flex justify-between text-slate-400 mb-0.5">
-                    <span>FINAI & COMMERCIAL STRATEGY</span>
-                    <span className="text-[#FFA14A] font-bold">ACTIVE</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                    <div className="h-full bg-gradient-to-r from-[#FF6B1A] to-[#FFA14A] w-[94%] rounded-full shadow-[0_0_8px_rgba(255,107,26,0.5)]" />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-slate-400 mb-0.5">
-                    <span>DATA GOVERNANCE & SECURITY</span>
-                    <span className="text-emerald-400 font-bold">ENFORCED</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                    <div className="h-full bg-emerald-400 w-[99%] rounded-full shadow-[0_0_8px_rgba(52,211,153,0.5)]" />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-slate-400 mb-0.5">
-                    <span>CREATIVE SYNTHESIS (OPTICS/AI)</span>
-                    <span className="text-purple-400 font-bold">ONLINE</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                    <div className="h-full bg-gradient-to-r from-purple-500 to-[#38BDF8] w-[96%] rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]" />
-                  </div>
+            {/* MODULE 2: OPERATIONAL CREDENTIALS // MATRIX */}
+            <div className="my-2 py-2 border-y border-slate-800/90 shrink-0">
+              <div className="flex items-center justify-between mb-2">
+                <div className="font-mono-hud text-[9px] text-[#FFA14A] tracking-widest font-bold flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
+                  <span>OPERATIONAL CREDENTIALS // MATRIX</span>
                 </div>
               </div>
 
-              {/* 3 Circular Dial Gauges (Matching Mockup) */}
-              <div className="grid grid-cols-3 gap-2 mt-3 pt-2.5 border-t border-slate-800/80 text-center font-mono-hud">
-                {/* Dial 1: Throughput */}
-                <div className="flex flex-col items-center">
-                  <div className="relative w-11 h-11 flex items-center justify-center">
-                    <svg className="w-full h-full -rotate-90">
-                      <circle cx="22" cy="22" r="18" fill="none" stroke="#1E293B" strokeWidth="2.5" />
-                      <circle cx="22" cy="22" r="18" fill="none" stroke="#FFA14A" strokeWidth="2.5" strokeDasharray="113" strokeDashoffset="28" strokeLinecap="round" />
-                    </svg>
-                    <span className="absolute text-[9px] font-bold text-white">3.20</span>
-                  </div>
-                  <span className="text-[7px] text-slate-400 uppercase mt-0.5 tracking-tight">THROUGHPUT</span>
+              {/* Clean 2x2 Grid of Minimal Monospace HUD Badges */}
+              <div className="grid grid-cols-2 gap-1.5 font-mono-hud">
+                <div className="p-2 rounded-lg bg-[#05080C]/90 border border-slate-800 hover:border-[#FF6B1A]/50 transition-all flex flex-col justify-center">
+                  <span className="text-[7px] text-slate-500 uppercase tracking-wider">DEGREE // QUANT</span>
+                  <span className="text-[9px] font-bold text-white tracking-wider mt-0.5">
+                    MSc // FINANCE
+                  </span>
                 </div>
 
-                {/* Dial 2: AI Orchestrations */}
-                <div className="flex flex-col items-center">
-                  <div className="relative w-11 h-11 flex items-center justify-center">
-                    <svg className="w-full h-full -rotate-90">
-                      <circle cx="22" cy="22" r="18" fill="none" stroke="#1E293B" strokeWidth="2.5" />
-                      <circle cx="22" cy="22" r="18" fill="none" stroke="#38BDF8" strokeWidth="2.5" strokeDasharray="113" strokeDashoffset="18" strokeLinecap="round" />
-                    </svg>
-                    <Target className="absolute w-3.5 h-3.5 text-[#38BDF8]" />
-                  </div>
-                  <span className="text-[7px] text-slate-400 uppercase mt-0.5 tracking-tight">ORCHESTRATION</span>
+                <div className="p-2 rounded-lg bg-[#05080C]/90 border border-slate-800 hover:border-[#FF6B1A]/50 transition-all flex flex-col justify-center">
+                  <span className="text-[7px] text-slate-500 uppercase tracking-wider">CHARTER // AUDIT</span>
+                  <span className="text-[9px] font-bold text-[#FFA14A] tracking-wider mt-0.5">
+                    ACCA // CERTIFIED
+                  </span>
                 </div>
 
-                {/* Dial 3: Network Load */}
-                <div className="flex flex-col items-center">
-                  <div className="relative w-11 h-11 flex items-center justify-center">
-                    <svg className="w-full h-full -rotate-90">
-                      <circle cx="22" cy="22" r="18" fill="none" stroke="#1E293B" strokeWidth="2.5" />
-                      <circle cx="22" cy="22" r="18" fill="none" stroke="#FF6B1A" strokeWidth="2.5" strokeDasharray="113" strokeDashoffset="8" strokeLinecap="round" />
-                    </svg>
-                    <span className="absolute text-[8px] font-bold text-emerald-400">100%</span>
-                  </div>
-                  <span className="text-[7px] text-slate-400 uppercase mt-0.5 tracking-tight">UPTIME LOAD</span>
+                <div className="p-2 rounded-lg bg-[#05080C]/90 border border-slate-800 hover:border-[#38BDF8]/50 transition-all flex flex-col justify-center">
+                  <span className="text-[7px] text-[#38BDF8] uppercase tracking-wider font-bold">
+                    AI ENGINEER | Data Scientist
+                  </span>
+                  <span className="text-[8.5px] font-bold text-white tracking-wider mt-0.5">
+                    // AZURE &amp; IBM
+                  </span>
+                </div>
+
+                <div className="p-2 rounded-lg bg-[#05080C]/90 border border-slate-800 hover:border-[#FF6B1A]/50 transition-all flex flex-col justify-center">
+                  <span className="text-[7px] text-slate-500 uppercase tracking-wider">LEADERSHIP // ADVISORY</span>
+                  <span className="text-[9px] font-bold text-emerald-400 tracking-wider mt-0.5">
+                    FOUNDER // NELC DIGITAL
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Module 2: OPERATIONAL CREDENTIALS MATRIX */}
-            <div className="my-2 py-2 border-y border-slate-800/80 shrink-0">
-              <div className="font-mono-hud text-[8px] text-slate-400 tracking-wider uppercase mb-1.5 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                <span>CREDENTIALS // CERTIFIED</span>
-              </div>
-
-              {/* 4 Hexagonal / Shield Badges matching Mockup */}
-              <div className="grid grid-cols-4 gap-1 mb-2">
-                {/* ACCA */}
-                <div className="flex flex-col items-center justify-center py-1 rounded bg-red-950/40 border border-red-500/50 shadow-[0_0_10px_rgba(239,68,68,0.2)]">
-                  <span className="font-mono-hud text-[8px] font-black text-red-400">ACCA</span>
-                  <span className="font-mono-hud text-[6px] text-red-300">CERT</span>
-                </div>
-                {/* IBM AI */}
-                <div className="flex flex-col items-center justify-center py-1 rounded bg-blue-950/40 border border-blue-500/50 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-                  <span className="font-mono-hud text-[8px] font-black text-blue-400">IBM</span>
-                  <span className="font-mono-hud text-[6px] text-blue-300">DATA SCI</span>
-                </div>
-                {/* AZURE AI */}
-                <div className="flex flex-col items-center justify-center py-1 rounded bg-sky-950/40 border border-sky-400/50 shadow-[0_0_10px_rgba(56,189,248,0.2)]">
-                  <span className="font-mono-hud text-[8px] font-black text-sky-300">AZURE</span>
-                  <span className="font-mono-hud text-[6px] text-sky-200">AI ENG</span>
-                </div>
-                {/* MSc / SCRUM */}
-                <div className="flex flex-col items-center justify-center py-1 rounded bg-emerald-950/40 border border-emerald-500/50 shadow-[0_0_10px_rgba(16,185,129,0.2)]">
-                  <span className="font-mono-hud text-[8px] font-black text-emerald-400">MSc</span>
-                  <span className="font-mono-hud text-[6px] text-emerald-300">FINANCE</span>
-                </div>
-              </div>
-
-              {/* Minimal 2x2 HUD Matrix List */}
-              <div className="grid grid-cols-2 gap-1 font-mono-hud text-[8px] text-slate-300">
-                <div className="p-1 rounded bg-slate-900/80 border border-slate-800 truncate">
-                  • MSc // FINANCE
-                </div>
-                <div className="p-1 rounded bg-slate-900/80 border border-slate-800 truncate">
-                  • ACCA // CERTIFIED
-                </div>
-                <div className="p-1 rounded bg-slate-900/80 border border-slate-800 truncate">
-                  • AZURE & IBM // AI ENG
-                </div>
-                <div className="p-1 rounded bg-slate-900/80 border border-slate-800 truncate">
-                  • FOUNDER // NELC DIGITAL
-                </div>
-              </div>
-            </div>
-
-            {/* Module 3: DIRECT COMMS // UPLINK TERMINAL */}
+            {/* MODULE 3: DIRECT COMMS // UPLINK TERMINAL */}
             <div className="shrink-0 flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <span className="font-mono-hud text-[9px] text-[#38BDF8] tracking-widest font-bold">
+                  DIRECT COMMS // UPLINK TERMINAL
+                </span>
+                <span className="font-mono-hud text-[7.5px] text-slate-400 flex items-center gap-1">
+                  <Lock className="w-2.5 h-2.5 text-[#FFA14A]" />
+                  TLS 1.3
+                </span>
+              </div>
+
+              {/* Prominent Glowing Ember CTA Button */}
               <button
                 onClick={() => {
-                  try { audioEngine.playLockOnSFX(); } catch {}
+                  try {
+                    audioEngine.playLockOnSFX();
+                  } catch {}
                   setIsCommsModalOpen(true);
                 }}
-                className="w-full py-2.5 rounded-lg font-mono-hud text-xs font-black tracking-widest bg-[#FF6B1A] hover:bg-[#FFA14A] text-slate-950 transition-all border border-[#FFA14A] shadow-[0_0_20px_rgba(255,107,26,0.6)] cursor-pointer flex items-center justify-center gap-2 group active:scale-[0.98]"
+                className="w-full py-2.5 px-3 rounded-lg font-mono-hud text-[10px] sm:text-[11px] font-black tracking-widest bg-[#FF6B1A] hover:bg-[#FFA14A] text-slate-950 transition-all border border-[#FFA14A] shadow-[0_0_20px_rgba(255,107,26,0.55)] cursor-pointer flex items-center justify-center gap-1.5 active:scale-[0.98]"
               >
-                <Terminal className="w-4 h-4 transition-transform group-hover:rotate-12" />
-                <span>DIRECT COMMS // TERMINAL</span>
+                <Terminal className="w-3.5 h-3.5 shrink-0" />
+                <span>[ INITIATE COMMS // CONNECT ]</span>
               </button>
 
-              {/* Quick Link Icon Tray */}
+              {/* Quick-Link Icon Buttons (LinkedIn, GitHub, Nelc Digital, Direct Email) */}
               <div className="grid grid-cols-4 gap-1.5">
                 <a
-                  href={profile.comms.organizationUrl || 'https://nelcdigital.com'}
+                  href={linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
-                  title="Nelc Digital Enterprise Architecture"
-                  className="p-1.5 rounded-lg bg-slate-900 hover:bg-[#38BDF8]/20 border border-slate-800 hover:border-[#38BDF8] text-slate-400 hover:text-[#38BDF8] flex items-center justify-center transition-all cursor-pointer"
+                  title="LinkedIn // Lawrence Emenike"
+                  className="py-1.5 px-1 rounded-lg bg-[#05080C]/90 hover:bg-[#38BDF8]/15 border border-slate-800 hover:border-[#38BDF8] text-slate-300 hover:text-[#38BDF8] flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer"
+                >
+                  <LinkedInIcon className="w-3.5 h-3.5" />
+                  <span className="font-mono-hud text-[7px] font-bold tracking-tight">LinkedIn</span>
+                </a>
+
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="GitHub // AI Architecture Repositories"
+                  className="py-1.5 px-1 rounded-lg bg-[#05080C]/90 hover:bg-white/15 border border-slate-800 hover:border-white text-slate-300 hover:text-white flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer"
+                >
+                  <GitHubIcon className="w-3.5 h-3.5" />
+                  <span className="font-mono-hud text-[7px] font-bold tracking-tight">GitHub</span>
+                </a>
+
+                <a
+                  href={nelcUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Nelc Digital // Commercial Intelligence"
+                  className="py-1.5 px-1 rounded-lg bg-[#05080C]/90 hover:bg-[#FFA14A]/15 border border-slate-800 hover:border-[#FFA14A] text-slate-300 hover:text-[#FFA14A] flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer"
                 >
                   <Globe className="w-3.5 h-3.5" />
-                </a>
-
-                <a
-                  href={profile.comms.github || 'https://github.com/lxwrvnx'}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="GitHub Architecture Repositories"
-                  className="p-1.5 rounded-lg bg-slate-900 hover:bg-white/20 border border-slate-800 hover:border-white text-slate-400 hover:text-white flex items-center justify-center transition-all cursor-pointer"
-                >
-                  <Terminal className="w-3.5 h-3.5" />
-                </a>
-
-                <a
-                  href={profile.comms.twitter || 'https://twitter.com/lxwrvnx'}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="X / Creative Matrix"
-                  className="p-1.5 rounded-lg bg-slate-900 hover:bg-[#FFA14A]/20 border border-slate-800 hover:border-[#FFA14A] text-slate-400 hover:text-[#FFA14A] flex items-center justify-center transition-all cursor-pointer"
-                >
-                  <Radio className="w-3.5 h-3.5" />
+                  <span className="font-mono-hud text-[7px] font-bold tracking-tight truncate max-w-full">
+                    Nelc Digital
+                  </span>
                 </a>
 
                 <button
                   onClick={handleCopyEmail}
-                  title="Copy Direct Email"
-                  className="p-1.5 rounded-lg bg-slate-900 hover:bg-[#FF6B1A]/20 border border-slate-800 hover:border-[#FF6B1A] text-slate-400 hover:text-[#FF6B1A] flex items-center justify-center transition-all cursor-pointer"
+                  title={`Direct Email // ${profile.comms.email}`}
+                  className="py-1.5 px-1 rounded-lg bg-[#05080C]/90 hover:bg-[#FF6B1A]/15 border border-slate-800 hover:border-[#FF6B1A] text-slate-300 hover:text-[#FF6B1A] flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer"
                 >
-                  {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Mail className="w-3.5 h-3.5" />}
+                  {copiedEmail ? (
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                  ) : (
+                    <Mail className="w-3.5 h-3.5" />
+                  )}
+                  <span className="font-mono-hud text-[7px] font-bold tracking-tight">
+                    {copiedEmail ? 'Copied!' : 'Direct Email'}
+                  </span>
                 </button>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
 
       {/* ======================================================== */}
-      {/* DIRECT COMMS ENCRYPTED SLIDE-OVER / MODAL */}
+      {/* ENCRYPTED-STYLE SLIDE-OVER / CONTACT MODAL               */}
       {/* ======================================================== */}
       {isCommsModalOpen && (
-        <div 
-          onClick={(e) => {
+        <div
+          onClick={e => {
             if (e.target === e.currentTarget) setIsCommsModalOpen(false);
           }}
-          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 animate-fade-in pointer-events-auto"
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-end p-4 animate-fade-in pointer-events-auto"
         >
-          <div className="relative w-full max-w-lg p-6 rounded-2xl bg-[#070A0E] border-2 border-[#FF6B1A] shadow-[0_0_50px_rgba(255,107,26,0.5)] flex flex-col gap-4">
-            
-            {/* Modal Header */}
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
-              <div className="flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-[#FF6B1A]" />
-                <span className="font-mono-hud text-xs font-bold text-white tracking-widest">
-                  ENCRYPTED TRANSMISSION // COMMS TERMINAL
-                </span>
-              </div>
-              <button
-                onClick={() => setIsCommsModalOpen(false)}
-                className="p-1.5 rounded-lg bg-slate-900 hover:bg-red-500/20 text-slate-400 hover:text-white transition-all cursor-pointer"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            <p className="font-inter text-xs text-slate-300 leading-relaxed">
-              Initiate direct contact with Lawrence Emenike (lxwrvnx) for AI architecture consultation, commercial intelligence advisory, enterprise governance engagements, or creative synthesis commissions.
-            </p>
-
-            {/* Direct Dispatch Options */}
-            <div className="space-y-2.5">
-              {/* Copy Email Button */}
-              <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-[#FF6B1A] transition-all">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-[#FFA14A]" />
-                  <div>
-                    <div className="font-mono-hud text-[9px] text-slate-500">OFFICIAL ARCHITECT EMAIL</div>
-                    <div className="font-mono-hud text-xs font-bold text-white">{profile.comms.email}</div>
-                  </div>
+          <div className="relative w-full max-w-md h-full max-h-[calc(100vh-32px)] p-6 rounded-2xl bg-[#070A0E]/95 border-2 border-[#FF6B1A] shadow-[0_0_60px_rgba(255,107,26,0.45)] flex flex-col justify-between overflow-y-auto">
+            <div>
+              {/* Modal Header */}
+              <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div className="flex items-center gap-2">
+                  <Terminal className="w-4 h-4 text-[#FF6B1A]" />
+                  <span className="font-mono-hud text-xs font-bold text-white tracking-widest">
+                    DIRECT COMMS // UPLINK TERMINAL
+                  </span>
                 </div>
                 <button
-                  onClick={handleCopyEmail}
-                  className="px-3 py-1.5 rounded-lg font-mono-hud text-[10px] font-bold bg-[#FF6B1A]/20 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 transition-all border border-[#FF6B1A]/50 cursor-pointer flex items-center gap-1"
+                  onClick={() => setIsCommsModalOpen(false)}
+                  className="p-1.5 rounded-lg bg-slate-900 hover:bg-red-500/20 text-slate-400 hover:text-white transition-all cursor-pointer"
                 >
-                  {copiedEmail ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
-                  <span>{copiedEmail ? 'COPIED' : 'COPY'}</span>
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
-              {/* Organization Link */}
-              <a
-                href={profile.comms.organizationUrl || 'https://nelcdigital.com'}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-[#38BDF8] transition-all group"
-              >
-                <div className="flex items-center gap-3">
-                  <Globe className="w-4 h-4 text-[#38BDF8]" />
-                  <div>
-                    <div className="font-mono-hud text-[9px] text-slate-500">ENTERPRISE PRACTICE</div>
-                    <div className="font-mono-hud text-xs font-bold text-white group-hover:text-[#38BDF8] transition-colors">
-                      Nelc Digital // nelcdigital.com
+              {/* Status Banner */}
+              <div className="mt-4 p-3 rounded-xl bg-[#FF6B1A]/10 border border-[#FF6B1A]/40 flex items-center justify-between font-mono-hud text-[10px]">
+                <span className="text-[#FFA14A] font-bold">CHANNEL: ENCRYPTED DIRECT UPLINK</span>
+                <span className="text-emerald-400 font-bold">READY</span>
+              </div>
+
+              <p className="font-inter text-xs text-slate-300 leading-relaxed mt-4">
+                Initiate direct communication with <strong className="text-white">Lawrence Emenike (lxwrvnx)</strong> for enterprise AI transformation, governed multi-agent systems architecture, commercial intelligence advisory, or creative synthesis collaborations.
+              </p>
+
+              {/* Channel Endpoints */}
+              <div className="space-y-2.5 mt-5">
+                {/* Direct Email */}
+                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-[#FF6B1A] transition-all">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <Mail className="w-4 h-4 text-[#FFA14A] shrink-0" />
+                    <div className="min-w-0">
+                      <div className="font-mono-hud text-[9px] text-slate-500">DIRECT EMAIL // UPLINK</div>
+                      <div className="font-mono-hud text-xs font-bold text-white truncate">
+                        {profile.comms.email}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-white" />
-              </a>
-
-              {/* GitHub */}
-              <a
-                href={profile.comms.github || 'https://github.com/lxwrvnx'}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-white transition-all group"
-              >
-                <div className="flex items-center gap-3">
-                  <Terminal className="w-4 h-4 text-slate-400" />
-                  <div>
-                    <div className="font-mono-hud text-[9px] text-slate-500">RESEARCH & CODE LAB</div>
-                    <div className="font-mono-hud text-xs font-bold text-white">github.com/lxwrvnx</div>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <button
+                      onClick={handleCopyEmail}
+                      className="px-2.5 py-1.5 rounded-lg font-mono-hud text-[10px] font-bold bg-[#FF6B1A]/20 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 transition-all border border-[#FF6B1A]/50 cursor-pointer flex items-center gap-1"
+                    >
+                      {copiedEmail ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                      <span>{copiedEmail ? 'COPIED' : 'COPY'}</span>
+                    </button>
+                    <a
+                      href={`mailto:${profile.comms.email}`}
+                      className="px-2.5 py-1.5 rounded-lg font-mono-hud text-[10px] font-bold bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 transition-all"
+                    >
+                      SEND
+                    </a>
                   </div>
                 </div>
-                <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-white" />
-              </a>
+
+                {/* LinkedIn */}
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-[#38BDF8] transition-all group"
+                >
+                  <div className="flex items-center gap-3">
+                    <LinkedInIcon className="w-4 h-4 text-[#38BDF8]" />
+                    <div>
+                      <div className="font-mono-hud text-[9px] text-slate-500">EXECUTIVE NETWORK // LINKEDIN</div>
+                      <div className="font-mono-hud text-xs font-bold text-white group-hover:text-[#38BDF8] transition-colors">
+                        linkedin.com/in/lawrenceemenike
+                      </div>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-white" />
+                </a>
+
+                {/* GitHub */}
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-white transition-all group"
+                >
+                  <div className="flex items-center gap-3">
+                    <GitHubIcon className="w-4 h-4 text-slate-300" />
+                    <div>
+                      <div className="font-mono-hud text-[9px] text-slate-500">SYSTEM REPOSITORIES // GITHUB</div>
+                      <div className="font-mono-hud text-xs font-bold text-white">
+                        github.com/lawrenceemenike
+                      </div>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-white" />
+                </a>
+
+                {/* Nelc Digital */}
+                <a
+                  href={nelcUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-[#FFA14A] transition-all group"
+                >
+                  <div className="flex items-center gap-3">
+                    <Globe className="w-4 h-4 text-[#FFA14A]" />
+                    <div>
+                      <div className="font-mono-hud text-[9px] text-slate-500">ENTERPRISE PRACTICE // NELC DIGITAL</div>
+                      <div className="font-mono-hud text-xs font-bold text-white group-hover:text-[#FFA14A] transition-colors">
+                        nelcdigital.com
+                      </div>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-white" />
+                </a>
+              </div>
             </div>
 
             {/* Modal Footer */}
-            <div className="pt-2 flex items-center justify-between font-mono-hud text-[9px] text-slate-500 border-t border-slate-800/80">
-              <span>STATUS: DISPATCH READY</span>
-              <span>SHA-256 AUDIT VERIFIED</span>
+            <div className="pt-3 mt-4 flex items-center justify-between font-mono-hud text-[9px] text-slate-500 border-t border-slate-800/80">
+              <span>CALLSIGN: LXWRVNX</span>
+              <span>SHA-256 VERIFIED // 60FPS</span>
             </div>
-
           </div>
         </div>
       )}
-
     </div>
   );
 };

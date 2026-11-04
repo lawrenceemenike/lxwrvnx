@@ -154,3 +154,39 @@
     height: 95%;
   }
 }
+
+/* Holographic Laser Scanline Animation */
+@keyframes scanLine {
+  0% {
+    top: 4%;
+    opacity: 0.3;
+  }
+  50% {
+    top: 94%;
+    opacity: 0.95;
+  }
+  100% {
+    top: 4%;
+    opacity: 0.3;
+  }
+}
+
+.animate-scan {
+  animation: scanLine 3.5s ease-in-out infinite;
+}
+
+/* Smooth Telemetry Cross-Fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
