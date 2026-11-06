@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { PhotoItem, PhotoCategory } from '../../types';
+import { getPhotoThumbUrl } from '../../utils/photoData50';
 import { audioEngine } from '../../utils/audioEngine';
 import { 
   ArrowLeft, Maximize2, Minimize2, Share2, X, ChevronUp, ChevronDown, 
@@ -300,6 +301,8 @@ export const OpticsPavilion50: React.FC<OpticsPavilion50Props> = ({
           src="/media/vault-rooms/optics_pavilion_clean.jpg"
           alt="Optics Pavilion SQ"
           draggable={false}
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
           style={{ filter: 'contrast(1.06) brightness(1.01)' }}
         />
@@ -359,11 +362,18 @@ export const OpticsPavilion50: React.FC<OpticsPavilion50Props> = ({
                   }}
                 >
                   <img
-                    src={photo.image}
+                    src={getPhotoThumbUrl(photo.image)}
                     alt={photo.title}
                     draggable={false}
-                    className="w-full h-full object-cover select-none transition-transform duration-300 group-hover:scale-103"
+                    decoding="async"
                     loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src !== photo.image) {
+                        target.src = photo.image;
+                      }
+                    }}
+                    className="w-full h-full object-cover select-none transition-transform duration-300 group-hover:scale-103"
                   />
                   {/* Subtle Inner Bevel Depth */}
                   <div className="absolute inset-0 shadow-[inset_0_1px_4px_rgba(0,0,0,0.8)] pointer-events-none" />
@@ -831,14 +841,35 @@ export const OpticsPavilion50: React.FC<OpticsPavilion50Props> = ({
             </button>
           </div>
 
-          <div className="relative max-w-5xl max-h-[82vh] rounded-2xl overflow-hidden border-2 border-[#38BDF8] shadow-[0_0_60px_rgba(56,189,248,0.5)]">
-            <img
-              src={selectedPhoto.image}
-              alt={selectedPhoto.title}
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full object-contain max-h-[82vh] select-none"
-            />
+          <div className="relative max-w-5xl max-h-[82vh] flex items-center justify-center">
+            <button
+              onClick={handlePrevPhoto}
+              className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 flex items-center gap-1.5 px-3.5 py-4 rounded-2xl bg-[#070A0E]/90 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 border-2 border-[#FF6B1A]/60 shadow-[0_0_25px_rgba(0,0,0,0.9)] transition-all cursor-pointer group"
+              title="Previous Exhibit [←]"
+            >
+              <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-1" />
+              <span className="hidden lg:inline font-mono-hud text-xs font-bold">PREV</span>
+            </button>
+
+            <div className="rounded-2xl overflow-hidden border-2 border-[#38BDF8] shadow-[0_0_60px_rgba(56,189,248,0.5)]">
+              <img
+                src={selectedPhoto.image}
+                alt={selectedPhoto.title}
+                decoding="async"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                className="w-full h-full object-contain max-h-[82vh] select-none"
+              />
+            </div>
+
+            <button
+              onClick={handleNextPhoto}
+              className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 flex items-center gap-1.5 px-3.5 py-4 rounded-2xl bg-[#070A0E]/90 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 border-2 border-[#FF6B1A]/60 shadow-[0_0_25px_rgba(0,0,0,0.9)] transition-all cursor-pointer group"
+              title="Next Exhibit [→]"
+            >
+              <span className="hidden lg:inline font-mono-hud text-xs font-bold">NEXT</span>
+              <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
+            </button>
           </div>
 
           <div className="absolute bottom-6 font-mono-hud text-xs text-slate-400">
@@ -904,10 +935,17 @@ export const OpticsPavilion50: React.FC<OpticsPavilion50Props> = ({
                   {/* Thumbnail */}
                   <div className="relative w-16 h-14 rounded-lg overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0">
                     <img
-                      src={photo.image}
+                      src={getPhotoThumbUrl(photo.image)}
                       alt={photo.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      decoding="async"
                       loading="lazy"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src !== photo.image) {
+                          target.src = photo.image;
+                        }
+                      }}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     {isCustom && (
                       <div className="absolute top-0.5 left-0.5 px-1 rounded bg-[#FF6B1A] text-slate-950 font-mono-hud text-[6px] font-black uppercase">

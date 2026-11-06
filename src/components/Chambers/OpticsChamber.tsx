@@ -53,14 +53,30 @@ export const OpticsChamber: React.FC<OpticsChamberProps> = ({
     return () => window.removeEventListener('hashchange', handleHashSync);
   }, []);
 
+  // Preload the 3 room architectural backdrops while on the Gateway so room entry is instant
+  React.useEffect(() => {
+    const backdrops = [
+      '/media/vault-rooms/optics_pavilion_clean.jpg',
+      '/media/vault-rooms/optics_street_clean.jpg',
+      '/media/vault-rooms/optics_light_art_clean.jpg'
+    ];
+    backdrops.forEach(src => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = src;
+    });
+  }, []);
+
   // Filter strictly for Portraits category photos (including custom portrait uploads)
   const portraitPhotos = React.useMemo(() => {
+    if (activeCategory !== 'portraits') return [];
     return (photos || []).filter(p => p.category === 'portraits');
-  }, [photos]);
+  }, [photos, activeCategory]);
 
   const all50Photos = React.useMemo(() => {
+    if (activeCategory !== 'portraits') return [];
     return getPavilion50Photos(portraitPhotos);
-  }, [portraitPhotos]);
+  }, [portraitPhotos, activeCategory]);
 
   // Subtle 3D perspective tilt
   const tiltX = -mouseOffset.y * 3.5;
@@ -137,10 +153,14 @@ export const OpticsChamber: React.FC<OpticsChamberProps> = ({
         }}
       >
         {/* Photorealistic Optics Wind Tunnel Backdrop matching Mockup */}
-        <div 
-          className="absolute inset-[-2%] bg-cover bg-center transition-all duration-700 pointer-events-none"
+        <img
+          src="/media/vault-rooms/optics_gateway.jpg"
+          alt="Optics Gateway"
+          draggable={false}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-[-2%] w-[104%] h-[104%] object-cover object-center transition-all duration-700 pointer-events-none select-none"
           style={{
-            backgroundImage: "url('/media/vault-rooms/optics_gateway.jpg')",
             filter: 'contrast(1.06) brightness(1.02)'
           }}
         />

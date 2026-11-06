@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { PhotoItem } from '../../types';
+import { getPhotoThumbUrl } from '../../utils/photoData50';
 import { audioEngine } from '../../utils/audioEngine';
 import { 
   ArrowLeft, Share2, X, ChevronLeft, ChevronRight, 
@@ -490,6 +491,8 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
         <img 
           src="/media/vault-rooms/optics_light_art_clean.jpg"
           alt="Optics Light Art Horizon"
+          fetchPriority="high"
+          decoding="async"
           draggable={false}
           className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
           style={{ filter: 'contrast(1.06) brightness(1.02)' }}
@@ -554,12 +557,16 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
                   }`}
                 >
                   <img
-                    src={work.image}
+                    src={getPhotoThumbUrl(work.image)}
                     alt={work.title}
+                    loading="lazy"
+                    decoding="async"
                     draggable={false}
                     onError={(e) => {
                       const target = e.currentTarget;
-                      if (!target.src.includes('DSC00150.jpg')) {
+                      if (target.src.includes('/thumbs/')) {
+                        target.src = work.image;
+                      } else if (!target.src.includes('DSC00150.jpg')) {
                         target.src = '/media/photography/light-art/DSC00150.jpg';
                       }
                     }}
@@ -994,16 +1001,18 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
             {/* Prev Artwork Full Screen Button */}
             <button
               onClick={handlePrevArtwork}
-              className="absolute -left-16 z-30 p-3 rounded-full bg-[#07090C]/90 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 border border-[#FF6B1A]/60 shadow-[0_0_20px_rgba(0,0,0,0.9)] transition-all cursor-pointer hidden md:flex items-center justify-center group"
+              className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 flex items-center gap-1.5 px-3.5 py-4 rounded-2xl bg-[#07090C]/90 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 border-2 border-[#FF6B1A]/60 shadow-[0_0_25px_rgba(0,0,0,0.9)] transition-all cursor-pointer group"
               title="Previous Exhibit [←]"
             >
               <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-1" />
+              <span className="hidden lg:inline font-mono-hud text-xs font-bold">PREV</span>
             </button>
 
             <div className="rounded-2xl overflow-hidden border-2 border-[#FF6B1A] shadow-[0_0_60px_rgba(255,107,26,0.6)]">
               <img
                 src={selectedArtwork.image}
                 alt={selectedArtwork.title}
+                decoding="async"
                 draggable={false}
                 onContextMenu={(e) => e.preventDefault()}
                 className="w-full h-full object-contain max-h-[82vh] select-none"
@@ -1013,9 +1022,10 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
             {/* Next Artwork Full Screen Button */}
             <button
               onClick={handleNextArtwork}
-              className="absolute -right-16 z-30 p-3 rounded-full bg-[#07090C]/90 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 border border-[#FF6B1A]/60 shadow-[0_0_20px_rgba(0,0,0,0.9)] transition-all cursor-pointer hidden md:flex items-center justify-center group"
+              className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 flex items-center gap-1.5 px-3.5 py-4 rounded-2xl bg-[#07090C]/90 hover:bg-[#FF6B1A] text-[#FFA14A] hover:text-slate-950 border-2 border-[#FF6B1A]/60 shadow-[0_0_25px_rgba(0,0,0,0.9)] transition-all cursor-pointer group"
               title="Next Exhibit [→]"
             >
+              <span className="hidden lg:inline font-mono-hud text-xs font-bold">NEXT</span>
               <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
             </button>
           </div>
@@ -1081,8 +1091,15 @@ export const OpticsLightArtSpiral: React.FC<OpticsLightArtSpiralProps> = ({
                     {/* Thumbnail */}
                     <div className="relative w-16 h-14 rounded-lg overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0">
                       <img
-                        src={work.image}
+                        src={getPhotoThumbUrl(work.image)}
                         alt={work.title}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          if (e.currentTarget.src !== work.image) {
+                            e.currentTarget.src = work.image;
+                          }
+                        }}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       {work.isCustom && (

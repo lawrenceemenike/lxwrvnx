@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { AiArtItem } from '../../types';
 import { SYNTHESIS_30_ARTWORKS } from '../../data/synthesisArtworks';
+import { getPhotoThumbUrl } from '../../utils/photoData50';
 import { audioEngine } from '../../utils/audioEngine';
 import { Maximize2, Share2, X, ChevronRight, ChevronLeft, Eye, Layers, Upload } from 'lucide-react';
 
@@ -26,6 +27,11 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
 
   // Guarantee all unique artworks are available, matching custom uploads to explicit slots
   const artworks = useMemo<AiArtItem[]>(() => {
+    const normalizeArt = (item: AiArtItem): AiArtItem => ({
+      ...item,
+      image: item.image ? item.image.replace(/^(\/media\/ai-art\/.+)\.png$/i, '$1.jpg') : item.image
+    });
+
     return SYNTHESIS_30_ARTWORKS.map((defaultArt, index) => {
       // 1. Try finding explicitly bound artwork for this slot
       const bound = items?.find(a =>
@@ -34,17 +40,35 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
         a.id === `ai-${defaultArt.id}` ||
         a.id === defaultArt.id
       );
-      if (bound) return bound;
+      if (bound) return normalizeArt(bound);
 
       // 2. Otherwise fallback to unassigned custom artwork
       const unassigned = items?.filter(
         a => !a.frameId && a.targetSlotIndex === undefined && !SYNTHESIS_30_ARTWORKS.some(d => d.id === a.id)
       );
-      if (unassigned && unassigned[index]) return unassigned[index];
+      if (unassigned && unassigned[index]) return normalizeArt(unassigned[index]);
 
-      return defaultArt;
+      return normalizeArt(defaultArt);
     });
   }, [items]);
+
+  // Preload active and adjacent master images so Fullscreen and Pop-Card transitions are instant
+  useEffect(() => {
+    if (artworks.length === 0) return;
+    const indicesToPreload = [
+      currentIndex,
+      (currentIndex - 1 + artworks.length) % artworks.length,
+      (currentIndex + 1) % artworks.length
+    ];
+    indicesToPreload.forEach(i => {
+      const src = artworks[i]?.image;
+      if (src) {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = src;
+      }
+    });
+  }, [currentIndex, artworks]);
 
   // If custom uploads exist at index 0, jump to them automatically so the user sees their art immediately
   useEffect(() => {
@@ -77,6 +101,27 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
     setCurrentIndex(prev => (prev === artworks.length - 1 ? 0 : prev + 1));
   }, [artworks.length]);
 
+  // Step to Prev / Next artwork while inside Pop-Card or Fullscreen Theater view
+  const handlePrevSelected = useCallback(() => {
+    if (artworks.length === 0) return;
+    try {
+      audioEngine.playClickSFX?.();
+    } catch {}
+    const prevIdx = (currentIndex - 1 + artworks.length) % artworks.length;
+    setCurrentIndex(prevIdx);
+    setSelectedArt(artworks[prevIdx]);
+  }, [currentIndex, artworks]);
+
+  const handleNextSelected = useCallback(() => {
+    if (artworks.length === 0) return;
+    try {
+      audioEngine.playClickSFX?.();
+    } catch {}
+    const nextIdx = (currentIndex + 1) % artworks.length;
+    setCurrentIndex(nextIdx);
+    setSelectedArt(artworks[nextIdx]);
+  }, [currentIndex, artworks]);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -86,7 +131,15 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
       }
 
       if (isTheaterOpen) {
-        if (e.key === 'Escape') setIsTheaterOpen(false);
+        if (e.key === 'Escape') {
+          setIsTheaterOpen(false);
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          handlePrevSelected();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          handleNextSelected();
+        }
         return;
       }
 
@@ -94,13 +147,11 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
         if (e.key === 'Escape') {
           setSelectedArt(null);
         } else if (e.key === 'ArrowLeft') {
-          const nextIdx = (currentIndex - 1 + artworks.length) % artworks.length;
-          setCurrentIndex(nextIdx);
-          setSelectedArt(artworks[nextIdx]);
+          e.preventDefault();
+          handlePrevSelected();
         } else if (e.key === 'ArrowRight') {
-          const nextIdx = (currentIndex + 1) % artworks.length;
-          setCurrentIndex(nextIdx);
-          setSelectedArt(artworks[nextIdx]);
+          e.preventDefault();
+          handleNextSelected();
         }
         return;
       }
@@ -116,7 +167,7 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, selectedArt, isTheaterOpen, artworks, handlePrev, handleNext]);
+  }, [currentIndex, selectedArt, isTheaterOpen, showRosterDrawer, artworks, handlePrev, handleNext, handlePrevSelected, handleNextSelected]);
 
   // Floating Cyan & Ember Particle Dust
   useEffect(() => {
@@ -192,10 +243,14 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
         }}
       >
         {/* Photorealistic Synthesis Tunnel Backdrop matching image_18.png / image_19.png */}
-        <div 
-          className="absolute inset-[-4%] bg-cover bg-center transition-transform duration-500"
+        <img
+          src="/media/vault-rooms/synthesis.jpg"
+          alt="Synthesis Cavern Backdrop"
+          fetchPriority="high"
+          decoding="async"
+          draggable={false}
+          className="absolute inset-[-4%] w-[108%] h-[108%] object-cover object-center transition-transform duration-500 pointer-events-none select-none"
           style={{
-            backgroundImage: "url('/media/vault-rooms/synthesis.jpg')",
             transform: 'scale(1.05)'
           }}
         />
@@ -254,10 +309,16 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
                     }}
                   >
                     <img
-                      src={art.image}
+                      src={getPhotoThumbUrl(art.image)}
                       alt={art.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      decoding="async"
                       loading="lazy"
+                      onError={(e) => {
+                        if (e.currentTarget.src !== art.image) {
+                          e.currentTarget.src = art.image;
+                        }
+                      }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
 
                     {/* Edge-lit Ambient Shading & Gradient Vignette */}
@@ -351,8 +412,25 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
                   <span className="font-mono-hud text-[10px] text-[#FFA14A] tracking-widest uppercase font-bold">
                     CHAMBER 02 // INTER-SPECT TELEMETRY
                   </span>
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-1.5 font-mono-hud text-[10px] bg-cyan-950/70 border border-cyan-500/50 text-[#38BDF8] px-2 py-0.5 rounded font-bold">
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={handlePrevSelected}
+                      className="p-1 rounded bg-slate-800/80 hover:bg-[#38BDF8] text-slate-300 hover:text-slate-950 border border-slate-700 hover:border-[#38BDF8] transition-all cursor-pointer"
+                      title="Previous Artwork [←]"
+                    >
+                      <ChevronLeft className="w-3.5 h-3.5" />
+                    </button>
+                    <span className="font-mono-hud text-[10px] text-[#38BDF8] bg-cyan-950/70 border border-cyan-500/40 px-1.5 py-0.5 rounded font-bold">
+                      {String(currentIndex + 1).padStart(2, '0')} / {String(artworks.length).padStart(2, '0')}
+                    </span>
+                    <button
+                      onClick={handleNextSelected}
+                      className="p-1 rounded bg-slate-800/80 hover:bg-[#38BDF8] text-slate-300 hover:text-slate-950 border border-slate-700 hover:border-[#38BDF8] transition-all cursor-pointer"
+                      title="Next Artwork [→]"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                    <div className="hidden sm:flex items-center gap-1.5 font-mono-hud text-[10px] bg-cyan-950/70 border border-cyan-500/50 text-[#38BDF8] px-2 py-0.5 rounded font-bold">
                       <span>{selectedArt.status}</span>
                     </div>
                     {/* Highlighted Close X button in header */}
@@ -628,31 +706,77 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
         </div>
       )}
 
-      {/* THEATER ZOOM MODAL */}
+      {/* THEATER ZOOM MODAL (WITH LEFT / RIGHT NAVIGATION) */}
       {isTheaterOpen && selectedArt && (
-        <div className="fixed inset-0 z-50 bg-[#070A0E]/95 backdrop-blur-2xl flex items-center justify-center p-4 select-none">
+        <div className="fixed inset-0 z-50 bg-[#070A0E]/95 backdrop-blur-2xl flex flex-col items-center justify-center p-4 select-none">
+          {/* Left Floating Prev Button */}
+          <button
+            onClick={handlePrevSelected}
+            className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-50 flex items-center gap-2 px-3.5 py-4 md:px-4 md:py-5 rounded-2xl bg-[#0B131F]/90 hover:bg-[#38BDF8] text-[#38BDF8] hover:text-slate-950 border-2 border-[#38BDF8]/60 hover:border-[#38BDF8] shadow-[0_0_30px_rgba(56,189,248,0.35)] hover:shadow-[0_0_35px_rgba(56,189,248,0.85)] transition-all cursor-pointer group"
+            title="Previous Artwork (Left Arrow)"
+          >
+            <ChevronLeft className="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:-translate-x-1" />
+            <span className="hidden lg:inline font-mono-hud text-xs font-bold tracking-wider uppercase">PREV</span>
+          </button>
+
+          {/* Right Floating Next Button */}
+          <button
+            onClick={handleNextSelected}
+            className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 flex items-center gap-2 px-3.5 py-4 md:px-4 md:py-5 rounded-2xl bg-[#0B131F]/90 hover:bg-[#38BDF8] text-[#38BDF8] hover:text-slate-950 border-2 border-[#38BDF8]/60 hover:border-[#38BDF8] shadow-[0_0_30px_rgba(56,189,248,0.35)] hover:shadow-[0_0_35px_rgba(56,189,248,0.85)] transition-all cursor-pointer group"
+            title="Next Artwork (Right Arrow)"
+          >
+            <span className="hidden lg:inline font-mono-hud text-xs font-bold tracking-wider uppercase">NEXT</span>
+            <ChevronRight className="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:translate-x-1" />
+          </button>
+
           <div className="relative max-w-6xl max-h-[90vh] flex flex-col items-center">
-            
             <div className="relative rounded-lg overflow-hidden border border-[#38BDF8]/60 shadow-[0_0_60px_rgba(56,189,248,0.5)]">
               <img
                 src={selectedArt.image}
                 alt={selectedArt.title}
+                decoding="async"
                 draggable={false}
                 onContextMenu={(e) => e.preventDefault()}
-                className="max-h-[82vh] w-auto object-contain select-none"
+                className="max-h-[78vh] w-auto object-contain select-none"
               />
             </div>
 
-            <div className="mt-3 flex items-center justify-between w-full font-mono-hud text-xs text-slate-300 px-2">
-              <span className="text-[#38BDF8] font-bold">{selectedArt.title}</span>
-              <span>{selectedArt.generativeData.engine} // SEED: {selectedArt.generativeData.seed}</span>
+            {/* Bottom Control Bar: Prev / Counter / Title / Next / Close */}
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-3 w-full font-mono-hud text-xs text-slate-300 px-3 py-2 rounded-xl bg-[#0B131F]/90 border border-[#38BDF8]/30 backdrop-blur-md">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrevSelected}
+                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-[#38BDF8] text-[#38BDF8] hover:text-slate-950 border border-[#38BDF8]/40 font-bold transition-all cursor-pointer"
+                  title="Previous Artwork [←]"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  <span>PREV</span>
+                </button>
+                <span className="px-2.5 py-1 rounded bg-[#38BDF8]/15 border border-[#38BDF8]/40 text-[#FFA14A] font-bold">
+                  {String(currentIndex + 1).padStart(2, '0')} / {String(artworks.length).padStart(2, '0')}
+                </span>
+                <button
+                  onClick={handleNextSelected}
+                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-[#38BDF8] text-[#38BDF8] hover:text-slate-950 border border-[#38BDF8]/40 font-bold transition-all cursor-pointer"
+                  title="Next Artwork [→]"
+                >
+                  <span>NEXT</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="hidden md:flex flex-col items-center">
+                <span className="text-[#38BDF8] font-bold">{selectedArt.title}</span>
+                <span className="text-[10px] text-slate-400">{selectedArt.generativeData.engine} // SEED: {selectedArt.generativeData.seed}</span>
+              </div>
+
               <button
                 onClick={() => setIsTheaterOpen(false)}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-950/60 hover:bg-red-600 border-2 border-red-500 text-white font-mono-hud text-xs font-bold shadow-[0_0_20px_rgba(239,68,68,0.7)] transition-all cursor-pointer group"
+                className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/60 hover:bg-red-600 border-2 border-red-500 text-white font-mono-hud text-xs font-bold shadow-[0_0_20px_rgba(239,68,68,0.7)] transition-all cursor-pointer group"
                 title="Close Full Screen [ESC]"
               >
                 <X className="w-4 h-4 transition-transform group-hover:rotate-90" />
-                <span>[ESC] CLOSE FULL SCREEN</span>
+                <span>[ESC] CLOSE</span>
               </button>
             </div>
 
@@ -716,10 +840,16 @@ export const SynthesisChamber: React.FC<SynthesisChamberProps> = ({
                   {/* Thumbnail */}
                   <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0">
                     <img
-                      src={art.image}
+                      src={getPhotoThumbUrl(art.image)}
                       alt={art.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      decoding="async"
                       loading="lazy"
+                      onError={(e) => {
+                        if (e.currentTarget.src !== art.image) {
+                          e.currentTarget.src = art.image;
+                        }
+                      }}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     {isCustom && (
                       <div className="absolute top-0.5 left-0.5 px-1 rounded bg-[#FF6B1A] text-slate-950 font-mono-hud text-[6px] font-black uppercase">

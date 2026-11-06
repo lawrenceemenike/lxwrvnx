@@ -1,5 +1,22 @@
 import { PhotoItem } from '../types';
 
+/**
+ * Converts a local photography or AI art asset path (e.g. "/media/photography/portraits/DSC00486.jpg"
+ * or "/media/ai-art/image-49.jpg") into its lightweight thumbnail path (".../thumbs/<file>.jpg").
+ * Leaves custom data:/blob: URLs or already-thumbnailed paths untouched.
+ */
+export function getPhotoThumbUrl(imageUrl: string): string {
+  if (!imageUrl || imageUrl.startsWith('data:') || imageUrl.startsWith('blob:') || imageUrl.includes('/thumbs/')) {
+    return imageUrl;
+  }
+  const normalized = imageUrl.replace(/^(\/media\/ai-art\/.+)\.png$/i, '$1.jpg');
+  const match = normalized.match(/^(\/media\/(?:photography\/(?:portraits|street|light-art)|ai-art))\/([^/]+)$/);
+  if (match) {
+    return `${match[1]}/thumbs/${match[2]}`;
+  }
+  return normalized;
+}
+
 // Curated pool of high-resolution master photography canvases
 const BASE_IMAGES = {
   street: [
